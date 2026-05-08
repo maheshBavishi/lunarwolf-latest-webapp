@@ -1,0 +1,107 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.faqSection {
+    padding: 120px 0;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 60%;
+        content: '';
+        border-radius: 895.117px;
+        opacity: 0.56;
+        background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
+        filter: blur(139.5px);
+    }
+
+    &::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40%;
+        height: 60%;
+        content: '';
+        border-radius: 895.117px;
+        opacity: 0.56;
+        background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
+        filter: blur(139.5px);
+    }
+
+
+    .leftrightSpacing {
+        padding: 0 64px;
+        position: relative;
+        z-index: 1;
+
+        .title {
+            padding: 0 0 60px 0;
+
+            h2 {
+                color: #fff;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 36px;
+                font-weight: 400;
+                font-family: var(--font-inter-sans);
+                margin: 0;
+            }
+        }
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+
+            .mainFaq {
+                padding: 20px 0;
+                border-bottom: 1px solid rgb(255, 255, 255, .2);
+
+                .faqbody {
+                    .spacing {
+                        padding: 12px 0 0 0;
+
+                        p {
+                            color: #B2B2B2;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 130%;
+                            font-family: var(--font-inter-sans);
+                        }
+                    }
+                }
+
+                .faqheader {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .iconAlignment {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        svg {
+                            cursor: pointer;
+                        }
+                    }
+
+                    h3 {
+                        color: #FFF;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-family: var(--font-inter-sans);
+                        font-weight: 400;
+                        line-height: normal;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

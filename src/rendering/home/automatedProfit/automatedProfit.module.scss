@@ -1,0 +1,54 @@
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+@use '../../../scss/main.scss' as *;
+
+.automatedProfit {
+    padding: 0 64px;
+
+    .box {
+        background: linear-gradient(90deg, rgba(25, 66, 75, 0.12) 0%, rgba(60, 155, 177, 0.3) 100%);
+        position: relative;
+        padding: 40px 0;
+        border-radius: 12px;
+        overflow: hidden;
+
+        h2 {
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 400;
+            font-family: var(--font-inter-sans);
+            margin: 0 0 30px 0;
+        }
+
+        .buttonCenter {
+            display: flex;
+            justify-content: center;
+
+            button {
+                border: none;
+                cursor: pointer;
+                color: #000;
+                border-radius: 100px;
+                padding: 14px 32px;
+                font-size: 16px;
+                font-weight: 500;
+                transition: all .3s ease-in-out;
+                background: #FFF;
+                box-shadow: 0 0 12px 0 rgba(107, 197, 224, 0.80) inset;
+            }
+        }
+
+        .iconTopAlignment {
+            position: absolute;
+            top: -6%;
+            left: -6%;
+
+            img {
+                max-width: 250px;
+                display: block;
+                opacity: .5;
+            }
+        }
+    }
+}

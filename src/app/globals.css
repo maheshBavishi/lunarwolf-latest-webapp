@@ -1,0 +1,44 @@
+body {
+  background: #040709;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+body,
+a {
+  font-family: var(--font-roboto-sans);
+  /* font-family: var(--font-inter-sans); */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+p:last-child {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.font {
+  font-family: var(--font-inter-sans);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
