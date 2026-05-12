@@ -1,0 +1,77 @@
+@use '../../scss/main.scss' as *;
+@use '../../scss/breakpoints/breakpoints.scss' as *;
+
+.blogDetails {
+    padding: 140px 0 40px 0;
+    border-bottom: 1px solid rgb(255, 255, 255, .2);
+
+    .textgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: flex-end;
+        padding: 0 0 48px 0;
+
+        p {
+            color: #C1C1C1;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            font-family: var(--font-inter-sans);
+            line-height: 140%;
+            max-width: 476px;
+            margin-left: auto;
+        }
+
+        h2 {
+            color: #FFF;
+            font-family: var(--font-inter-sans);
+            max-width: 577px;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            span {
+                color: #69CDFF;
+            }
+        }
+    }
+
+    .banner {
+        img {
+            display: block;
+            border-radius: 4px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.detailsLayer {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        right: 0;
+        content: '';
+        border-radius: 1504.362px;
+        background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
+        filter: blur(200px);
+        width: 400px;
+        height: 400px;
+        top: 0;
+    }
+
+    &::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        border-radius: 1504.362px;
+        background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
+        filter: blur(200px);
+        width: 400px;
+        height: 400px;
+        bottom: 0;
+    }
+}
