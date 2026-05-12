@@ -1,0 +1,28 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.profitSharing {
+    padding: 60px 0 0 0;
+
+    .title {
+        padding: 0 0 60px 0;
+
+        h2 {
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+            margin: 0 0 20px 0;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 18px;
+            color: #fff;
+            line-height: 28px;
+            font-weight: 300;
+            max-width: 926px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}

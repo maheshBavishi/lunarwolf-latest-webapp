@@ -1,0 +1,94 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.contentSection {
+    position: relative;
+    padding: 100px 0;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 400px;
+        border-radius: 400px;
+        opacity: 0.5;
+        background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
+        filter: blur(120px);
+        content: '';
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 400px;
+        opacity: 0.5;
+        background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
+        filter: blur(120px);
+        content: '';
+    }
+
+    :global(.container-xl) {
+        position: relative;
+        z-index: 1;
+    }
+
+    .tabCenter {
+        display: flex;
+        justify-content: center;
+
+        .tabGroup {
+            display: flex;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 99px;
+            padding: 4px;
+            box-shadow: rgb(107, 197, 224) 0px 2px 4px 0px inset, rgba(107, 197, 224, 0.5) 0px 4px 24px 0px inset;
+            border: 1px solid rgba(107, 197, 224, 0.2);
+
+            .tabButton {
+                position: relative;
+                border: none;
+                background-color: transparent;
+                color: rgba(255, 255, 255, 0.6);
+                border-radius: 99px;
+                padding: 12px 36px;
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: color 0.3s ease;
+                outline: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.active {
+                    color: #121212;
+                }
+
+                &:hover:not(.active) {
+                    color: #fff;
+                }
+
+                .tabLabel {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .activePill {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #fff;
+                    border-radius: 99px;
+                    z-index: 1;
+                    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+    }
+}

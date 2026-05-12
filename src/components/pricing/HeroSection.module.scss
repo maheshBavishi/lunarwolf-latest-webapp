@@ -1,0 +1,251 @@
+@use "../../scss/breakpoints/breakpoints" as *;
+
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #000; // Assuming black background as per typical "dark" designs
+
+  .container {
+    padding: 4rem 1.5rem; // py-16 px-6
+    width: 100%;
+
+    @include respond-to("md") {
+      padding: 6rem 3.5rem; // py-24 px-14
+    }
+
+    @media (min-width: 1280px) {
+      padding: 6rem 97px; // py-24 xl:px-[97px]
+    }
+  }
+
+  .grid {
+    display: grid;
+    min-height: 100vh;
+    align-items: center;
+    gap: 3rem; // gap-12
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 639px) {
+      padding-top: 3rem; // max-mobile:pt-12
+    }
+  }
+
+  .topRightShadow {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem; // space-y-8
+    z-index: 5;
+
+    h1 {
+      font-family: "Inter", sans-serif;
+      font-size: 2.25rem; // text-4xl
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: 400;
+      margin: 0;
+
+      @include respond-to("tab") {
+        font-size: 3rem; // md:text-5xl
+      }
+
+      @media (min-width: 1280px) {
+        font-size: 72px; // xl:text-[72px]
+        line-height: 80px; // xl:leading-[80px]
+      }
+    }
+
+    p {
+      max-width: 32rem; // max-w-lg
+      font-family: "Inter", sans-serif;
+      font-size: 1.125rem; // text-lg
+      line-height: 1.625; // leading-relaxed
+      color: #d1d5db; // text-gray-300
+      margin: 0;
+
+      @include respond-to("tab") {
+        font-size: 1.25rem; // md:text-xl
+      }
+    }
+  }
+
+  .emblemContainer {
+    position: relative;
+    height: 600px;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+      height: 700px;
+    }
+  }
+
+  .emblem {
+    position: absolute;
+    perspective: 1000px;
+  }
+
+  .coin {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+
+  .coinEdge {
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    opacity: 0.3;
+  }
+
+  .outerGlow {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(4px);
+  }
+
+  .metallicRing {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    border: 2px solid #4b5563; // border-gray-600
+    background: linear-gradient(135deg, #374151, #4b5563, #1f2937); // from-gray-700 via-gray-600 to-gray-800
+    overflow: hidden;
+  }
+
+  .compassV {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2rem;
+    width: 0.25rem;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #d1d5db, #6b7280);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .compassH {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0.25rem;
+    width: 2rem;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #d1d5db, #6b7280);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .blueGlow {
+    position: absolute;
+    inset: 0.5rem; // inset-2
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #60a5fa, #22d3ee, #3b82f6); // from-blue-400 via-cyan-400 to-blue-500
+    opacity: 0.3;
+  }
+
+  .innerGlow {
+    position: absolute;
+    inset: 0.75rem; // inset-3
+    border-radius: 9999px;
+  }
+
+  .coinFace {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 9999px;
+    backface-visibility: visible; // As per original code
+  }
+
+  .shine {
+    position: absolute;
+    border-radius: 9999px;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .dot {
+    position: absolute;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #60a5fa, #22d3ee);
+  }
+
+  // Position variations
+  .emblemLarge {
+    top: 0;
+    right: 0;
+    width: 11rem;
+    height: 11rem;
+
+    @media (min-width: 1024px) {
+      width: 13rem;
+      height: 13rem;
+    }
+  }
+
+  .emblemMidTopLeft {
+    top: 4rem;
+    left: 2rem;
+    width: 9rem;
+    height: 9rem;
+
+    @media (min-width: 1024px) {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  .emblemMidCenter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10rem;
+    height: 10rem;
+
+    @media (min-width: 1024px) {
+      width: 11rem;
+      height: 11rem;
+    }
+  }
+
+  .emblemBottomLeft {
+    bottom: 4rem;
+    left: 1rem;
+    width: 8rem;
+    height: 8rem;
+
+    @media (min-width: 1024px) {
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+
+  .emblemBottomRight {
+    bottom: 2rem;
+    right: 2rem;
+    width: 9rem;
+    height: 9rem;
+
+    @media (min-width: 1024px) {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+}
