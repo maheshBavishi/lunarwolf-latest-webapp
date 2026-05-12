@@ -1,0 +1,406 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+.card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem; /* 2 */
+  padding: 0.75rem 0.75rem 1rem; /* px-3 py-3 pb-4 */
+
+  @media (min-width: 640px) {
+    gap: 0.75rem; /* 3 */
+    padding: 0.75rem 1rem 1rem; /* px-4 py-3 pb-4 */
+  }
+
+  @media (min-width: 768px) {
+    gap: 1rem; /* 4 */
+    padding: 1rem 1.25rem 1.25rem; /* px-5 py-4 pb-5 */
+  }
+
+  @media (min-width: 1024px) {
+    gap: 1.25rem; /* 5 */
+    padding: 1.25rem 1.5rem; /* px-6 py-5 */
+  }
+
+  @media (min-width: 1280px) {
+    gap: 1.5rem; /* 6 */
+    padding: 1.5rem 2rem; /* px-8 py-6 */
+  }
+}
+
+.cardUnlocking {
+  // Applied dynamically via className
+}
+
+.cardUnlocked {
+  // Applied dynamically via className
+}
+
+.lockOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem; /* xl */
+  background-color: rgba(0, 0, 0, 0.8); // bg-black-80
+
+  @media (min-width: 640px) {
+    border-radius: 1rem; /* 2xl */
+  }
+
+  @media (min-width: 1024px) {
+    border-radius: 1.5rem; /* 3xl */
+  }
+}
+
+.lockContent {
+  display: flex;
+  width: 100%;
+  max-width: 90%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem; /* 1 */
+  text-align: center;
+
+  @media (min-width: 640px) {
+    max-width: 85%;
+    padding: 1rem; /* 4 */
+  }
+
+  @media (min-width: 768px) {
+    max-width: 80%;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 1.25rem; /* 5 */
+  }
+}
+
+.lockIcon {
+  margin-bottom: 0.5rem; /* 2 */
+  height: 1.25rem; /* 5 */
+  width: 1.25rem; /* 5 */
+
+  @media (min-width: 640px) {
+    margin-bottom: 0.75rem; /* 3 */
+    height: 1.5rem; /* 6 */
+    width: 1.5rem; /* 6 */
+  }
+
+  @media (min-width: 768px) {
+    height: 2rem; /* 8 */
+    width: 2rem; /* 8 */
+  }
+
+  @media (min-width: 1024px) {
+    height: 2.5rem; /* 10 */
+    width: 2.5rem; /* 10 */
+  }
+
+  @media (min-width: 1280px) {
+    height: 3rem; /* 12 */
+    width: 3rem; /* 12 */
+  }
+}
+
+.lockText {
+  margin-bottom: 0.25rem; /* 1 */
+  padding: 0 0.25rem; /* px-1 */
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  @media (min-width: 640px) {
+    margin-bottom: 0.5rem; /* 2 */
+    padding: 0 0.5rem; /* px-2 */
+    font-size: 0.75rem; /* xs */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 0.875rem; /* sm */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1rem; /* base */
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 1.125rem; /* lg */
+  }
+}
+
+.lockLevelText {
+  font-family: 'Crimson', serif;
+  color: var(--theme-blue-light); // Assuming CSS variable exists
+  font-size: 11px;
+  font-weight: 700;
+
+  @media (min-width: 640px) {
+    font-size: 0.875rem; /* sm */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1rem; /* base */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.125rem; /* lg */
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 1.25rem; /* xl */
+  }
+}
+
+.lockDescription {
+  font-family: 'Crimson', serif;
+  color: var(--theme-blue-light);
+  padding: 0 0.25rem; /* px-1 */
+  font-size: 9px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  @media (min-width: 640px) {
+    padding: 0 0.5rem; /* px-2 */
+    font-size: 0.75rem; /* xs */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 0.875rem; /* sm */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1rem; /* base */
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 1.125rem; /* lg */
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: 0.5rem; /* 2 */
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem; /* 2 */
+  }
+
+  @media (min-width: 768px) {
+    gap: 0.75rem; /* 3 */
+  }
+
+  @media (min-width: 1024px) {
+    gap: 1rem; /* 4 */
+  }
+}
+
+.headerLeft {
+  display: flex;
+  min-width: 0;
+  flex-shrink: 1;
+  align-items: center;
+  gap: 0.25rem; /* 1 */
+
+  @media (min-width: 640px) {
+    gap: 0.5rem; /* 2 */
+  }
+
+  @media (min-width: 768px) {
+    gap: 0.75rem; /* 3 */
+  }
+}
+
+.levelText {
+  font-family: 'Crimson', serif;
+  color: var(--theme-blue-light);
+  font-size: 0.875rem; /* sm */
+  font-weight: 700;
+  white-space: nowrap;
+
+  @media (min-width: 640px) {
+    font-size: 1rem; /* base */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem; /* lg */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.25rem; /* xl */
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 1.5rem; /* 2xl */
+  }
+}
+
+.titleText {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media (min-width: 640px) {
+    font-size: 0.75rem; /* xs */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 0.875rem; /* sm */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1rem; /* base */
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 1.125rem; /* lg */
+  }
+}
+
+.headerRight {
+  display: flex;
+  min-width: 0;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem; /* 1 */
+
+  @media (min-width: 640px) {
+    gap: 0.5rem; /* 2 */
+  }
+
+  @media (min-width: 768px) {
+    gap: 0.75rem; /* 3 */
+  }
+}
+
+.directReferralText {
+  color: var(--accent-color); // text-accent
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+
+  @media (min-width: 640px) {
+    font-size: 0.75rem; /* xs */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 0.875rem; /* sm */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1rem; /* base */
+  }
+}
+
+.yellowDot {
+  height: 0.375rem; /* 1.5 */
+  width: 0.375rem; /* 1.5 */
+  flex-shrink: 0;
+
+  @media (min-width: 640px) {
+    height: 0.5rem; /* 2 */
+    width: 0.5rem; /* 2 */
+  }
+
+  @media (min-width: 768px) {
+    height: 0.625rem; /* 2.5 */
+    width: 0.625rem; /* 2.5 */
+  }
+
+  @media (min-width: 1024px) {
+    height: 0.75rem; /* 3 */
+    width: 0.75rem; /* 3 */
+  }
+}
+
+.commissionText {
+  font-family: 'Roboto', sans-serif;
+  font-size: 9px;
+  white-space: nowrap;
+
+  @media (min-width: 640px) {
+    font-size: 0.75rem; /* xs */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 0.875rem; /* sm */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1rem; /* base */
+  }
+}
+
+.commissionPercentage {
+  font-size: 0.75rem; /* xs */
+  font-weight: 700;
+
+  @media (min-width: 640px) {
+    font-size: 0.875rem; /* sm */
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1rem; /* base */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.125rem; /* lg */
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 1.25rem; /* xl */
+  }
+}
+
+.wolfLogosWrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+}
+
+.wolfLogosGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: start;
+  justify-items: center;
+  gap: 0.125rem; /* 0.5 */
+
+  @media (min-width: 640px) {
+    gap: 0.25rem; /* 1 */
+  }
+
+  @media (min-width: 768px) {
+    gap: 0.375rem; /* 1.5 */
+  }
+
+  @media (min-width: 1024px) {
+    gap: 0.5rem; /* 2 */
+  }
+
+  @media (min-width: 1280px) {
+    gap: 0.75rem; /* 3 */
+  }
+}
+
+.wolfLogoCell {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

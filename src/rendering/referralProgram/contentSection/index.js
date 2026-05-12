@@ -14,7 +14,7 @@ export default function ContentSection() {
 
     return (
         <div className={styles.contentSection}>
-            <div className='container-xl'>
+            <div className=''>
                 <div className={styles.tabCenter}>
                     <div className={styles.tabGroup}>
                         {tabs.map((tab) => (

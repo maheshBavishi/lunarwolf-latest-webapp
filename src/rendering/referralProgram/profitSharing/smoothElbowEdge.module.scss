@@ -1,0 +1,45 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+.baseEdge {
+  stroke: #53B1D9;
+  stroke-width: 2;
+}
+
+.edgeLabelContainer {
+  font-weight: normal;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #53B1D9;
+  color: #000;
+  
+  // Default mobile styles
+  font-size: 9px;
+  padding: 2px 5px;
+  border-radius: 3px;
+
+  @media (min-width: 640px) {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+}
+
+.edgeLabelVertical {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: none;
+  transform-origin: center;
+}
+
+// React Flow specific utility classes (keep these)
+:global {
+  .nodrag {
+    // React Flow class - prevents dragging
+  }
+  
+  .nopan {
+    // React Flow class - prevents panning
+  }
+}
