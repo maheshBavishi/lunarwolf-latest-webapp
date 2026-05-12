@@ -1,0 +1,118 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.aboutusBanner {
+    height: 100dvh;
+    background-color: #030b17;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        filter: blur(139.5px);
+        background: radial-gradient(50% 50%, #19424b 0%, #0f203b 100%);
+        border-radius: 1111.62px;
+        width: 30%;
+        height: 300px;
+        position: absolute;
+        top: 0%;
+        right: 0;
+    }
+
+    &::after {
+        content: "";
+        filter: blur(139.5px);
+        background: radial-gradient(50% 50%, #19424b 0%, #0f203b 100%);
+        border-radius: 1111.62px;
+        width: 30%;
+        height: 300px;
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+    }
+
+    .moongImage {
+        position: absolute;
+        top: -5%;
+        left: -5%;
+
+        img {
+            display: block;
+            max-width: 400px;
+        }
+    }
+
+    :global(.container) {
+        position: relative;
+        z-index: 1;
+    }
+
+    h1 {
+        font-size: 54px;
+        color: #fff;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .topAlignment {
+        padding: 160px 0 0 0;
+
+        p {
+            color: #fff;
+            opacity: .80;
+            font-size: 18px;
+            font-weight: 400;
+            margin: 20px 0;
+            text-align: center;
+        }
+    }
+
+    .buttonDesign {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0 0 0;
+
+        button {
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            background: rgb(0, 0, 0);
+            border-radius: 100px;
+            align-items: center;
+            gap: 4px;
+            padding: 16px 32px;
+            text-transform: uppercase;
+            font-size: 16px;
+            border: none;
+            font-weight: 500;
+            display: flex;
+            box-shadow: rgba(255, 255, 255, 0.26) 0px 2px 2px inset, rgba(107, 177, 224, 0.8) 0px 6px 14px inset;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                svg {
+                    transform: rotate(45deg);
+                }
+            }
+
+            svg {
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+
+    .wolfAlignment {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: -35vh;
+        display: flex;
+        justify-content: center;
+
+        img {
+            display: block;
+            max-width: 1500px;
+        }
+    }
+}

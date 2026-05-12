@@ -1,0 +1,41 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.ourMission {
+    padding: 0 0 40px 0;
+
+    .textgrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .tabHeadings {
+            h2 {
+                font-size: 36px;
+                color: #fff;
+                font-weight: 400;
+                cursor: pointer;
+                user-select: none;
+                margin: 0 0 8px 0;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .tabContent {
+            display: flex;
+            align-items: flex-start;
+
+            p {
+                font-size: 18px;
+                color: #fff;
+                max-width: 462px;
+                margin-left: auto;
+                line-height: 28px;
+                min-height: 140px;
+            }
+        }
+    }
+}

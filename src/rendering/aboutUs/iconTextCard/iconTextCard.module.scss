@@ -1,0 +1,35 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.iconTextCard {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        .items {
+            padding: 24px;
+
+            &:hover {
+                p {
+                    opacity: 1;
+                }
+            }
+
+            svg {
+                path {
+                    fill: #3FA9E9;
+                }
+            }
+
+            p {
+                margin: 16px 0 0 0;
+                font-size: 18px;
+                transition: .3s ease-in-out;
+                line-height: 28px;
+                color: #fff;
+                opacity: .50;
+            }
+        }
+    }
+}

@@ -26,7 +26,7 @@ export default function Herobanner() {
         />
       </div>
       <div className={styles.content}>
-        <motion.div 
+        <motion.div
           className={styles.boxwidth}
           initial="hidden"
           animate="visible"
@@ -38,35 +38,35 @@ export default function Herobanner() {
             }
           }}
         >
-          <motion.p 
-            variants={{ 
-              hidden: { opacity: 0, y: 20 }, 
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } 
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
             }}
           >
             BACKTESTED SINCE 2015
           </motion.p>
-          <motion.div 
+          <motion.div
             className={styles.line}
             style={{ originX: 0 }}
-            variants={{ 
-              hidden: { scaleX: 0, opacity: 0 }, 
-              visible: { scaleX: 1, opacity: 1, transition: { duration: 0.8, ease: "easeInOut" } } 
+            variants={{
+              hidden: { scaleX: 0, opacity: 0 },
+              visible: { scaleX: 1, opacity: 1, transition: { duration: 0.8, ease: "easeInOut" } }
             }}
           ></motion.div>
-          <motion.h2 
-            variants={{ 
-              hidden: { opacity: 0, y: 20 }, 
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } 
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
             }}
           >
             LUNAR WOLF A <br /> <span> FOREX </span> EA <br />
             WITH POWERFUL INSTINCTS
           </motion.h2>
-          <motion.button 
-            variants={{ 
-              hidden: { opacity: 0, y: 20 }, 
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } 
+          <motion.button
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
             }}
           >
             View Live Performance

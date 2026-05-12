@@ -1,0 +1,464 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.marketFlow {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        filter: blur(139.5px);
+        background: radial-gradient(50% 50%, #19424b 0%, #0f203b 100%);
+        border-radius: 1111.62px;
+        width: 30%;
+        height: 300px;
+        position: absolute;
+        top: 0%;
+        right: 0;
+    }
+
+    &::after {
+        content: "";
+        filter: blur(139.5px);
+        background: radial-gradient(50% 50%, #19424b 0%, #0f203b 100%);
+        border-radius: 1111.62px;
+        width: 30%;
+        height: 300px;
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+    }
+
+    :global(.container-lg) {
+        position: relative;
+        z-index: 1;
+    }
+
+    .title {
+        padding: 0 0 50px 0;
+
+        h2 {
+            font-size: 32px;
+            color: #fff;
+            max-width: 950px;
+            margin: 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+
+            @media (max-width: 767px) {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+/* ═══════════════════════════════════════
+   Timeline Container
+   ═══════════════════════════════════════ */
+.timelineContainer {
+    position: relative;
+    width: 100%;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+        padding: 0 60px;
+    }
+}
+
+.timelineTrack {
+    position: relative;
+    width: 100%;
+    max-width: 1260px;
+}
+
+/* ═══════════════════════════════════════
+   Renderer & Rows
+   ═══════════════════════════════════════ */
+.renderer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timelineRow {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.rowInner {
+    position: relative;
+    width: 100%;
+    max-width: 964px;
+    margin: 0 auto;
+    padding: 24px 0;
+
+    @media (min-width: 768px) {
+        padding: 40px 0;
+    }
+
+    &.rowOverlap {
+        @media (min-width: 768px) {
+            margin-top: -2px;
+        }
+    }
+}
+
+/* ═══════════════════════════════════════
+   Mobile Line & Dot
+   ═══════════════════════════════════════ */
+.mobileLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background-color: #1e2a3b;
+    z-index: 0;
+
+    &.active {
+        background-color: #1da9e8;
+    }
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobileDot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #1e2a3b;
+    left: -5px;
+    z-index: 20;
+
+    &.active {
+        background-color: #1da9e8;
+        box-shadow: 0 0 12px 3px #1da9e8;
+    }
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+/* ═══════════════════════════════════════
+   Desktop Concentric Lines
+   ═══════════════════════════════════════ */
+.desktopLines {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+
+/* Quarter circles — shared base */
+.quarterTR,
+.quarterBR,
+.quarterTL,
+.quarterBL {
+    position: absolute;
+    border-style: solid;
+    border-color: #1e2a3b;
+
+    &.active {
+        border-color: #1da9e8;
+    }
+}
+
+/* Top-Right quarter arc */
+.quarterTR {
+    top: 0;
+    right: -40px;
+    width: calc(50% + 40px);
+    height: calc(50% + 2px);
+    border-width: 2px 2px 0 0;
+    border-radius: 0 9999px 0 0;
+}
+
+/* Bottom-Right quarter arc */
+.quarterBR {
+    bottom: 0;
+    right: -40px;
+    width: calc(50% + 40px);
+    height: calc(50% + 2px);
+    border-width: 0 2px 2px 0;
+    border-radius: 0 0 9999px 0;
+}
+
+/* Top-Left quarter arc */
+.quarterTL {
+    top: 0;
+    left: -40px;
+    width: calc(50% + 40px);
+    height: calc(50% + 2px);
+    border-width: 2px 0 0 2px;
+    border-radius: 9999px 0 0 0;
+}
+
+/* Bottom-Left quarter arc */
+.quarterBL {
+    bottom: 0;
+    left: -40px;
+    width: calc(50% + 40px);
+    height: calc(50% + 2px);
+    border-width: 0 0 2px 2px;
+    border-radius: 0 0 0 9999px;
+}
+
+/* Fade lines (first top-right & last bottom-left) */
+.fadeLineTop {
+    position: absolute;
+    width: 2px;
+    height: 60px;
+
+    &.fadeRight {
+        bottom: 50%;
+        right: -40px;
+        background: linear-gradient(to top, #1e2a3b, transparent);
+
+        &.active {
+            background: linear-gradient(to top, #1da9e8, transparent);
+        }
+    }
+}
+
+.fadeLineBottom {
+    position: absolute;
+    width: 2px;
+    height: 80px;
+
+    &.fadeLeft {
+        top: 50%;
+        left: -40px;
+        background: linear-gradient(to bottom, #1e2a3b, transparent);
+
+        &.active {
+            background: linear-gradient(to bottom, #1da9e8, transparent);
+        }
+    }
+}
+
+/* ═══════════════════════════════════════
+   Desktop Glowing Dot
+   ═══════════════════════════════════════ */
+.desktopDot {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        z-index: 20;
+        background-color: #1e2a3b;
+
+        &.active {
+            background-color: #1da9e8;
+            box-shadow: 0 0 15px 4px rgba(29, 169, 232, 0.8);
+        }
+    }
+
+    &.dotRight {
+        right: -46px;
+    }
+
+    &.dotLeft {
+        left: -46px;
+    }
+}
+
+/* ═══════════════════════════════════════
+   Pill Card
+   ═══════════════════════════════════════ */
+.pill {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    margin-left: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #0d141e, #04080e);
+    border: 1px solid #162130;
+    padding: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+
+    @media (min-width: 768px) {
+        margin-left: 0;
+        border-radius: 9999px;
+        flex-direction: row;
+        padding: 12px;
+    }
+
+    &.pillRight {
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    &.pillLeft {
+        @media (min-width: 768px) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    /* Active overlay: visible on mobile, hidden on desktop */
+    &.pillActive {
+        @media (min-width: 768px) {
+            opacity: 0;
+        }
+    }
+}
+
+/* ── Text Section ── */
+.pillText {
+    flex: 1;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+        padding: 32px 56px;
+    }
+
+    &.textRight {
+        @media (min-width: 768px) {
+            padding-right: 24px;
+        }
+    }
+
+    &.textLeft {
+        @media (min-width: 768px) {
+            padding-left: 24px;
+        }
+    }
+}
+
+.pillTitle {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
+}
+
+.descList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.descItem {
+    color: #C1C1C1;
+    font-size: 14px;
+    line-height: 1.625;
+    margin: 0;
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+/* ── Year Circle ── */
+.pillCircle {
+    width: 140px;
+    min-width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        width: 230px;
+        min-width: 230px;
+        height: 230px;
+    }
+}
+
+.circleOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: #0d2a45;
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+}
+
+.yearText {
+    position: relative;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: 900;
+    color: #26a8e0;
+    letter-spacing: -0.05em;
+
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+}
+
+.labelText {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-size: 9px;
+    color: #fff;
+    margin-top: 8px;
+    font-weight: 500;
+    max-width: 185px;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    text-align: center;
+    width: 85%;
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
+}
+
+/* ═══════════════════════════════════════
+   Active Overlay (scroll-triggered)
+   ═══════════════════════════════════════ */
+.activeOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 20;
+    pointer-events: none;
+}

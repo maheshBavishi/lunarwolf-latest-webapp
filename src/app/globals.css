@@ -42,3 +42,15 @@ p {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.container-lg {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-xs {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

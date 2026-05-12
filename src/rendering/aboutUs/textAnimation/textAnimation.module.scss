@@ -1,0 +1,23 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.textAnimation {
+    background-color: #030b17;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0;
+
+
+    p {
+        color: rgba(255, 255, 255, 0.55);
+        opacity: 0.3;
+        font-size: 24px;
+        margin: 0 0 40px 0;
+        line-height: 1.6;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+    }
+}
