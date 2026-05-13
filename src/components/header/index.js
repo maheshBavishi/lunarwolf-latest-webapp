@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 import styles from "./header.module.scss";
 import DownloadIcon from "@/icons/downloadIcon";
 
@@ -13,30 +14,42 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
+  
+  // Define pages that have the Loader component and need delayed header entrance
+  const loaderPages = ["/", "/about-us", "/blog", "/referral-program"];
+  const isLoaderPage = loaderPages.includes(pathname);
+  
+  const [isVisible, setIsVisible] = useState(!isLoaderPage);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Show header after loader finishes (match loader timeout)
-    const showTimer = setTimeout(() => {
+    // Only show delay on pages that use the Loader to match its timeout
+    if (isLoaderPage) {
+      const showTimer = setTimeout(() => {
+        setIsVisible(true);
+      }, 3600);
+      return () => clearTimeout(showTimer);
+    } else {
       setIsVisible(true);
-    }, 3600);
+    }
+  }, [isLoaderPage, pathname]);
 
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
-      clearTimeout(showTimer);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Stagger children animation
+  // Stagger children animation - only for pages with Loader entrance
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: isLoaderPage ? 0 : 1 },
     visible: {
       opacity: 1,
       transition: {
@@ -47,7 +60,7 @@ export default function Header() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: -20 },
+    hidden: { opacity: isLoaderPage ? 0 : 1, y: isLoaderPage ? -20 : 0 },
     visible: {
       opacity: 1,
       y: 0,
@@ -63,7 +76,7 @@ export default function Header() {
       {isVisible && (
         <motion.header
           className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
-          initial={{ y: -100, opacity: 0 }}
+          initial={isLoaderPage ? { y: -100, opacity: 0 } : { y: 0, opacity: 1 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
             duration: 0.8,
@@ -72,7 +85,7 @@ export default function Header() {
         >
           <div className={styles.headerDesign}>
             <div className={styles.headerInner}>
-              <motion.div className={styles.logoWrap} variants={containerVariants} initial="hidden" animate="visible">
+              <motion.div className={styles.logoWrap} variants={containerVariants} initial={isLoaderPage ? "hidden" : "visible"} animate="visible">
                 <motion.a href="/" className={styles.logo} variants={itemVariants}>
                   <img src={LogoIcon} alt="Lunar Wolf" className={styles.logoIcon} />
                   <span className={styles.logoText}>LUNAR WOLF</span>
@@ -80,7 +93,7 @@ export default function Header() {
               </motion.div>
 
               <div className={styles.alignment}>
-                <motion.nav className={styles.nav} variants={containerVariants} initial="hidden" animate="visible">
+                <motion.nav className={styles.nav} variants={containerVariants} initial={isLoaderPage ? "hidden" : "visible"} animate="visible">
                   {navLinks.map((link) => (
                     <motion.a
                       key={link.label}
@@ -98,7 +111,7 @@ export default function Header() {
                 </motion.nav>
 
                 {/* CTA Buttons */}
-                <motion.div className={styles.cta} variants={containerVariants} initial="hidden" animate="visible">
+                <motion.div className={styles.cta} variants={containerVariants} initial={isLoaderPage ? "hidden" : "visible"} animate="visible">
                   <motion.a
                     href="https://app.lunarwolf.ai"
                     target="_blank"
@@ -125,7 +138,7 @@ export default function Header() {
                   className={`${styles.hamburger} ${isMobileMenuOpen ? styles.active : ""}`}
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   variants={itemVariants}
-                  initial="hidden"
+                  initial={isLoaderPage ? "hidden" : "visible"}
                   animate="visible"
                   aria-label="Toggle menu"
                 >
@@ -193,3 +206,5 @@ export default function Header() {
     </AnimatePresence>
   );
 }
+
+
