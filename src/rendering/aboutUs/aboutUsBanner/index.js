@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './aboutUsBanner.module.scss';
 import RightIcon from '@/icons/rightIcon';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const MoonImage = '/assets/images/moon.webp';
 const ThreeWolfImage = '/assets/images/three-wolf.webp';
@@ -89,13 +90,15 @@ export default function AboutUsBanner() {
                         Hunt Profits
                     </motion.p>
                     <motion.div className={styles.buttonDesign} variants={itemVariants}>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            Hunt Profits
-                            <RightIcon />
-                        </motion.button>
+                        <Link href="https://app.lunarwolf.ai/signup" target="_blank" rel="noopener noreferrer">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                Hunt Profits
+                                <RightIcon />
+                            </motion.button>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </div>

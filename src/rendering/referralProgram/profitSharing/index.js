@@ -24,8 +24,8 @@ import LeverCard from "./LeverCard";
 // Custom hook to get live screen dimensions
 const useScreenSize = () => {
   const [screenSize, setScreenSize] = useState({
-    width:  window.innerWidth ?? 1280,
-    height:  window.innerHeight ?? 800,
+    width: typeof window !== "undefined" ? window.innerWidth : 1280,
+    height: typeof window !== "undefined" ? window.innerHeight : 800,
   });
 
   useEffect(() => {
