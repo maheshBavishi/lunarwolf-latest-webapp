@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./contentSection.module.scss";
 import ProfitSharing from "../profitSharing";
 import BrokerageSharing from "../brokerageSharing";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 
-export default function ContentSection() {
+export default function ContentSection({ model }) {
   const [activeTab, setActiveTab] = useState("profit");
-  const searchParams = useSearchParams();
-  const model = searchParams.get("model");
+  // const searchParams = useSearchParams();
+  // const model = searchParams.get("model");
 
   const tabs = [
     { id: "profit", label: "Profit Sharing" },
