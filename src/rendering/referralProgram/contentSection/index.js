@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './contentSection.module.scss';
 import ProfitSharing from '../profitSharing';
+import BrokerageSharing from '../brokerageSharing';
 
 export default function ContentSection() {
     const [activeTab, setActiveTab] = useState('profit');
@@ -55,10 +56,7 @@ export default function ContentSection() {
                                 <ProfitSharing />
                             )}
                             {activeTab === 'brokerage' && (
-                                <div className={styles.tabContent}>
-                                    <h2>Brokerage Sharing</h2>
-                                    <p>Details about brokerage sharing model...</p>
-                                </div>
+                                <BrokerageSharing />
                             )}
                         </motion.div>
                     </AnimatePresence>
