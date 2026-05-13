@@ -30,6 +30,19 @@ export const GetAllBlogs = gql`
             }
           }
         }
+        Author {
+          id
+          name
+          authorProfile {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          biography
+          autherPosition
+        }
       }
     }
     meta {

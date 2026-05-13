@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import styles from "./blogBanner.module.scss";
+import { getImageUrl, formatDate, getAuthorImageUrl } from "@/utils/blog";
 
-const BlogImage = "/assets/images/blog.png";
-const AuthorImage = "/assets/images/profile.png";
+const MotionLink = motion(Link);
 
-export default function BlogBanner() {
+export default function BlogBanner({ bannerBlogData }) {
+  if (!bannerBlogData) return <></>
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -76,31 +78,31 @@ export default function BlogBanner() {
               transition: { duration: 0.4, ease: "easeOut" },
             }}
           >
-            <div className={styles.image}>
-              <motion.img src={BlogImage} alt="BlogImage" whileHover={{ scale: 1.08 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} />
-            </div>
+            <Link href={`/blog/${bannerBlogData?.attributes?.slug}`} className={styles.image}>
+              <motion.img src={getImageUrl(bannerBlogData)} alt="BlogImage" whileHover={{ scale: 1.08 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} />
+            </Link>
             <div className={styles.Content}>
               <div className={styles.topContent}>
                 <motion.span variants={itemVariants}>Featured Article</motion.span>
-                <motion.h2 variants={itemVariants}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</motion.h2>
+                <motion.h2 variants={itemVariants}>{bannerBlogData.attributes.title}</motion.h2>
                 <motion.p variants={itemVariants}>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-                  ever since the 1500s.
+                  {bannerBlogData?.attributes?.shortDescription}
                 </motion.p>
-                <motion.a
+                <MotionLink
+                  href={`/blog/${bannerBlogData?.attributes?.slug}`}
                   variants={itemVariants}
                   whileHover={{ x: 10 }}
                   whileTap={{ scale: 0.95 }}
                   style={{ display: "inline-block", cursor: "pointer" }}
                 >
                   Read More...
-                </motion.a>
+                </MotionLink>
               </div>
               <motion.div className={styles.bottomContent} variants={itemVariants}>
-                <img src={AuthorImage} alt="AuthorImage" />
+                <img src={getAuthorImageUrl(bannerBlogData?.attributes?.Author)} alt="AuthorImage" />
                 <div>
-                  <h3>By Clinton Oduor</h3>
-                  <p>March 23, 2025 • 4 min read</p>
+                  <h3>By {bannerBlogData?.attributes?.Author?.name}</h3>
+                  <p>{formatDate(bannerBlogData?.attributes?.publishedAt)} • 4 min read</p>
                 </div>
               </motion.div>
             </div>

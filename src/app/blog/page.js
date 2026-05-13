@@ -10,7 +10,7 @@ export default async function page({ searchParams }) {
   const variables = {
     pagination: {
       page: page,
-      pageSize: 1,
+      pageSize: 7,
     },
     filters: {
       blog_categories: {
@@ -22,8 +22,15 @@ export default async function page({ searchParams }) {
     sort: ["createdAt:desc"],
   };
 
-  const Data = await graphcms?.request(GetAllBlogs, variables);
-  const CategoriesData = await graphcms?.request(GetBlogsCategory);
+  let Data = null;
+  let CategoriesData = null;
+
+  try {
+    Data = await graphcms?.request(GetAllBlogs, variables);
+    CategoriesData = await graphcms?.request(GetBlogsCategory);
+  } catch (error) {
+    console.error("Failed to fetch blog data:", error);
+  }
   return (
     <div>
       <Blog

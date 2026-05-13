@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './blogDetails.module.scss';
 import BlogInformation from './blogInformation';
-const Banner = '/assets/images/details-banner.png';
-export default function BlogDetails() {
+import { getImageUrl } from '@/utils/blog';
+
+export default function BlogDetails({ blogData, sidebarBlogs }) {
     return (
         <>
             <div className={styles.detailsLayer}>
@@ -10,20 +11,19 @@ export default function BlogDetails() {
                     <div className={styles.blogDetails}>
                         <div className={styles.textgrid}>
                             <h2>
-                                Lorem Ipsum is simply dummy text.
+                                {blogData?.attributes?.title}
                             </h2>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                the industry's standard dummy text ever since the 1500s
+                                {blogData?.attributes?.shortDescription}
                             </p>
                         </div>
                     </div>
                     <div className={styles.banner}>
-                        <img src={Banner} alt='Banner' />
+                        <img src={getImageUrl(blogData)} alt='Banner' />
                     </div>
                 </div>
             </div>
-            <BlogInformation />
+            <BlogInformation blogData={blogData} sidebarBlogs={sidebarBlogs} />
         </>
     )
 }

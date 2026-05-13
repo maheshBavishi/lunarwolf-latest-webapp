@@ -1,29 +1,22 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import styles from "./exploreBlog.module.scss";
 import moment from "moment";
 import Pagination from "@/components/pagination";
+import { formatDate, getImageUrl } from "@/utils/blog";
+
 
 export default function ExploreBlog({ blogsData, paginationData, categoriesData, currentCategory, currentPage: initialPage }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [currentPage, setCurrentPage] = useState(initialPage || 1);
 
-  const formatDate = (dateString) => {
-    return moment(dateString).format("MMM D");
-  };
-
-  const getImageUrl = (blog) => {
-    if (blog?.attributes?.coverImage?.data?.attributes?.url) {
-      return `${process.env.NEXT_PUBLIC_CMS_IMAGE_URL}${blog.attributes.coverImage.data.attributes.url}`;
-    }
-    return "/assets/images/blog1.png";
-  };
 
   const handleCategoryClick = (categorySlug) => {
     const params = new URLSearchParams(searchParams.toString());
-    
+
     if (categorySlug === 'all' || !categorySlug) {
       params.delete('category');
       params.set('page', '1');
@@ -31,7 +24,7 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
       params.set('category', categorySlug);
       params.set('page', '1');
     }
-    
+
     router.push(`?${params.toString()}`);
   };
 
@@ -42,15 +35,15 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
           <h2>Explore Our Blog</h2>
         </div>
         <div className={styles.tabCenter}>
-          <button 
+          <button
             className={`${!currentCategory ? styles.active : ""}`}
             onClick={() => handleCategoryClick('all')}
           >
             All
           </button>
-          {categoriesData && categoriesData.length > 0 && 
+          {categoriesData && categoriesData.length > 0 &&
             categoriesData.map((category) => (
-              <button 
+              <button
                 key={category.id}
                 className={`${currentCategory === category.attributes.slug ? styles.active : ""}`}
                 onClick={() => handleCategoryClick(category.attributes.slug)}
@@ -63,7 +56,7 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
         <div className={styles.grid}>
           {blogsData && blogsData.length > 0 ? (
             blogsData.map((blog, index) => (
-              <div className={styles.items} key={index}>
+              <Link href={`/blog/${blog.attributes.slug}`} className={styles.items} key={index}>
                 <div className={styles.image}>
                   <img src={getImageUrl(blog)} alt={blog.attributes.title} />
                 </div>
@@ -71,7 +64,7 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
                   <span>{formatDate(blog.attributes.publishedAt)}</span>
                   <h3>{blog.attributes.title}</h3>
                 </div>
-              </div>
+              </Link>
             ))
           ) : (
             <div className={styles.noData}>
@@ -80,7 +73,7 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
           )}
         </div>
         {paginationData && paginationData.pageCount > 1 && (
-          <Pagination 
+          <Pagination
             currentPage={currentPage}
             totalPages={paginationData.pageCount}
             onPageChange={(page) => setCurrentPage(page)}
