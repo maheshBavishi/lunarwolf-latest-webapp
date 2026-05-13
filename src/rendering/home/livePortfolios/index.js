@@ -30,7 +30,7 @@ export default function LivePortfolios() {
     },
   ];
   return (
-    <div className={styles.livePortfolios}>
+    <div className={styles.livePortfolios} id="live-portfolios">
       <motion.div
         className="container"
         initial="hidden"
