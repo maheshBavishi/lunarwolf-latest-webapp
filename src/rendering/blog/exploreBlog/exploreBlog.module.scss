@@ -136,6 +136,12 @@
                 }
             }
 
+            &.active {
+                color: #030303;
+                background: #FFF;
+                box-shadow: 0 0 12px 0 rgba(124, 205, 255, 0.80) inset;
+            }
+
         }
     }
 }

@@ -1,0 +1,65 @@
+@use '../../scss/main.scss' as *;
+@use '../../scss/breakpoints/breakpoints.scss' as *;
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+
+    .paginationButton {
+        border-radius: 8px;
+        border: 1px solid #3B3B3B;
+        background: #030303;
+        box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.20) inset;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        color: #FFF;
+        align-items: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        cursor: pointer;
+        letter-spacing: 0.2px;
+        transition: .3s ease-in-out;
+        padding: 0;
+
+        &:hover:not(.disabled):not(.dots) {
+            color: #030303;
+            background: #FFF;
+            box-shadow: 0 0 12px 0 rgba(124, 205, 255, 0.80) inset;
+
+            svg {
+                path {
+                    stroke: #030303;
+                }
+            }
+        }
+
+        &.active {
+            color: #030303;
+            background: #FFF;
+            box-shadow: 0 0 12px 0 rgba(124, 205, 255, 0.80) inset;
+        }
+
+        &.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &.dots {
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            cursor: default;
+        }
+
+        svg {
+            display: block;
+        }
+    }
+}
