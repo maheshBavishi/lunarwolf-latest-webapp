@@ -65,6 +65,10 @@
     position: relative;
     z-index: 1;
 
+    @include respond-to("md") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .items {
       background: rgba(255, 255, 255, 0.05);
       padding: 40px 0;
@@ -90,10 +94,11 @@
           gap: 5px;
           cursor: pointer;
         }
-    }
-    a {
-      text-decoration: none;
-    }
+      }
+
+      a {
+        text-decoration: none;
+      }
 
       .image {
         height: 64px;

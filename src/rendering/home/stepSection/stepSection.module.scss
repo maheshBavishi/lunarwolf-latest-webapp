@@ -36,6 +36,9 @@
         position: relative;
         z-index: 1;
 
+        @include respond-to("md") {
+            padding-bottom: 40px;
+        }
 
         h2 {
             color: #fff;
@@ -44,6 +47,10 @@
             font-weight: 400;
             font-family: var(--font-inter-sans);
             margin: 0 0 16px;
+
+            @include respond-to("md") {
+                font-size: 28px;
+            }
         }
 
         p {
@@ -53,31 +60,56 @@
             opacity: .6;
             max-width: 1160px;
             font-weight: 300;
-        }
 
+            @include respond-to("md") {
+                font-size: 16px;
+            }
+        }
     }
 
     .allflexBox {
-        .flexBox:nth-child(2) {
-            justify-content: flex-end;
-            margin-top: -80px;
-            align-items: flex-end;
-        }
+        display: flex;
+        flex-direction: column;
 
-        .flexBox:nth-child(3) {
-            .line {
-                margin-top: 140px;
+        .flexBox {
+            &:nth-child(2) {
+                justify-content: flex-end;
+                margin-top: -80px;
+                align-items: flex-end;
+
+                @include respond-to("md") {
+                    justify-content: flex-start;
+                    margin-top: 0;
+                    align-items: stretch;
+                }
             }
-        }
 
-        .flexBox:last-child {
-            justify-content: flex-end;
-            margin-top: -80px;
-        }
+            &:nth-child(3) {
+                .line {
+                    margin-top: 140px;
 
-        .flexBox:nth-child(4) {
-            .line {
-                margin-top: 140px;
+                    @include respond-to("md") {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                justify-content: flex-end;
+                margin-top: -80px;
+
+                @include respond-to("md") {
+                    justify-content: flex-start;
+                    margin-top: 0;
+                }
+
+                .line {
+                    margin-top: 140px;
+
+                    @include respond-to("md") {
+                        margin-top: 0;
+                    }
+                }
             }
         }
     }
@@ -88,22 +120,70 @@
         z-index: 1;
         align-items: center;
 
+        @include respond-to("md") {
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .line {
+            @include respond-to("md") {
+                display: none;
+            }
+
+            svg {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .mobileLine {
+            display: none;
+
+            @include respond-to("md") {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+
         .fillbox {
             box-shadow: rgba(51, 172, 224, 0) 0px 0px 0px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 20px 16px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
             max-width: 516px;
-            width: 516px;
-            min-width: 516px;
+            width: 100%;
+            min-width: auto;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.08);
+                border-color: rgba(0, 179, 255, 0.3);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            @include respond-to("md") {
+                max-width: 100%;
+                padding: 20px;
+            }
 
             .colgrid {
                 display: grid;
                 grid-template-columns: 50px 1fr;
                 gap: 30px;
 
+                @include respond-to("sm") {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+
                 .contentAlignment {
-                    padding: 54px 0;
+                    padding: 0;
 
                     ul {
                         margin: 0;
@@ -118,6 +198,10 @@
                             font-weight: 300;
                             line-height: 140%;
 
+                            @include respond-to("md") {
+                                font-size: 16px;
+                            }
+
                             &:last-child {
                                 padding: 0;
                             }
@@ -127,27 +211,41 @@
                     .icontext {
                         display: flex;
                         align-items: center;
-                        padding: 0 0 40px 0;
+                        padding: 0 0 30px 0;
                         gap: 16px;
+
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
 
                         h3 {
                             color: #FFF;
                             font-size: 24px;
                             font-weight: 500;
                             font-family: var(--font-inter-sans);
+
+                            @include respond-to("md") {
+                                font-size: 20px;
+                            }
                         }
-
-
                     }
                 }
 
                 .stepbox {
-                    border-radius: 10px;
-                    background: rgba(255, 255, 255, 0.10);
-                    box-shadow: 0 20px 20.196px 0 rgba(51, 172, 224, 0.40) inset, 0 1px 2.222px 0 #FFF inset, 0 8px 11.31px 0 rgba(255, 255, 255, 0.10) inset;
+                    border-radius: 12px;
+                    background: rgba(255, 255, 255, 0.05);
+                    box-shadow: 0 20px 20.196px 0 rgba(51, 172, 224, 0.20) inset, 0 1px 2.222px 0 #FFF inset, 0 8px 11.31px 0 rgba(255, 255, 255, 0.05) inset;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    min-height: 120px;
+
+                    @include respond-to("sm") {
+                        min-height: auto;
+                        padding: 10px;
+                        width: fit-content;
+                    }
 
                     span {
                         display: block;
@@ -164,6 +262,9 @@
                         position: relative;
                         transform: rotate(270deg);
 
+                        @include respond-to("sm") {
+                            transform: rotate(0);
+                        }
                     }
                 }
             }

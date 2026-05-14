@@ -18,13 +18,7 @@ export default function Herobanner() {
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
         />
       </div>
-      <div className={styles.wolfImage} >
-        <img
-          src={WolfImage}
-          alt="WolfImage"
 
-        />
-      </div>
       <div className={styles.content}>
         <motion.div
           className={styles.boxwidth}
@@ -79,6 +73,13 @@ export default function Herobanner() {
             <RightIcon />
           </motion.button>
         </motion.div>
+      </div>
+      <div className={styles.wolfImage} >
+        <img
+          src={WolfImage}
+          alt="WolfImage"
+
+        />
       </div>
     </div>
   )

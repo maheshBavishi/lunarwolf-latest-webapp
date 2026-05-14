@@ -24,6 +24,11 @@
         gap: 50px;
         position: relative;
 
+        @include respond-to("md") {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
         &::before {
             position: absolute;
             left: 50%;
@@ -44,6 +49,10 @@
             align-items: center;
             position: relative;
             width: 100%;
+
+            @include respond-to("md") {
+                justify-content: center;
+            }
         }
 
         .items {

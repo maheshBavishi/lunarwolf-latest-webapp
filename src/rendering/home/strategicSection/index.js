@@ -8,7 +8,7 @@ const BrokerImage = '/assets/images/broker.png';
 export default function StrategicSection() {
     return (
         <div className={styles.strategicSection}>
-            <motion.div 
+            <motion.div
                 className='container'
                 initial="hidden"
                 whileInView="visible"
@@ -17,7 +17,7 @@ export default function StrategicSection() {
                     visible: { transition: { staggerChildren: 0.2 } }
                 }}
             >
-                <motion.div 
+                <motion.div
                     className={styles.title}
                     variants={{
                         hidden: { opacity: 0, y: -20 },
@@ -29,7 +29,7 @@ export default function StrategicSection() {
                     </h2>
                 </motion.div>
                 <div className={styles.grid}>
-                    <motion.div 
+                    <motion.div
                         className={styles.items}
                         variants={{
                             hidden: { opacity: 0, x: -50 },
@@ -55,7 +55,7 @@ export default function StrategicSection() {
                             </p>
                         </div>
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                         className={styles.centerAlignment}
                         variants={{
                             hidden: { opacity: 0, scale: 0.8 },
@@ -119,7 +119,7 @@ export default function StrategicSection() {
                             </defs>
                         </svg>
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                         className={styles.items}
                         variants={{
                             hidden: { opacity: 0, x: 50 },

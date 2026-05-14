@@ -14,9 +14,19 @@
     align-items: center;
     justify-content: center;
 
+    @include respond-to("md") {
+        padding: 60px 0 60px 0;
+        display: block;
+        height: auto;
+    }
+
     .content {
         width: 100%;
         padding: 0 80px;
+
+        @include respond-to("md") {
+            padding: 0 20px;
+        }
 
         .boxwidth {
             max-width: 780px;
@@ -34,6 +44,10 @@
             color: #fff;
             font-weight: 300;
             margin: 20px 0 50px 0;
+
+            @include respond-to("md") {
+                font-size: 42px;
+            }
 
             span {
                 font-weight: 600;
@@ -73,10 +87,18 @@
         left: 8%;
         top: -17%;
 
+        @include respond-to("md") {
+            left: 4%;
+        }
+
         img {
             max-width: 400px;
             opacity: .5;
             display: block;
+
+            @include respond-to("md") {
+                max-width: 250px;
+            }
         }
     }
 
@@ -84,6 +106,12 @@
         position: absolute;
         right: 0;
         bottom: 0;
+
+        @include respond-to("md") {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
 
         img {
             display: block;

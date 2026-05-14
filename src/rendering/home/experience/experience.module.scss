@@ -12,6 +12,10 @@
     box-sizing: border-box;
     margin-left: calc(-50vw + 50%);
 
+    @include respond-to("md") {
+        margin-left: 0px;
+    }
+
     &::before {
         position: absolute;
         top: 0;
@@ -44,6 +48,10 @@
         position: relative;
         z-index: 1;
 
+        @include respond-to("md") {
+            grid-template-columns: 1fr;
+        }
+
         .iconGrid {
             display: grid;
             grid-template-columns: 52px 1fr;
@@ -73,6 +81,9 @@
                 padding: 100px 0 0 64px;
                 border-right: 1px solid rgb(255, 255, 255, .1);
 
+                @include respond-to("md") {
+                    padding: 60px 20px 0 20px;
+                }
 
                 .content {
                     span {
@@ -91,6 +102,10 @@
                         max-width: 700px;
                         color: #fff;
                         text-transform: uppercase;
+
+                        @include respond-to("md") {
+                            font-size: 42px;
+                        }
                     }
 
                     .round {
