@@ -108,8 +108,8 @@ export default function ChooseBroker() {
                 <div className={styles.image}>
                   <img src={broker.icon} alt={broker.alt} />
                 </div>
-                  <Link href={broker.link} target="_blank">
-                <div className={styles.details}>
+                <Link href={broker.link} target="_blank">
+                  <div className={styles.details}>
                     <button>
                       {broker.buttonText}
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -117,8 +117,8 @@ export default function ChooseBroker() {
                         <path d="M4.66666 11.3332L11.3333 4.6665" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </button>
-                </div>
-                  </Link>
+                  </div>
+                </Link>
               </motion.div>
             );
           })}

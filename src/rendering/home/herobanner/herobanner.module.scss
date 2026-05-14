@@ -92,6 +92,18 @@
             font-weight: 500;
             color: #fff;
             box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.26) inset, 0 6px 14px 0 rgba(107, 177, 224, 0.80) inset;
+
+            transition: .3s ease-in-out;
+
+            &:hover {
+                svg {
+                    transform: rotate(45deg);
+                }
+            }
+
+            svg {
+                transition: .3s ease-in-out;
+            }
         }
 
         p {
