@@ -4,6 +4,10 @@
 .refundWrapper {
     padding: 160px 0 100px 0;
 
+    @include respond-to("md") {
+        padding: 160px 0 60px 0;
+    }
+
     .container {
         margin-left: auto;
         margin-right: auto;
