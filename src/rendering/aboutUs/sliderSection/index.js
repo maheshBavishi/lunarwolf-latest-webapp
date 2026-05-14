@@ -53,8 +53,8 @@ const SliderSection = forwardRef(({ onProgressChange }, ref) => {
     // Config
     const desktopCardWidth = 440;
     const desktopGap = 140;
-    const mobileCardWidth = 240;
-    const mobileGap = 50;
+    const mobileCardWidth = 220;
+    const mobileGap = 30;
 
     useEffect(() => {
         const handleResize = () => {

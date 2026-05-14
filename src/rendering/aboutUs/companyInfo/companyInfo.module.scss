@@ -5,6 +5,10 @@
     padding: 120px 0;
     position: relative;
 
+    @include respond-to("sm") {
+        padding: 60px 0;
+    }
+
     &::before {
         content: "";
         filter: blur(139.5px);
@@ -15,6 +19,10 @@
         position: absolute;
         top: 0%;
         right: 0;
+
+        @include respond-to("sm") {
+            filter: blur(100px)
+        }
     }
 
     &::after {
@@ -27,6 +35,10 @@
         position: absolute;
         bottom: 0%;
         left: 0;
+
+        @include respond-to("sm") {
+            filter: blur(100px)
+        }
     }
 
     :global(.container-lg) {
@@ -37,6 +49,10 @@
     .title {
         padding: 0 0 60px 0;
 
+        @include respond-to("sm") {
+            padding: 0 0 40px 0;
+        }
+
         h2 {
             font-size: 36px;
             color: #fff;
@@ -45,6 +61,10 @@
             text-align: center;
             text-transform: uppercase;
             font-weight: 500;
+
+            @include respond-to("sm") {
+                font-size: 32px;
+            }
         }
 
         p {
@@ -55,13 +75,17 @@
             margin: 0 auto;
             text-align: center;
             font-weight: 400;
+
+            @include respond-to("sm") {
+                font-size: 16px;
+            }
         }
     }
 
     /* ───────── Card Grid ───────── */
     .cardGrid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 20px;
 
         @media (min-width: 1024px) {
@@ -72,7 +96,7 @@
     /* ───────── Card Wrapper ───────── */
     .cardWrapper {
         position: relative;
-        height: 280px;
+        height: 410px;
         perspective: 1000px;
         cursor: pointer;
 

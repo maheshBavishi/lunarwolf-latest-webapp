@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef } from 'react'
 import styles from './marketFlow.module.scss';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -145,11 +145,6 @@ const TimelineRenderer = ({ active, isMobile = false }) => {
 
 export default function MarketFlow() {
     const trackRef = useRef(null);
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        setIsMobile(window.innerWidth < 768);
-    }, []);
 
     const { scrollYProgress } = useScroll({
         target: trackRef,
@@ -172,17 +167,15 @@ export default function MarketFlow() {
             <div className={styles.timelineContainer} ref={trackRef}>
                 <div className={styles.timelineTrack}>
                     {/* Base inactive layer */}
-                    <TimelineRenderer active={isMobile} isMobile={isMobile} />
+                    <TimelineRenderer active={false} />
 
-                    {/* Masked active blue layer — desktop only */}
-                    {!isMobile && (
-                        <motion.div
-                            className={styles.activeOverlay}
-                            style={{ height: animatedHeight }}
-                        >
-                            <TimelineRenderer active={true} isMobile={false} />
-                        </motion.div>
-                    )}
+                    {/* Masked active blue layer — tracing animation */}
+                    <motion.div
+                        className={styles.activeOverlay}
+                        style={{ height: animatedHeight }}
+                    >
+                        <TimelineRenderer active={true} />
+                    </motion.div>
                 </div>
             </div>
         </div>
