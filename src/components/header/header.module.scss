@@ -15,14 +15,16 @@
     }
 
     &.scrolled {
-        background: rgba(10, 15, 25, 0.85);
-        border-color: rgba(60, 120, 200, 0.25);
+
+        .headerDesign {
+            background: rgba(10, 15, 25, 0.85);
+            border-color: rgba(60, 120, 200, 0.25);
+        }
     }
 
     @include respond-to('sm') {
         padding: 0 16px;
-        margin: 8px 10px 0;
-        width: calc(100% - 20px);
+        width: 100%;
         border-radius: 12px;
     }
 

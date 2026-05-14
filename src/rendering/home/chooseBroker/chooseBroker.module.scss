@@ -5,6 +5,10 @@
   position: relative;
   padding: 0 0 100px 0;
 
+  @include respond-to("sm") {
+    padding: 0 0 60px 0;
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -16,6 +20,13 @@
     background: radial-gradient(50% 50% at 50% 50%, #19424b 0%, #0f203b 100%);
     filter: blur(120px);
     content: "";
+
+    @include respond-to("sm") {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      filter: blur(100px);
+    }
   }
 
   &::after {
@@ -28,12 +39,23 @@
     background: radial-gradient(50% 50% at 50% 50%, #19424b 0%, #0f203b 100%);
     filter: blur(120px);
     content: "";
+
+    @include respond-to("sm") {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      filter: blur(100px);
+    }
   }
 
   .title {
     padding: 0 0 60px 0;
     position: relative;
     z-index: 1;
+
+    @include respond-to("sm") {
+      padding: 0 20px 40px 20px;
+    }
 
     h2 {
       color: #fff;
@@ -43,6 +65,10 @@
       font-weight: 400;
       margin: 0 0 16px 0;
       font-family: var(--font-inter-sans);
+
+      @include respond-to("sm") {
+        font-size: 32px;
+      }
     }
 
     p {
@@ -50,11 +76,21 @@
       font-family: var(--font-inter-sans);
       color: rgb(255, 255, 255);
       opacity: 0.6;
-      background: rgb(4, 7, 9);
+      // background: rgb(4, 7, 9);
       max-width: 928px;
       margin: 0 auto;
       text-align: center;
       font-weight: 300;
+
+      @include respond-to("sm") {
+        font-size: 16px;
+      }
+    }
+  }
+
+  :global(.container) {
+    @include respond-to("sm") {
+      padding: 0;
     }
   }
 
@@ -69,9 +105,22 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
+    @include respond-to("sm") {
+      display: flex;
+      padding: 0 20px;
+      overflow: auto;
+      scrollbar-width: none;
+    }
+
     .items {
       background: rgba(255, 255, 255, 0.05);
       padding: 40px 0;
+
+      @include respond-to("sm") {
+        width: 290px;
+        min-width: 290px;
+        max-width: 290px;
+      }
 
       .details {
         padding: 24px 0 0 0;

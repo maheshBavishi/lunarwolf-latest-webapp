@@ -27,6 +27,12 @@
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(175px);
         content: '';
+
+        @include respond-to("sm") {
+            width: 200px;
+            height: 200px;
+            filter: blur(100px);
+        }
     }
 
     &::after {
@@ -39,6 +45,12 @@
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(139.5px);
         content: '';
+
+        @include respond-to("sm") {
+            width: 200px;
+            height: 200px;
+            filter: blur(100px);
+        }
     }
 
     .grid {
@@ -52,6 +64,10 @@
             grid-template-columns: 1fr;
         }
 
+        @include respond-to("sm") {
+            gap: 20px;
+        }
+
         .iconGrid {
             display: grid;
             grid-template-columns: 52px 1fr;
@@ -60,11 +76,21 @@
             border-bottom: 1px solid rgb(255, 255, 255, .1);
             padding: 40px;
 
+            @include respond-to("sm") {
+                grid-template-columns: 32px 1fr;
+                padding: 16px;
+            }
+
             &:last-child {
                 border: none;
             }
 
-            svg {}
+            svg {
+                @include respond-to("sm") {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
 
             span {
                 display: block;
@@ -73,6 +99,10 @@
                 font-style: normal;
                 font-weight: 300;
                 line-height: 130%;
+
+                @include respond-to("sm") {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -94,6 +124,11 @@
                         padding: 0 0 20px 0;
                         font-weight: 500;
                         line-height: normal;
+
+                        @include respond-to("sm") {
+                            font-size: 16px;
+                            padding: 0 0 10px 0;
+                        }
                     }
 
                     h2 {
@@ -106,6 +141,10 @@
                         @include respond-to("md") {
                             font-size: 42px;
                         }
+
+                        @include respond-to("sm") {
+                            font-size: 32px;
+                        }
                     }
 
                     .round {
@@ -117,6 +156,36 @@
                         align-items: center;
                         justify-content: center;
                         position: relative;
+
+                        &::before {
+                            @include respond-to("sm") {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 250px;
+                                height: 250px;
+                                border-radius: 250px;
+                                opacity: 0.5;
+                                background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
+                                filter: blur(50px);
+                                content: '';
+
+                            }
+                        }
+
+                        @include respond-to("md") {
+                            width: 380px;
+                            height: 380px;
+                            margin-left: 0;
+                            margin: 40px auto;
+                        }
+
+                        @include respond-to("sm") {
+                            width: 280px;
+                            height: 280px;
+                            margin: 30px auto;
+                        }
 
                         .dashedBorder {
                             position: absolute;
@@ -133,6 +202,14 @@
                             max-width: 318px;
                             position: relative;
                             z-index: 2;
+
+                            @include respond-to("md") {
+                                max-width: 250px;
+                            }
+
+                            @include respond-to("sm") {
+                                max-width: 180px;
+                            }
                         }
                     }
                 }

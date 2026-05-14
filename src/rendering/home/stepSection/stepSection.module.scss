@@ -5,6 +5,10 @@
     position: relative;
     padding: 120px 0;
 
+    @include respond-to("sm") {
+        padding: 60px 0;
+    }
+
     &::after {
         position: absolute;
         right: 0;
@@ -16,6 +20,10 @@
         opacity: 0.56;
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(139.5px);
+
+        @include respond-to("sm") {
+            filter: blur(100px);
+        }
     }
 
     &::before {
@@ -29,6 +37,10 @@
         opacity: 0.56;
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(139.5px);
+
+        @include respond-to("sm") {
+            filter: blur(100px);
+        }
     }
 
     .headerAlignment {
@@ -50,6 +62,10 @@
 
             @include respond-to("md") {
                 font-size: 28px;
+            }
+
+            @include respond-to("sm") {
+                font-size: 32px;
             }
         }
 
@@ -126,6 +142,11 @@
             margin-bottom: 40px;
         }
 
+        @include respond-to("sm") {
+            gap: 0px;
+            margin-bottom: 0px;
+        }
+
         .line {
             @include respond-to("md") {
                 display: none;
@@ -146,6 +167,10 @@
                 justify-content: center;
                 width: 100%;
                 margin: 20px 0;
+            }
+
+            @include respond-to("sm") {
+                margin: 0;
             }
         }
 
@@ -247,6 +272,10 @@
                         width: fit-content;
                     }
 
+                    @include respond-to("sm") {
+                        padding: 8px 24px;
+                    }
+
                     span {
                         display: block;
                         color: #FFF;
@@ -264,6 +293,10 @@
 
                         @include respond-to("sm") {
                             transform: rotate(0);
+                        }
+
+                        @include respond-to("sm") {
+                            font-size: 16px;
                         }
                     }
                 }

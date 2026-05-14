@@ -11,9 +11,20 @@
         gap: 40px;
         padding: 0 0 60px 0;
 
+        @include respond-to("sm") {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 0 0 40px 0;
+        }
+
         img {
             display: block;
             max-width: 70px;
+
+            @include respond-to("sm") {
+                max-width: 40px;
+            }
         }
 
         h2 {
@@ -23,6 +34,10 @@
             font-weight: 400;
             font-family: var(--font-inter-sans);
             margin: 0 0 16px;
+
+            @include respond-to("sm") {
+                font-size: 32px;
+            }
         }
 
         p {
@@ -33,6 +48,10 @@
             background: #040709;
             max-width: 1160px;
             font-weight: 300;
+
+            @include respond-to("sm") {
+                font-size: 16px;
+            }
         }
 
     }
@@ -51,6 +70,10 @@
             border: 1px solid #33ace042;
             background: rgba(255, 255, 255, 0.06);
             padding: 24px;
+
+            @include respond-to("sm") {
+                padding: 16px;
+            }
 
             .image {
                 img {
@@ -110,6 +133,12 @@
                 grid-template-columns: repeat(3, 1fr);
                 gap: 10px;
                 padding: 0 0 40px 0;
+
+                @include respond-to("sm") {
+                    grid-template-columns: 1fr;
+                    gap: 16px;
+                    padding: 0 0 20px 0;
+                }
 
                 .contentAlignment {
                     display: flex;

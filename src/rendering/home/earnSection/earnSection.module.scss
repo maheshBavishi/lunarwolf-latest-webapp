@@ -19,6 +19,10 @@
         border-radius: 1111.619px;
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(139.5px);
+
+        @include respond-to("sm") {
+            filter: blur(100px);
+        }
     }
 
     &:after {
@@ -31,6 +35,13 @@
         border-radius: 515.819px;
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(139.5px);
+
+        @include respond-to("sm") {
+            filter: blur(100px);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
     }
 
     .earnmoreAlignment {
@@ -58,6 +69,11 @@
                     width: 80px;
                     height: 80px;
                     display: block;
+
+                    @include respond-to("sm") {
+                        width: 40px;
+                        height: 40px;
+                    }
                 }
             }
 
@@ -75,6 +91,10 @@
                 padding-left: 20px;
             }
 
+            @include respond-to("sm") {
+                padding: 0 20px 80px 20px;
+            }
+
             h2 {
                 color: #fff;
                 text-transform: uppercase;
@@ -84,6 +104,10 @@
 
                 @include respond-to("md") {
                     font-size: 42px;
+                }
+
+                @include respond-to("sm") {
+                    font-size: 32px;
                 }
             }
 
@@ -98,6 +122,11 @@
                     max-width: 762px;
                     font-style: italic;
                     background: #040709;
+
+                    @include respond-to("sm") {
+                        background-color: transparent;
+                        font-size: 16px;
+                    }
 
                     span {
                         opacity: 1;
@@ -115,6 +144,10 @@
         position: relative;
         z-index: 1;
 
+        @include respond-to("sm") {
+            display: block;
+        }
+
         .lineAnimation {
             position: absolute;
             top: 59%;
@@ -122,16 +155,28 @@
             z-index: -1;
             display: flex;
             justify-content: center;
+
+            @include respond-to("sm") {
+                display: none;
+            }
         }
 
         .imageAlignment {
             max-width: 530px;
             position: relative;
 
+            @include respond-to("sm") {
+                display: flex;
+                justify-content: flex-end;
+            }
 
             img {
                 display: block;
                 width: 100%;
+
+                @include respond-to("sm") {
+                    width: 80%;
+                }
             }
         }
 
@@ -140,6 +185,10 @@
 
             @include respond-to("md") {
                 padding-left: 20px;
+            }
+
+            @include respond-to("sm") {
+                padding: 0 20px;
             }
 
             h2 {
@@ -151,6 +200,10 @@
 
                 @include respond-to("md") {
                     font-size: 42px;
+                }
+
+                @include respond-to("sm") {
+                    font-size: 32px;
                 }
             }
 
@@ -187,6 +240,10 @@
             .detailsalignment {
                 padding: 0 0 32px 0;
 
+                @include respond-to("sm") {
+                    padding: 0 0 24px 0;
+                }
+
                 p {
                     font-size: 20px;
                     font-family: var(--font-inter-sans);
@@ -194,6 +251,10 @@
                     font-weight: 300;
                     opacity: .6;
                     max-width: 799px;
+
+                    @include respond-to("sm") {
+                        font-size: 16px;
+                    }
 
                     span {
                         opacity: 1;
@@ -205,6 +266,10 @@
 
             .buttonstyle {
                 padding: 0 0 50px 0;
+
+                @include respond-to("sm") {
+                    padding: 0 0 24px 0;
+                }
 
                 button {
                     display: flex;
@@ -220,10 +285,19 @@
                     font-weight: 500;
                     line-height: normal;
 
+                    @include respond-to("sm") {
+                        font-size: 16px;
+                    }
+
                     img {
                         display: block;
                         width: 26px;
                         height: 26px;
+
+                        @include respond-to("sm") {
+                            width: 20px;
+                            height: 20px;
+                        }
                     }
                 }
             }
