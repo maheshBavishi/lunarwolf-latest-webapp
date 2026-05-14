@@ -23,7 +23,7 @@ export default function ContentSection({ model }) {
   }, [model]);
   return (
     <div className={styles.contentSection}>
-      <div className="">
+      <div className={styles.relative}>
         <div className={styles.tabCenter}>
           <div className={styles.tabGroup}>
             {tabs.map((tab) => (
