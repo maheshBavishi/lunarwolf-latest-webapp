@@ -5,12 +5,22 @@
     padding: 140px 0 40px 0;
     border-bottom: 1px solid rgb(255, 255, 255, .2);
 
+    @include respond-to("sm") {
+        padding: 120px 0 40px 0;
+    }
+
     .textgrid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
         align-items: flex-end;
-        padding: 0 0 48px 0;
+
+        @include respond-to("md") {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+
 
         p {
             color: #C1C1C1;
@@ -21,6 +31,10 @@
             line-height: 140%;
             max-width: 476px;
             margin-left: auto;
+
+            @include respond-to("md") {
+                margin-left: 0px;
+            }
         }
 
         h2 {
@@ -31,6 +45,10 @@
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+
+            @include respond-to("sm") {
+                font-size: 32px;
+            }
 
             span {
                 color: #69CDFF;
@@ -51,6 +69,14 @@
 .detailsLayer {
     position: relative;
 
+    :global(.container-lg) {
+        @include respond-to("sm") {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+
     &::before {
         position: absolute;
         right: 0;
@@ -61,6 +87,13 @@
         width: 400px;
         height: 400px;
         top: 0;
+
+        @include respond-to("sm") {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            filter: blur(100px);
+        }
     }
 
     &::after {
@@ -73,5 +106,12 @@
         width: 400px;
         height: 400px;
         bottom: 0;
+
+        @include respond-to("sm") {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            filter: blur(100px);
+        }
     }
 }

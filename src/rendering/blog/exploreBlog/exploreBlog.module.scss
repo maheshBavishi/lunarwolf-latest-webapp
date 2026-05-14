@@ -4,8 +4,27 @@
 .exploreBlog {
     padding: 40px 0 100px 0;
 
+    @include respond-to("md") {
+        padding: 40px 0 80px 0;
+    }
+
+    @include respond-to("sm") {
+        padding: 40px 0 40px 0;
+    }
+
+    :global(.container-lg) {
+        @include respond-to("sm") {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
     .title {
         padding: 0 0 16px 0;
+
+        @include respond-to("sm") {
+            padding: 0 0 40px 0;
+        }
 
         h2 {
             color: #FFF;
@@ -15,6 +34,10 @@
             font-weight: 500;
             line-height: normal;
             font-family: var(--font-inter-sans);
+
+            @include respond-to("sm") {
+                font-size: 32px;
+            }
         }
     }
 
@@ -23,6 +46,12 @@
         padding: 0 0 32px 0;
         justify-content: center;
         gap: 16px;
+
+        @include respond-to("md") {
+            justify-content: flex-start;
+            width: 100%;
+            overflow: auto;
+        }
 
         button {
             border: none;
@@ -37,6 +66,10 @@
             line-height: 130%;
             padding: 10px 24px;
             cursor: pointer;
+
+            @include respond-to("md") {
+                white-space: nowrap;
+            }
 
             &:hover {
                 border-radius: 100px;
@@ -59,6 +92,14 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
         padding: 0 0 44px 0;
+
+        @include respond-to("md") {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include respond-to("sm") {
+            grid-template-columns: 1fr;
+        }
 
         .items {
             text-decoration: none;
@@ -84,6 +125,10 @@
                     font-weight: 400;
                     line-height: 140%;
                     font-family: var(--font-inter-sans);
+
+                    @include respond-to("sm") {
+                        font-size: 18px;
+                    }
                 }
             }
 

@@ -60,15 +60,7 @@ export default function Blog({ blogsData, paginationData, categoriesData, curren
               }
             </motion.p>
 
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <Link href="/blog" className={styles.resetBtn}>
-                Reset Filters
-              </Link>
-            </motion.div>
+
           </div>
         </div>
       )}
