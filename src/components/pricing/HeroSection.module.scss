@@ -107,7 +107,7 @@
 
   .emblemContainer {
     position: relative;
-    height: 400px; // Reduced for mobile
+    height: 450px; // Mobile height
     z-index: 1;
     width: 100%;
     display: flex;
@@ -115,12 +115,12 @@
     align-items: center;
 
     @include respond-to("tab") {
-      height: 600px;
+      height: 500px;
     }
 
     @media (min-width: 1024px) {
       height: 700px;
-      display: block; // Back to block for absolute positioning relative to container
+      display: block;
     }
   }
 
@@ -217,44 +217,46 @@
     background: linear-gradient(135deg, #60a5fa, #22d3ee);
   }
 
-  // Position variations - Optimized for mobile first
+  // Position variations - Balanced and Premium Layout
   .emblemLarge {
-    top: 40%;
-    right: 10%;
-    transform: translateY(-50%);
-    width: 6.5rem; // Reduced from 8rem
-    height: 6.5rem;
+    top: 10%;
+    right: 5%;
+    width: 5rem;
+    height: 5rem;
 
     @include respond-to("tab") {
-      top: 0;
-      right: 0;
-      transform: none;
-      width: 11rem;
-      height: 11rem;
+      width: 6.5rem;
+      height: 6.5rem;
+      top: 12%;
+      right: 8%;
     }
 
     @media (min-width: 1024px) {
-      width: 13rem;
-      height: 13rem;
+      top: 5%;
+      right: 0;
+      width: 14rem;
+      height: 14rem;
     }
   }
 
   .emblemMidTopLeft {
-    top: 20%;
-    left: 20%;
-    width: 5rem; // Reduced from 6rem
-    height: 5rem;
+    top: 15%;
+    left: 5%;
+    width: 4rem;
+    height: 4rem;
 
     @include respond-to("tab") {
-      top: 4rem;
-      left: 2rem;
-      width: 9rem;
-      height: 9rem;
+      width: 5.5rem;
+      height: 5.5rem;
+      top: 18%;
+      left: 10%;
     }
 
     @media (min-width: 1024px) {
-      width: 10rem;
-      height: 10rem;
+      top: 12%;
+      left: 5%;
+      width: 11rem;
+      height: 11rem;
     }
   }
 
@@ -262,56 +264,60 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 6rem; // Reduced from 7rem
-    height: 6rem;
+    width: 6.5rem;
+    height: 6.5rem;
     z-index: 2;
 
     @include respond-to("tab") {
-      width: 10rem;
-      height: 10rem;
-    }
-
-    @media (min-width: 1024px) {
-      width: 11rem;
-      height: 11rem;
-    }
-  }
-
-  .emblemBottomLeft {
-    bottom: 25%;
-    left: 15%;
-    width: 4.5rem; // Reduced from 5.5rem
-    height: 4.5rem;
-
-    @include respond-to("tab") {
-      bottom: 4rem;
-      left: 1rem;
       width: 8rem;
       height: 8rem;
     }
 
     @media (min-width: 1024px) {
-      width: 9rem;
-      height: 9rem;
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+
+  .emblemBottomLeft {
+    bottom: 15%;
+    left: 5%;
+    width: 4.5rem;
+    height: 4.5rem;
+
+    @include respond-to("tab") {
+      width: 6rem;
+      height: 6rem;
+      bottom: 20%;
+      left: 8%;
+    }
+
+    @media (min-width: 1024px) {
+      bottom: 10%;
+      left: 0;
+      width: 10rem;
+      height: 10rem;
     }
   }
 
   .emblemBottomRight {
-    bottom: 25%;
-    right: 15%;
-    width: 5.5rem; // Reduced from 6.5rem
-    height: 5.5rem;
+    bottom: 10%;
+    right: 5%;
+    width: 4.5rem;
+    height: 4.5rem;
 
     @include respond-to("tab") {
-      bottom: 2rem;
-      right: 2rem;
-      width: 9rem;
-      height: 9rem;
+      width: 6.5rem;
+      height: 6.5rem;
+      bottom: 15%;
+      right: 12%;
     }
 
     @media (min-width: 1024px) {
-      width: 10rem;
-      height: 10rem;
+      bottom: 5%;
+      right: 5%;
+      width: 12rem;
+      height: 12rem;
     }
   }
 }

@@ -11,6 +11,7 @@ const LogoIcon = "/assets/logo/loader-logo.png";
 const navLinks = [
   { label: "Affiliate program", href: "/referral-program", target: "_self" },
   { label: "About Us", href: "/about-us", target: "_self" },
+  { label: "Blog", href: "/blog", target: "_self" },
   { label: "Our Profile", href: "/documents/Lunar Wolf Ea Presentation.pdf", hasDownload: true, target: "_blank" },
 ];
 
