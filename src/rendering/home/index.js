@@ -13,6 +13,7 @@ import LivePortfolios from './livePortfolios'
 import StepSection from './stepSection'
 import AutomatedProfit from './automatedProfit'
 import FaqSection from './faqSection'
+import OurClient from './ourClient'
 
 export default function Homepage() {
     return (
@@ -28,6 +29,7 @@ export default function Homepage() {
             <MemberSection />
             <LivePortfolios />
             <StepSection />
+            <OurClient />
             <AutomatedProfit />
             <FaqSection />
         </div>
