@@ -5,6 +5,7 @@ import styles from './StrategicSection.module.scss';
 const SystemImage = '/assets/images/system.png';
 const RoundLogo = '/assets/images/round-logo.svg';
 const BrokerImage = '/assets/images/broker.png';
+
 export default function StrategicSection() {
     return (
         <div className={styles.strategicSection}>
@@ -37,7 +38,27 @@ export default function StrategicSection() {
                         }}
                     >
                         <div className={styles.image}>
-                            <img src={SystemImage} alt='SystemImage' />
+                            <div className={styles.imagestyle}>
+                                <img src={SystemImage} alt='SystemImage' />
+                            </div>
+                            <div className={styles.logoWrapper}>
+                                <div className={styles.logoContainer}>
+                                    <motion.div
+                                        className={styles.spinningBorder}
+                                        animate={{ rotate: [0, 360] }}
+                                        transition={{
+                                            repeat: Infinity,
+                                            ease: "linear",
+                                            duration: 4,
+                                        }}
+                                    />
+                                    <img
+                                        src={RoundLogo}
+                                        alt="RoundLogo"
+                                        className={styles.logo}
+                                    />
+                                </div>
+                            </div>
                         </div>
                         <div className={styles.details}>
                             <h3>
@@ -127,7 +148,9 @@ export default function StrategicSection() {
                         }}
                     >
                         <div className={styles.image}>
-                            <img src={BrokerImage} alt='BrokerImage' />
+                            <div className={styles.imagestyle}>
+                                <img src={BrokerImage} alt='BrokerImage' />
+                            </div>
                         </div>
                         <div className={styles.details}>
                             <h3>

@@ -115,12 +115,43 @@
     .items {
       background: rgba(255, 255, 255, 0.05);
       padding: 40px 0;
+      position: relative;
+      overflow: hidden;
 
       @include respond-to("sm") {
         width: 290px;
         min-width: 290px;
         max-width: 290px;
       }
+
+      &.disabled {
+        pointer-events: none;
+        user-select: none;
+
+        .image,
+        .details {
+          filter: blur(16px);
+          // opacity: 0.8;
+        }
+      }
+
+      .comingSoonOverlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+
+        span {
+          color: #fff;
+          font-size: 20px;
+          font-weight: 600;
+          letter-spacing: 0.05em;
+        }
+      }
+
 
       .details {
         padding: 24px 0 0 0;
@@ -142,11 +173,21 @@
           align-items: center;
           gap: 5px;
           cursor: pointer;
+
+          &:disabled {
+            opacity: 0.5;
+            cursor: default;
+          }
         }
       }
 
       a {
         text-decoration: none;
+
+        &.disabledLink {
+          pointer-events: none;
+          cursor: default;
+        }
       }
 
       .image {

@@ -1,0 +1,14 @@
+@use '../../scss/main.scss' as *;
+@use '../../scss/breakpoints/breakpoints.scss' as *;
+
+.telegramContent {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+
+    svg {
+        width: 56px;
+        height: 56px;
+    }
+}

@@ -52,19 +52,22 @@ const brokerData = [
     icon: TmgmIcon,
     alt: "TmgmIcon",
     buttonText: "Open Account with TMGM",
-    link: "https://portal.tmgm.com/register?r_code=IB1750216339A",
+    link: "#",
+    comingSoon: true,
   },
   {
     icon: UltimaIcon,
     alt: "UltimaIcon",
     buttonText: "Open Account with Ultima",
-    link: "https://ultgo.com/la-com/gtkoJ8Nk",
+    link: "#",
+    comingSoon: true,
   },
   {
     icon: SecurefxIcon,
     alt: "SecurefxIcon",
     buttonText: "Open Account with Securefx",
-    link: "https://client.securefx.net/register/sponsor/126321",
+    link: "#",
+    comingSoon: true,
   },
 ];
 export default function ChooseBroker() {
@@ -98,19 +101,24 @@ export default function ChooseBroker() {
           {brokerData.map((broker, index) => {
             return (
               <motion.div
-                className={styles.items}
+                className={`${styles.items} ${broker.comingSoon ? styles.disabled : ""}`}
                 key={index}
                 variants={{
                   hidden: { opacity: 0, y: 30, scale: 0.95 },
                   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
                 }}
               >
+                {broker.comingSoon && (
+                  <div className={styles.comingSoonOverlay}>
+                    <span>Coming Soon</span>
+                  </div>
+                )}
                 <div className={styles.image}>
                   <img src={broker.icon} alt={broker.alt} />
                 </div>
-                <Link href={broker.link} target="_blank">
+                <Link href={broker.link} target={broker.comingSoon ? "_self" : "_blank"} className={broker.comingSoon ? styles.disabledLink : ""}>
                   <div className={styles.details}>
-                    <button>
+                    <button disabled={broker.comingSoon}>
                       {broker.buttonText}
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M4.66666 4.6665H11.3333V11.3332" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
@@ -127,3 +135,4 @@ export default function ChooseBroker() {
     </div>
   );
 }
+

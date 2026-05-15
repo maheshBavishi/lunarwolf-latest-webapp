@@ -85,10 +85,60 @@
             position: relative;
 
             .image {
-                img {
-                    border-radius: 12px 12px 0 0;
-                    width: 100%;
-                    display: block;
+                position: relative;
+
+                .imagestyle {
+                    img {
+                        border-radius: 12px 12px 0 0;
+                        width: 100%;
+                        display: block;
+                    }
+                }
+
+                .logoWrapper {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 5;
+
+                    .logoContainer {
+                        position: relative;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(0, 0, 0, 0.10);
+
+                        @include respond-to("sm") {
+                            width: 80px;
+                            height: 80px;
+                        }
+
+                        .spinningBorder {
+                            position: absolute;
+                            inset: 0;
+                            border-radius: 50%;
+                            padding: 2px;
+                            background: conic-gradient(from 0deg, #3DC5FF 0%, rgba(36, 118, 153, 0.1) 40%, transparent 50%, rgba(36, 118, 153, 0.1) 60%, #3DC5FF 100%);
+                            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                            -webkit-mask-composite: xor;
+                            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                            mask-composite: exclude;
+                        }
+
+                        .logo {
+                            position: relative;
+                            z-index: 10;
+
+                            @include respond-to("sm") {
+                                width: 40px;
+                                height: auto;
+                            }
+                        }
+                    }
                 }
             }
 
