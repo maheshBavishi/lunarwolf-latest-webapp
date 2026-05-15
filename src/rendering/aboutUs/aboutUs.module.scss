@@ -2,6 +2,7 @@
     background-color: #030b17;
     position: relative;
     width: 100%;
+    overflow-x: hidden;
 
     .stickySection {
         height: 400vh;
@@ -58,4 +59,3 @@
         }
     }
 }
-
