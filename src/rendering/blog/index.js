@@ -7,11 +7,18 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import styles from "./blog.module.scss";
 
+import styles1 from "./NoDataFound.module.scss";
+
+const NoDataFound = () => (
+  <div className={styles1.container}>
+    <p className={styles1.message}>No blog posts available at the moment.</p>
+  </div>
+);
+
 export default function Blog({ blogsData, paginationData, categoriesData, currentCategory, currentPage }) {
   const bannerBlogData = blogsData?.[0];
   const exploreBlogsData = blogsData?.slice(1);
-  const hasBlogs = blogsData && blogsData.length > 0;
-
+  if (!blogsData || blogsData.length === 0) return <NoDataFound />;
   return (
     <div>
       <Loader />
