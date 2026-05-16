@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./contentSection.module.scss";
 import ProfitSharing from "../profitSharing";
@@ -21,8 +21,19 @@ export default function ContentSection({ model }) {
       setActiveTab(model);
     }
   }, [model]);
+  const [showButtons, setShowButtons] = useState(false);
+  const sectionRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowButtons(entry.isIntersecting),
+      { threshold: 0.2 },
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
   return (
-    <div className={styles.contentSection}>
+    <div className={styles.contentSection} ref={sectionRef}>
       <div className={styles.relative}>
         <div className={styles.tabCenter}>
           <div className={styles.tabGroup}>
@@ -66,6 +77,20 @@ export default function ContentSection({ model }) {
           </AnimatePresence>
         </div>
       </div>
+      {showButtons && (
+        <div className={styles.floatingNav}>
+          <a
+            className={styles.headwolfBtn}
+            href="https://app.lunarwolf.ai/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className={styles.labelDesktop}>Become a Headwolf</span>
+            <span className={styles.labelMobile}>Join</span>
+          </a>
+        </div>
+      )
+      }
     </div>
   );
 }

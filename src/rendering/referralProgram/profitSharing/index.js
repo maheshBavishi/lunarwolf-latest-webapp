@@ -871,20 +871,9 @@ const ProfitSharing = () => {
   useEffect(() => {
     setEdges(initialEdges);
   }, [initialEdges, setEdges]);
-  const [showButtons, setShowButtons] = useState(false);
-  const sectionRef = useRef(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setShowButtons(entry.isIntersecting),
-      { threshold: 0.2 },
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
-    <div className={styles.profitSharing} ref={sectionRef}>
+    <div className={styles.profitSharing}>
       <div className={styles.title}>
         <h2>Profit Sharing</h2>
         <p>Visualize your earnings at each level with detailed commission percentages. This chart clearly shows how profits flow from direct referrals (5%) down to the fifth level (1%). Understand your earning potential and track rewards easily across all levels.</p>
@@ -945,21 +934,6 @@ const ProfitSharing = () => {
           </UnlockProgressContext.Provider>
         </div>
       </div>
-
-      {showButtons && (
-        <div className={styles.floatingNav}>
-          <a
-            className={styles.headwolfBtn}
-            href="https://app.lunarwolf.ai/signup"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className={styles.labelDesktop}>Become a Headwolf</span>
-            <span className={styles.labelMobile}>Join</span>
-          </a>
-        </div>
-      )
-      }
 
     </div >
   );
