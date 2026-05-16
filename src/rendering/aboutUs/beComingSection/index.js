@@ -77,7 +77,7 @@ export default function BeComingSection() {
                         </div>
                     </div>
                 </div>
-                <div className={styles.title}>
+                {/* <div className={styles.title}>
                     <h2>
                         By The Numbers
                     </h2>
@@ -116,7 +116,7 @@ export default function BeComingSection() {
                             every trade is rule-based
                         </span>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
