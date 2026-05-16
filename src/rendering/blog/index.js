@@ -7,11 +7,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import styles from "./blog.module.scss";
 
-import styles from "./NoDataFound.module.scss";
+import styles1 from "./NoDataFound.module.scss";
 
 const NoDataFound = () => (
-  <div className={styles.container}>
-    <p className={styles.message}>No blog posts available at the moment.</p>
+  <div className={styles1.container}>
+    <p className={styles1.message}>No blog posts available at the moment.</p>
   </div>
 );
 
