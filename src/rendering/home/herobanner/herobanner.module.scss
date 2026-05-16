@@ -14,13 +14,40 @@
     align-items: center;
     justify-content: center;
 
+    @include respond-to("md") {
+        padding: 100px 0 60px 0;
+        display: block;
+        height: auto;
+    }
+
+    @include respond-to("sm") {
+        padding: 120px 0 0 0;
+    }
+
     .content {
         width: 100%;
         padding: 0 80px;
 
+        @include respond-to("md") {
+            padding: 0 40px;
+        }
+
+        @include respond-to("sm") {
+            padding: 0 20px;
+        }
+
         .boxwidth {
             max-width: 780px;
             padding: 100px 0 0 0;
+
+            @include respond-to("md") {
+                padding-top: 40px;
+                max-width: 100%;
+            }
+
+            @include respond-to("sm") {
+                padding-top: 20px;
+            }
 
             .line {
                 background: linear-gradient(90deg, #FFF 0%, rgba(0, 0, 0, 0.00) 70.5%);
@@ -34,6 +61,16 @@
             color: #fff;
             font-weight: 300;
             margin: 20px 0 50px 0;
+
+            @include respond-to("md") {
+                font-size: 48px;
+                margin: 20px 0 30px 0;
+            }
+
+            @include respond-to("sm") {
+                font-size: 32px;
+                margin: 16px 0 24px 0;
+            }
 
             span {
                 font-weight: 600;
@@ -55,6 +92,18 @@
             font-weight: 500;
             color: #fff;
             box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.26) inset, 0 6px 14px 0 rgba(107, 177, 224, 0.80) inset;
+
+            transition: .3s ease-in-out;
+
+            &:hover {
+                svg {
+                    transform: rotate(45deg);
+                }
+            }
+
+            svg {
+                transition: .3s ease-in-out;
+            }
         }
 
         p {
@@ -65,6 +114,10 @@
             font-weight: 500;
             line-height: normal;
             text-align: left;
+
+            @include respond-to("sm") {
+                font-size: 16px;
+            }
         }
     }
 
@@ -73,10 +126,27 @@
         left: 8%;
         top: -17%;
 
+        @include respond-to("md") {
+            left: 4%;
+            top: -10%;
+        }
+
+        @include respond-to("sm") {
+            top: -14%;
+        }
+
         img {
             max-width: 400px;
             opacity: .5;
             display: block;
+
+            @include respond-to("md") {
+                max-width: 250px;
+            }
+
+            @include respond-to("sm") {
+                max-width: 200px;
+            }
         }
     }
 
@@ -85,9 +155,28 @@
         right: 0;
         bottom: 0;
 
+        @include respond-to("md") {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 40px;
+        }
+
+        @include respond-to("sm") {
+            margin-top: 20px;
+        }
+
         img {
             display: block;
             max-width: 670px;
+
+            @include respond-to("md") {
+                max-width: 500px;
+            }
+
+            @include respond-to("sm") {
+                max-width: 90%;
+            }
         }
     }
 }

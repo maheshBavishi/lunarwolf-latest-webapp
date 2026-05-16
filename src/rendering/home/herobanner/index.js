@@ -18,13 +18,7 @@ export default function Herobanner() {
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
         />
       </div>
-      <div className={styles.wolfImage} >
-        <img
-          src={WolfImage}
-          alt="WolfImage"
 
-        />
-      </div>
       <div className={styles.content}>
         <motion.div
           className={styles.boxwidth}
@@ -68,11 +62,24 @@ export default function Herobanner() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
             }}
+            onClick={() => {
+              const element = document.getElementById('live-portfolios');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             View Live Performance
             <RightIcon />
           </motion.button>
         </motion.div>
+      </div>
+      <div className={styles.wolfImage} >
+        <img
+          src={WolfImage}
+          alt="WolfImage"
+
+        />
       </div>
     </div>
   )

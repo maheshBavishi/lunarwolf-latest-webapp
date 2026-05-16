@@ -7,8 +7,17 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
 
+        @include respond-to("sm") {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
         .items {
             padding: 24px;
+
+            @include respond-to("sm") {
+                padding: 16px;
+            }
 
             &:hover {
                 p {
@@ -29,6 +38,10 @@
                 line-height: 28px;
                 color: #fff;
                 opacity: .50;
+
+                @include respond-to("sm") {
+                    font-size: 16px;
+                }
             }
         }
     }

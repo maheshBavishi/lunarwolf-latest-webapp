@@ -1,3 +1,64 @@
 .aboutPage {
     background-color: #030b17;
+    position: relative;
+    width: 100%;
+
+    @media (max-width: 576px) {
+        overflow-x: hidden;
+    }
+
+    .stickySection {
+        height: 400vh;
+        position: relative;
+        width: 100%;
+
+        @media (max-width: 768px) {
+            height: auto;
+        }
+    }
+
+    .stickyWrapper {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+
+        @media (max-width: 768px) {
+            position: relative;
+            height: auto;
+            overflow: visible;
+        }
+    }
+
+    .bannerContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 20;
+
+        @media (max-width: 768px) {
+            position: relative;
+            height: auto;
+            min-height: 100dvh;
+        }
+    }
+
+    .textContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+
+        @media (max-width: 768px) {
+            position: relative;
+            height: auto;
+            min-height: auto;
+            padding-bottom: 60px;
+        }
+    }
 }

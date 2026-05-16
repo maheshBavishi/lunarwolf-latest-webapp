@@ -146,6 +146,54 @@ const AnimatedConnectorSVGReversed = ({ id = "connector_rev" }) => {
         </svg>
     );
 };
+const VerticalConnectorSVG = ({ id = "connector_vert" }) => {
+    const gradientId = `gradient_${id}`;
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="100"
+            viewBox="0 0 24 100"
+            fill="none"
+            style={{ margin: '0 auto' }}
+        >
+            <motion.line
+                x1="12"
+                y1="0"
+                x2="12"
+                y2="90"
+                stroke={`url(#${gradientId})`}
+                strokeWidth="1.5"
+                strokeDasharray="6 4"
+                initial={{ strokeDashoffset: 0 }}
+                animate={{ strokeDashoffset: -20 }}
+                transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "linear",
+                }}
+            />
+            <motion.polygon
+                points="8,88 16,88 12,96"
+                fill="#00B2FF"
+                initial={{ opacity: 0.5 }}
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+            />
+            <defs>
+                <linearGradient id={gradientId} x1="12" y1="0" x2="12" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#1C5E7A" stopOpacity="0" />
+                    <stop offset="1" stopColor="#00B3FF" />
+                </linearGradient>
+            </defs>
+        </svg>
+    );
+};
+
 export default function StepSection() {
     return (
         <div className={styles.stepSection}>
@@ -187,6 +235,9 @@ export default function StepSection() {
                         <div className={styles.line}>
                             <AnimatedConnectorSVG id="connector1" />
                         </div>
+                        <div className={styles.mobileLine}>
+                            <VerticalConnectorSVG id="m_connector1" />
+                        </div>
                     </div>
                     <div className={styles.flexBox}>
                         <div className={styles.line}>
@@ -218,7 +269,9 @@ export default function StepSection() {
                                 </div>
                             </div>
                         </div>
-
+                        <div className={styles.mobileLine}>
+                            <VerticalConnectorSVG id="m_connector2" />
+                        </div>
                     </div>
                     <div className={styles.flexBox}>
                         <div className={styles.fillbox}>
@@ -249,6 +302,9 @@ export default function StepSection() {
                         </div>
                         <div className={styles.line}>
                             <AnimatedConnectorSVG id="connector3" />
+                        </div>
+                        <div className={styles.mobileLine}>
+                            <VerticalConnectorSVG id="m_connector3" />
                         </div>
                     </div>
                     <div className={styles.flexBox}>

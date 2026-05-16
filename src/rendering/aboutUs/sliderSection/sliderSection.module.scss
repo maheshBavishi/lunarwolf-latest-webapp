@@ -13,6 +13,17 @@
     isolation: isolate;
     padding-bottom: 120px;
 
+    @include respond-to("md") {
+        padding-left: 40px;
+        padding-bottom: 80px;
+    }
+
+    @include respond-to("sm") {
+        padding-left: 20px;
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
     .bgEllipse {
         position: absolute;
         inset: 0;
@@ -51,9 +62,7 @@
 
     .contentContainer {
         width: 100%;
-
         display: flex;
-
         z-index: 20;
         gap: 32px;
 
@@ -62,10 +71,23 @@
             align-items: center;
             gap: 56px;
         }
+
+        @include respond-to("sm") {
+            flex-direction: column;
+            gap: 24px;
+        }
     }
 
     .leftContent {
         width: 35%;
+
+        @include respond-to("sm") {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 20px;
+        }
 
         h2 {
             font-size: 26px;
@@ -87,6 +109,11 @@
                 font-size: 50px;
             }
 
+            @include respond-to("sm") {
+                font-size: 22px;
+                margin-bottom: 0;
+            }
+
             br {
                 display: none;
 
@@ -106,6 +133,12 @@
             margin-bottom: 60px;
         }
 
+        @include respond-to("sm") {
+            margin-top: 0;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
         button {
             width: 44px;
             height: 44px;
@@ -122,6 +155,11 @@
             @media (min-width: 1024px) {
                 width: 60px;
                 height: 60px;
+            }
+
+            @include respond-to("sm") {
+                width: 38px;
+                height: 38px;
             }
 
             &:disabled {
@@ -149,6 +187,11 @@
                     width: 32px;
                     height: 32px;
                 }
+
+                @include respond-to("sm") {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
     }
@@ -158,7 +201,9 @@
         overflow: hidden; // To allow numbers to peak out
         width: calc(100% - 35%);
 
-
+        @include respond-to("sm") {
+            width: 100%;
+        }
     }
 
     .sliderTrack {
@@ -168,6 +213,10 @@
 
         @media (min-width: 1024px) {
             gap: 140px;
+        }
+
+        @include respond-to("sm") {
+            gap: 30px;
         }
     }
 
@@ -181,6 +230,11 @@
         @media (min-width: 1024px) {
             width: 440px;
             padding-left: 0;
+        }
+
+        @include respond-to("sm") {
+            width: 220px;
+            padding-left: 35px;
         }
     }
 
@@ -198,6 +252,11 @@
             min-height: 580px;
         }
 
+        @include respond-to("sm") {
+            padding: 20px 14px;
+            min-height: 260px;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -209,6 +268,11 @@
 
             @media (min-width: 1024px) {
                 width: 50px;
+                height: 10vh;
+            }
+
+            @include respond-to("sm") {
+                width: 20px;
                 height: 10vh;
             }
         }
@@ -225,6 +289,11 @@
             @media (min-width: 1024px) {
                 width: 50px;
                 height: 19vh;
+            }
+
+            @include respond-to("sm") {
+                width: 20px;
+                height: 10vh;
             }
         }
     }
@@ -244,6 +313,12 @@
             left: -75px;
             top: 40%;
         }
+
+        @include respond-to("sm") {
+            font-size: 55px;
+            left: -35px;
+            top: 50%;
+        }
     }
 
     .cardContent {
@@ -257,6 +332,11 @@
             padding-top: 18vh;
         }
 
+        @include respond-to("sm") {
+            padding-left: 28px;
+            padding-top: 0;
+        }
+
         h3 {
             font-size: 18px;
             text-transform: uppercase;
@@ -265,6 +345,11 @@
             @media (min-width: 1024px) {
                 font-size: 28px;
                 margin-bottom: 48px;
+            }
+
+            @include respond-to("sm") {
+                font-size: 15px;
+                margin-bottom: 14px;
             }
         }
 
@@ -276,6 +361,11 @@
 
             @media (min-width: 1024px) {
                 font-size: 24px;
+            }
+
+            @include respond-to("sm") {
+                font-size: 13px;
+                line-height: 1.45;
             }
         }
     }

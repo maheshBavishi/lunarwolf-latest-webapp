@@ -15,33 +15,47 @@
       font-weight: 400;
     }
 
-    p {
-      font-size: 18px;
-      color: #fff;
-      line-height: 28px;
-      font-weight: 300;
-      max-width: 926px;
-      margin: 0 auto;
-      text-align: center;
+    @include respond-to("sm") {
+      padding: 40px 0 0 0;
+    }
+
+    .title {
+      padding: 0 0 60px 0;
+
+      @include respond-to("sm") {
+        padding: 0 20px 40px 20px;
+      }
+
+      h2 {
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+        margin: 0 0 20px 0;
+        font-weight: 400;
+
+        @include respond-to("sm") {
+          font-size: 32px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        color: #fff;
+        line-height: 28px;
+        font-weight: 300;
+        max-width: 926px;
+        margin: 0 auto;
+        text-align: center;
+
+        @include respond-to("sm") {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
     }
   }
 }
 
-.profitSharing {
-  // Main container styles
-}
-
-.title {
-
-  // Title section styles
-  h2 {
-    // Title heading styles
-  }
-
-  p {
-    // Title paragraph styles
-  }
-}
 
 .flowContainer {
   position: relative;

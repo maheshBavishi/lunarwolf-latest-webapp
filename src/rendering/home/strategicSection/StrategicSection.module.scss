@@ -3,10 +3,19 @@
 
 .strategicSection {
     padding: 120px 0 100px 0;
+    overflow-x: hidden;
+
+    @include respond-to("sm") {
+        padding: 60px 0;
+    }
 
     .title {
         padding: 0 0 60px 0;
         position: relative;
+
+        @include respond-to("sm") {
+            padding: 0 0 40px 0;
+        }
 
         h2 {
             color: #fff;
@@ -15,6 +24,10 @@
             font-size: 36px;
             font-weight: 400;
             font-family: var(--font-inter-sans);
+
+            @include respond-to("sm") {
+                font-size: 32px;
+            }
         }
     }
 
@@ -23,6 +36,15 @@
         grid-template-columns: 1fr 80px 1fr;
         gap: 50px;
         position: relative;
+
+        @include respond-to("md") {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @include respond-to("sm") {
+            gap: 20px;
+        }
 
         &::before {
             position: absolute;
@@ -44,6 +66,16 @@
             align-items: center;
             position: relative;
             width: 100%;
+
+            @include respond-to("md") {
+                justify-content: center;
+            }
+
+            svg {
+                @include respond-to("sm") {
+                    height: 200px;
+                }
+            }
         }
 
         .items {
@@ -53,15 +85,69 @@
             position: relative;
 
             .image {
-                img {
-                    border-radius: 12px 12px 0 0;
-                    width: 100%;
-                    display: block;
+                position: relative;
+
+                .imagestyle {
+                    img {
+                        border-radius: 12px 12px 0 0;
+                        width: 100%;
+                        display: block;
+                    }
+                }
+
+                .logoWrapper {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 5;
+
+                    .logoContainer {
+                        position: relative;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(0, 0, 0, 0.10);
+
+                        @include respond-to("sm") {
+                            width: 80px;
+                            height: 80px;
+                        }
+
+                        .spinningBorder {
+                            position: absolute;
+                            inset: 0;
+                            border-radius: 50%;
+                            padding: 2px;
+                            background: conic-gradient(from 0deg, #3DC5FF 0%, rgba(36, 118, 153, 0.1) 40%, transparent 50%, rgba(36, 118, 153, 0.1) 60%, #3DC5FF 100%);
+                            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                            -webkit-mask-composite: xor;
+                            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                            mask-composite: exclude;
+                        }
+
+                        .logo {
+                            position: relative;
+                            z-index: 10;
+
+                            @include respond-to("sm") {
+                                width: 40px;
+                                height: auto;
+                            }
+                        }
+                    }
                 }
             }
 
             .details {
                 padding: 24px;
+
+                @include respond-to("sm") {
+                    padding: 16px;
+                }
 
                 p {
                     color: #FFF;

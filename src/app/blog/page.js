@@ -1,8 +1,13 @@
+'use client'
 import { GetAllBlogs, GetBlogsCategory } from "@/graphql/graphql";
 import { graphcms } from "@/graphql/graphQLClient";
 import Blog from "@/rendering/blog";
+import { useEffect } from "react";
 
 export default async function page({ searchParams }) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   const params = await searchParams;
   const page = Number(params?.page) || 1;
   const category = params?.category;

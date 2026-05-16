@@ -5,6 +5,10 @@
     padding: 120px 0;
     position: relative;
 
+    @include respond-to("sm") {
+        padding: 60px 0 40px 0;
+    }
+
     &::after {
         position: absolute;
         right: 0;
@@ -16,6 +20,10 @@
         opacity: 0.56;
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(139.5px);
+
+        @include respond-to("sm") {
+            filter: blur(100px);
+        }
     }
 
     &::before {
@@ -29,6 +37,10 @@
         opacity: 0.56;
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(139.5px);
+
+        @include respond-to("sm") {
+            filter: blur(100px);
+        }
     }
 
 
@@ -37,8 +49,16 @@
         position: relative;
         z-index: 1;
 
+        @include respond-to("sm") {
+            padding: 0 20px;
+        }
+
         .title {
             padding: 0 0 60px 0;
+
+            @include respond-to("sm") {
+                padding: 0 0 40px 0;
+            }
 
             h2 {
                 color: #fff;
@@ -48,6 +68,10 @@
                 font-weight: 400;
                 font-family: var(--font-inter-sans);
                 margin: 0;
+
+                @include respond-to("sm") {
+                    font-size: 32px;
+                }
             }
         }
 
@@ -56,6 +80,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
+
+            @include respond-to("md") {
+                grid-template-columns: 1fr;
+            }
 
             .mainFaq {
                 padding: 20px 0;
@@ -99,6 +127,10 @@
                         font-weight: 400;
                         line-height: normal;
                         text-transform: uppercase;
+
+                        @include respond-to("sm") {
+                            font-size: 16px;
+                        }
                     }
                 }
             }

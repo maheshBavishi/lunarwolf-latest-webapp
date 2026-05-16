@@ -5,6 +5,10 @@
     padding: 120px 0;
     position: relative;
 
+    @include respond-to("sm") {
+        padding: 60px 0;
+    }
+
     &::after {
         position: absolute;
         right: 0;
@@ -16,6 +20,10 @@
         opacity: 0.56;
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(139.5px);
+
+        @include respond-to("sm") {
+            filter: blur(100px);
+        }
     }
 
     &::before {
@@ -29,12 +37,20 @@
         opacity: 0.56;
         background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
         filter: blur(139.5px);
+
+        @include respond-to("sm") {
+            filter: blur(100px);
+        }
     }
 
     .textstyle {
         padding: 0 0 60px 0;
         position: relative;
         z-index: 1;
+
+        @include respond-to("sm") {
+            padding: 0 0 40px 0;
+        }
 
         h2 {
             color: #fff;
@@ -43,6 +59,10 @@
             font-weight: 400;
             margin: 0 0 16px 0;
             font-family: var(--font-inter-sans);
+
+            @include respond-to("sm") {
+                font-size: 32px;
+            }
         }
 
         p {
@@ -50,9 +70,12 @@
             font-family: var(--font-inter-sans);
             color: rgb(255, 255, 255);
             opacity: 0.6;
-            background: rgb(4, 7, 9);
             max-width: 1160px;
             font-weight: 300;
+
+            @include respond-to("sm") {
+                font-size: 16px;
+            }
         }
     }
 
@@ -62,6 +85,11 @@
         gap: 13px;
         position: relative;
         z-index: 1;
+
+        @include respond-to("sm") {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
 
         .items {
             border: 1px solid rgba(255, 255, 255, 0.20);

@@ -4,12 +4,22 @@
 .blogInformation {
     padding: 48px 0 100px 0;
 
+    @include respond-to("sm") {
+        padding: 40px 0;
+    }
+
 
     .grid {
         display: grid;
         grid-template-columns: 360px 1fr;
         gap: 100px;
         border-top: 1px solid rgb(255, 255, 255, .2);
+
+        @include respond-to("sm") {
+            grid-template-columns: 1fr;
+            gap: 24px;
+            border: none;
+        }
 
         .items {
             .stickySection {
@@ -20,6 +30,10 @@
             .informationAlignment {
                 padding: 40px 0 0 0;
                 color: #FFF;
+
+                @include respond-to("sm") {
+                    padding: 0;
+                }
 
                 h2 {
                     color: #FFF;
@@ -70,8 +84,18 @@
                 border-right: 1px solid rgb(255, 255, 255, .2);
                 padding: 40px 0 0 0;
 
+                @include respond-to("sm") {
+                    padding: 0;
+                    border: none;
+                    order: 2;
+                }
+
                 .allCardAlignment {
                     max-width: 304px;
+
+                    @include respond-to("sm") {
+                        max-width: 100%;
+                    }
                 }
 
                 h2 {

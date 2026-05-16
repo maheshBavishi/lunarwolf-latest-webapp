@@ -1,10 +1,16 @@
-import ReferralProgram from '@/rendering/referralProgram'
-import React from 'react'
+'use client'
+import ReferralProgram from "@/rendering/referralProgram";
+import React, { useEffect } from "react";
 
-export default function page() {
-    return (
-        <div>
-            <ReferralProgram />
-        </div>
-    )
+export default async function page({ searchParams }) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  const params = await searchParams;
+
+  return (
+    <div>
+      <ReferralProgram searchParams={params} />
+    </div>
+  );
 }
