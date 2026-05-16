@@ -24,8 +24,8 @@ import LeverCard from "./LeverCard";
 // Custom hook to get live screen dimensions
 const useScreenSize = () => {
   const [screenSize, setScreenSize] = useState({
-    width:  window.innerWidth ?? 1280,
-    height:  window.innerHeight ?? 800,
+    width: window.innerWidth ?? 1280,
+    height: window.innerHeight ?? 800,
   });
 
   useEffect(() => {
@@ -169,7 +169,7 @@ const LevelNode = ({ data, levelRefs }) => {
               ? "97vw"
               : window.innerWidth < 768
                 ? "80vw"
-                :window.innerWidth < 1024
+                : window.innerWidth < 1024
                   ? "70vw"
                   : "55vw",
         maxWidth: "100%",
@@ -292,23 +292,23 @@ const LevelNode = ({ data, levelRefs }) => {
           data.level === "1.3" ||
           data.level === "1.4" ||
           data.level === "1.5") && (
-          <Handle
-            type="target"
-            position={Position.Right}
-            id="right-target"
-            style={{
-              background: "transparent",
-              right: "-4px",
-              top: "50%",
-              position: "absolute",
-              transform: "translateY(-50%) translateX(50%)",
-              border: "none",
-              width: "clamp(4px, 1vw, 8px)",
-              height: "clamp(4px, 1vw, 8px)",
-              zIndex: 1,
-            }}
-          />
-        )}
+            <Handle
+              type="target"
+              position={Position.Right}
+              id="right-target"
+              style={{
+                background: "transparent",
+                right: "-4px",
+                top: "50%",
+                position: "absolute",
+                transform: "translateY(-50%) translateX(50%)",
+                border: "none",
+                width: "clamp(4px, 1vw, 8px)",
+                height: "clamp(4px, 1vw, 8px)",
+                zIndex: 1,
+              }}
+            />
+          )}
 
         <LeverCard
           commission={data.commission}
@@ -382,7 +382,7 @@ const generateLetterAConnectionsBetweenLevels = () => {
       },
       style: {
         stroke: "#53B1D9",
-        strokeWidth:window.innerWidth < 640 ? 1 : 2,
+        strokeWidth: window.innerWidth < 640 ? 1 : 2,
       },
     });
   }
@@ -392,7 +392,7 @@ const generateLetterAConnectionsBetweenLevels = () => {
 
 const ProfitSharing = () => {
   const { width: screenWidth, height: screenHeight } = useScreenSize();
-console.log(screenWidth,"screenWidthscreenWidthscreenWidth")
+  console.log(screenWidth, "screenWidthscreenWidthscreenWidth")
   const getResponsiveLayout = (w) => {
     if (!w) w = 1280;
 
@@ -521,7 +521,7 @@ console.log(screenWidth,"screenWidthscreenWidthscreenWidth")
         progress = Math.min(
           1,
           Math.pow(adjustedRatio, 0.6) *
-            (1 + 0.1 * Math.sin(adjustedRatio * Math.PI)),
+          (1 + 0.1 * Math.sin(adjustedRatio * Math.PI)),
         );
       }
 
@@ -671,7 +671,7 @@ console.log(screenWidth,"screenWidthscreenWidthscreenWidth")
       layout.levelStartY + commissionLevels.length * layout.levelSpacing + 100,
       screenHeight - 100,
     );
-  }, [layout.levelStartY, layout.levelSpacing,screenHeight, screenWidth]);
+  }, [layout.levelStartY, layout.levelSpacing, screenHeight, screenWidth]);
 
   const [dynamicHeight, setDynamicHeight] = useState(() => getDynamicHeight());
 
@@ -871,9 +871,20 @@ console.log(screenWidth,"screenWidthscreenWidthscreenWidth")
   useEffect(() => {
     setEdges(initialEdges);
   }, [initialEdges, setEdges]);
+  const [showButtons, setShowButtons] = useState(false);
+  const sectionRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowButtons(entry.isIntersecting),
+      { threshold: 0.2 },
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className={styles.profitSharing}>
+    <div className={styles.profitSharing} ref={sectionRef}>
       <div className={styles.title}>
         <h2>Profit Sharing</h2>
         <p>Visualize your earnings at each level with detailed commission percentages. This chart clearly shows how profits flow from direct referrals (5%) down to the fifth level (1%). Understand your earning potential and track rewards easily across all levels.</p>
@@ -893,9 +904,9 @@ console.log(screenWidth,"screenWidthscreenWidthscreenWidth")
               )}`}
               nodes={staticNodes}
               edges={edges}
-              onNodesChange={() => {}}
-              onEdgesChange={() => {}}
-              onConnect={() => {}}
+              onNodesChange={() => { }}
+              onEdgesChange={() => { }}
+              onConnect={() => { }}
               nodeTypes={nodeTypes}
               edgeTypes={{
                 smoothstep: SmoothElbowEdge,
@@ -934,7 +945,23 @@ console.log(screenWidth,"screenWidthscreenWidthscreenWidth")
           </UnlockProgressContext.Provider>
         </div>
       </div>
-    </div>
+
+      {showButtons && (
+        <div className={styles.floatingNav}>
+          <a
+            className={styles.headwolfBtn}
+            href="https://app.lunarwolf.ai/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className={styles.labelDesktop}>Become a Headwolf</span>
+            <span className={styles.labelMobile}>Join</span>
+          </a>
+        </div>
+      )
+      }
+
+    </div >
   );
 };
 
