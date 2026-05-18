@@ -6,6 +6,9 @@
     position: relative;
     overflow: hidden;
 
+    @include respond-to("sm") {
+        padding: 60px 0;
+    }
 
     &::after {
         position: absolute;
@@ -44,6 +47,10 @@
     :global(.container) {
         position: relative;
         z-index: 1;
+
+        @include respond-to("sm") {
+            padding: 0;
+        }
     }
 
 
@@ -105,7 +112,12 @@
         }
 
         @include respond-to("sm") {
-            grid-template-columns: 1fr;
+            display: flex;
+            gap: 10px;
+            overflow: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 0 20px;
         }
     }
 
@@ -120,7 +132,11 @@
         -webkit-backdrop-filter: blur(10px);
 
         @include respond-to("sm") {
-            padding: 16px;
+            padding: 14px;
+            max-width: 310px;
+            min-width: 310px;
+            width: 310px;
+            border-radius: 12px;
         }
 
         .quoteIcon {
@@ -131,6 +147,10 @@
             display: flex;
             gap: 4px;
             margin-bottom: 20px;
+
+            @include respond-to("sm") {
+                margin-bottom: 10px;
+            }
         }
 
         .content {
@@ -141,6 +161,11 @@
             margin-bottom: 30px;
             flex-grow: 1;
             font-family: var(--font-inter-sans);
+
+            @include respond-to("sm") {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
         }
 
         .userInfo {
@@ -150,12 +175,21 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 24px;
 
+            @include respond-to("sm") {
+                padding-top: 16px;
+            }
+
             .avatar {
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
                 overflow: hidden;
                 border: 2px solid #00B7FF;
+
+                @include respond-to("sm") {
+                    width: 40px;
+                    height: 40px;
+                }
 
                 img {
                     width: 100%;
@@ -170,6 +204,10 @@
                     font-size: 18px;
                     font-weight: 500;
                     margin: 0;
+
+                    @include respond-to("sm") {
+                        font-size: 16px;
+                    }
                 }
 
                 span {

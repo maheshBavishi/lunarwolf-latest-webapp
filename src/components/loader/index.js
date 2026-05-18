@@ -7,8 +7,13 @@ const Logo = '/assets/logo/loader-logo.png';
 
 export default function Loader() {
     const [phase, setPhase] = useState('center'); // 'center' → 'move' → 'done'
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 767);
+        handleResize(); // Initial check
+        window.addEventListener('resize', handleResize);
+
         document.body.style.overflow = 'hidden';
 
         // Phase 1: Logo visible at center (0 → 2s)
@@ -27,6 +32,7 @@ export default function Loader() {
             clearTimeout(moveTimer);
             clearTimeout(doneTimer);
             document.body.style.overflow = '';
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
@@ -90,7 +96,7 @@ export default function Loader() {
                                 : {
                                     opacity: 1,
                                     scale: 0.4,
-                                    x: 'calc(-50vw + 70px)',
+                                    x: isMobile ? 'calc(-50vw + 38px)' : 'calc(-50vw + 70px)',
                                     y: 'calc(-50vh + 40px)',
                                 }
                         }

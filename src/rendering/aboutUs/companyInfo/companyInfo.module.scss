@@ -91,6 +91,11 @@
         @media (min-width: 1024px) {
             grid-template-columns: repeat(4, 1fr);
         }
+
+        @include respond-to("sm") {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
     }
 
     /* ───────── Card Wrapper ───────── */
@@ -110,6 +115,10 @@
                     transform: rotateY(180deg);
                 }
             }
+        }
+
+        @include respond-to("sm") {
+            height: 250px;
         }
     }
 
@@ -135,9 +144,17 @@
         border-radius: 12px;
         overflow: hidden;
 
+        @include respond-to("sm") {
+            border-radius: 8px;
+        }
+
         .cardImage {
             object-fit: cover;
             border-radius: 12px;
+
+            @include respond-to("sm") {
+                border-radius: 8px;
+            }
         }
     }
 
@@ -147,6 +164,10 @@
         background: linear-gradient(to top, rgba(2, 8, 16, 0.9) 0%, rgba(2, 8, 16, 0.1) 40%, transparent 100%);
         border-radius: 12px;
         pointer-events: none;
+
+        @include respond-to("sm") {
+            border-radius: 8px;
+        }
     }
 
     .cardInfo {
@@ -159,6 +180,10 @@
 
     .cardInfoInner {
         padding: 24px 24px 32px 24px;
+
+        @include respond-to("sm") {
+            padding: 12px;
+        }
     }
 
     .cardName {
@@ -192,6 +217,11 @@
         flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
+
+        @include respond-to("sm") {
+            padding: 12px;
+            border-radius: 12px;
+        }
     }
 
     .backName {
@@ -200,12 +230,21 @@
         color: #fff;
         line-height: 1.2;
         margin: 0;
+
+        @include respond-to("sm") {
+            font-size: 14px;
+        }
     }
 
     .backRole {
         font-size: 14px;
         color: #A3A3A3;
         margin: 4px 0 32px 0;
+
+        @include respond-to("sm") {
+            font-size: 12px;
+            margin: 4px 0 12px 0;
+        }
     }
 
     .backDesc {
@@ -213,6 +252,10 @@
         color: #C0C0C0;
         line-height: 1.6;
         margin: 0;
+
+        @include respond-to("sm") {
+            font-size: 10px;
+        }
     }
 
     .logoCircle {
@@ -225,8 +268,17 @@
         align-items: center;
         justify-content: center;
 
+        @include respond-to("sm") {
+            width: 38px;
+            height: 38px;
+        }
+
         img {
             max-width: 24px;
+
+            @include respond-to("sm") {
+                max-width: 20px;
+            }
         }
     }
 }
