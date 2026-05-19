@@ -12,6 +12,7 @@
     padding-left: 60px;
     isolation: isolate;
     padding-bottom: 120px;
+    padding-top: 120px;
 
     @include respond-to("md") {
         padding-left: 40px;

@@ -84,7 +84,7 @@ const FaqItem = ({ item, isOpen, onClick }) => {
 }
 
 export default function FaqSection() {
-    const [openIndex, setOpenIndex] = useState(0); // Open the first FAQ by default
+    const [openIndex, setOpenIndex] = useState(null); // All FAQs closed by default
 
     return (
         <div className={styles.faqSection}>
