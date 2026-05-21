@@ -1,114 +1,220 @@
 @use '../../../scss/main.scss' as *;
 @use '../../../scss/breakpoints/breakpoints.scss' as *;
 
-.referralNetwork {
-    padding: 100px 0 0 0;
+.container {
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100svh;
+    padding: 120px 40px;
+    z-index: 1;
+
+    @include respond-to("md") {
+        height: auto;
+        padding: 40px 24px;
+    }
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contentWrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @include respond-to("md") {
+        height: auto;
+    }
+}
+
+.heading {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-inter-sans);
+
+    @include respond-to("lg") {
+        font-size: 48px;
+    }
+
+    @include respond-to("md") {
+        font-size: 30px;
+    }
+}
+
+.description {
+    width: 50%;
+    color: #e5e7eb;
+    text-align: center;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: var(--font-inter-sans);
+
+    @include respond-to("lg") {
+        width: 100%;
+    }
+
+    @include respond-to("tab") {
+        font-size: 16px;
+    }
 
     @include respond-to("sm") {
-        padding: 60px 0 0 0;
+        font-size: 12px;
+    }
+}
+
+.cardsContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    position: relative;
+    margin-top: 40px;
+}
+
+.tooltip {
+    position: fixed;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 9999;
+}
+
+.divider {
+    display: block;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 2;
+    margin: 80px 0; // Prevent stretching to full height and center it
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @include respond-to("md") {
+        height: 260px;
     }
 
-    .title {
-        padding: 0 0 60px 0;
+    .blackOverlayTop,
+    .blackOverlayBottom {
+        position: absolute;
+        background-color: #000;
+        transition: opacity 0.7s;
+        height: 100vh;
+        width: 50%;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .blackOverlayTop {
+        top: 50%;
+    }
+
+    .blackOverlayBottom {
+        bottom: 50%;
+    }
+
+    &.leftCard {
+        height: 600px;
+
+        @media (max-width:576px) {
+            height: auto;
+        }
+
+        .blackOverlayTop,
+        .blackOverlayBottom {
+            left: 0;
+            right: auto;
+        }
+    }
+
+    &.rightCard {
+        height: 600px;
+
+        @media (max-width:576px) {
+            height: auto;
+        }
+
+        .blackOverlayTop,
+        .blackOverlayBottom {
+            right: 0;
+            left: auto;
+        }
+    }
+
+    span {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        font-family: var(--font-inter-sans);
+        transition: all 0.7s;
+
+        @include respond-to("lg") {
+            font-size: 24px;
+        }
+
+        @include respond-to("tab") {
+            font-size: 20px;
+        }
 
         @include respond-to("sm") {
-            padding: 0 0 40px 0;
-        }
-
-        h2 {
-            color: #fff;
-            text-transform: uppercase;
-            max-width: 700px;
-            margin: 0 auto 16px auto;
-            text-align: center;
-            font-size: 52px;
-            font-weight: 300;
-
-            @include respond-to("md") {
-                font-size: 42px;
-            }
-
-            @include respond-to("sm") {
-                font-size: 32px;
-            }
-        }
-
-        p {
-            font-size: 20px;
-            font-family: var(--font-inter-sans);
-            color: rgb(255, 255, 255);
-            opacity: 0.6;
-            background: rgb(4, 7, 9);
-            max-width: 928px;
-            margin: 0 auto;
-            text-align: center;
-            font-weight: 300;
-
-            @include respond-to("sm") {
-                font-size: 16px;
-            }
+            font-size: 14px;
         }
     }
 
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1px 1fr;
-        gap: 0px;
+    &:hover {
 
-        .items {
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-
-            @include respond-to("sm") {
-                height: 240px;
-            }
-
-            &:hover,
-            &.active {
-                &::before {
-                    right: 0%;
-                }
-            }
-
-            &::before {
-                position: absolute;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                height: 100%;
-                content: '';
-                background: radial-gradient(50% 50% at 50% 50%, #19424B 0%, #0F203B 100%);
-                filter: blur(139.5px);
-                opacity: 1;
-                transition: .3s ease-in-out;
-            }
-
-            p {
-                font-size: 30px;
-                color: #fff;
-                position: relative;
-                z-index: 9;
-                font-weight: 500;
-
-                @include respond-to("sm") {
-                    font-size: 16px;
-                    max-width: 80%;
-                    margin: 0 auto;
-                    text-align: center;
-                }
-            }
+        .blackOverlayTop,
+        .blackOverlayBottom {
+            opacity: 0;
         }
 
-        .line {
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            opacity: .2;
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &.active {
+
+        .blackOverlayTop,
+        .blackOverlayBottom {
+            opacity: 0;
+        }
+
+        span {
+            font-weight: 700;
+            transform: scale(1.1);
         }
     }
 }

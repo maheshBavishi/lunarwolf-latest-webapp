@@ -10,9 +10,13 @@ const WolfImage = "/assets/images/wolf3.png";
 const WolfImage2 = "/assets/images/wolf-group.png";
 const LineImage = "/assets/images/line.png";
 const CownImage = "/assets/images/cown.svg";
+const LineMobile = "/assets/images/line-mobile.png";
 export default function EarnSection() {
   return (
     <div className={styles.earnSectionSection}>
+      <div className={styles.mobileLine}>
+        <img src={LineMobile} alt="LineMobile" />
+      </div>
       <div className={styles.flexboxAlignment}>
         <div className={styles.textContainer}>
           <div className={styles.buttonstyle}>
@@ -59,6 +63,11 @@ export default function EarnSection() {
         </div>
         <div className={styles.imageCenterAlignmet}>
           <img src={WolfImage2} alt="WolfImage2" />
+          <div className={styles.textbox}>
+            <p>
+              Turn Every Trade Into Wealth = Automated Profits + Lifetime Commissions
+            </p>
+          </div>
           <div className={styles.cownAlignment}>
             <motion.img
               src={CownImage}

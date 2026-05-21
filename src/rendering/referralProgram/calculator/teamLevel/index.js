@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useCallback, useTransition, useEffect } from 'react';
 import styles from './teamLevel.module.scss';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const stepperhead = "/assets/images/stepperhead.png";
 const step1icon = "/assets/images/step1.png";
@@ -9,6 +10,29 @@ const step3icon = "/assets/images/step3.png";
 const step4icon = "/assets/images/step4.png";
 const step5icon = "/assets/images/step5.png";
 const LockImage = "/assets/images/lock.svg";
+
+const AnimatedLock = () => (
+    <motion.svg 
+        width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+        animate={{ y: [-3, 3, -3] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+    >
+        <rect x="0.5" y="0.5" width="43" height="43" rx="4.5" fill="#030303" />
+        <motion.rect 
+            x="0.5" y="0.5" width="43" height="43" rx="4.5" stroke="url(#paint0_linear_711_810)" 
+            animate={{ opacity: [0.3, 1, 0.3] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <path d="M29 21H15C13.8954 21 13 21.8954 13 23V30C13 31.1046 13.8954 32 15 32H29C30.1046 32 31 31.1046 31 30V23C31 21.8954 30.1046 21 29 21Z" stroke="#00D3F2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M17 21V17C17 15.6739 17.5268 14.4021 18.4645 13.4645C19.4021 12.5268 20.6739 12 22 12C23.3261 12 24.5979 12.5268 25.5355 13.4645C26.4732 14.4021 27 15.6739 27 17V21" stroke="#00D3F2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <defs>
+            <linearGradient id="paint0_linear_711_810" x1="22" y1="-2.6226e-06" x2="22" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stopColor="white" stopOpacity="0.3" />
+                <stop offset="1" stopColor="#999999" stopOpacity="0.1" />
+            </linearGradient>
+        </defs>
+    </motion.svg>
+);
 
 export default function TeamLevel() {
     const [isPending, startTransition] = useTransition();
@@ -61,7 +85,7 @@ export default function TeamLevel() {
                 <h2 className={styles.title}>
                     Team / Level Income (Bonus Commission)
                 </h2>
-                
+
                 <div className={styles.sliderCard}>
                     <div className={styles.accountGrid}>
                         <h2 className={styles.label}>Account</h2>
@@ -154,17 +178,20 @@ export default function TeamLevel() {
                             <Image src={step2icon} alt="step2icon" width={36} height={36} className={styles.stepIcon} />
                             <div className={`${styles.line} ${teamActiveAccounts >= 16 ? styles.active : styles.inactive}`}></div>
                         </div>
-                        <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 6 ? '' : styles.locked}`}>
-                            <div className={styles.stepContentInner}>
-                                <p className={styles.levelText}>Level 2</p>
-                                <p className={styles.reqText}>Achieve Rank 2</p>
-                                <p className={`${styles.commText} ${teamActiveAccounts >= 6 ? '' : styles.locked}`}>$2 / standard lot</p>
-                                {teamActiveAccounts < 6 && (
-                                    <div className={styles.lockOverlay}>
-                                        <Image src={LockImage} alt="LockImage" width={24} height={24} />
-                                    </div>
-                                )}
+                        <div className={styles.relative}>
+                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 6 ? '' : styles.locked}`}>
+                                <div className={styles.stepContentInner}>
+                                    <p className={styles.levelText}>Level 2</p>
+                                    <p className={styles.reqText}>Achieve Rank 2</p>
+                                    <p className={`${styles.commText} ${teamActiveAccounts >= 6 ? '' : styles.locked}`}>$2 / standard lot</p>
+
+                                </div>
                             </div>
+                            {teamActiveAccounts < 6 && (
+                                <div className={styles.lockOverlay}>
+                                    <AnimatedLock />
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -174,17 +201,19 @@ export default function TeamLevel() {
                             <Image src={step3icon} alt="step3icon" width={36} height={36} className={styles.stepIcon} />
                             <div className={`${styles.line} ${teamActiveAccounts >= 26 ? styles.active : styles.inactive}`}></div>
                         </div>
-                        <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 16 ? '' : styles.locked}`}>
-                            <div className={styles.stepContentInner}>
-                                <p className={styles.levelText}>Level 3</p>
-                                <p className={styles.reqText}>Achieve Rank 3</p>
-                                <p className={`${styles.commText} ${teamActiveAccounts >= 16 ? '' : styles.locked}`}>$1 / Standard lot</p>
-                                {teamActiveAccounts < 16 && (
-                                    <div className={styles.lockOverlay}>
-                                        <Image src={LockImage} alt="LockImage" width={24} height={24} />
-                                    </div>
-                                )}
+                        <div className={styles.relative}>
+                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 16 ? '' : styles.locked}`}>
+                                <div className={styles.stepContentInner}>
+                                    <p className={styles.levelText}>Level 3</p>
+                                    <p className={styles.reqText}>Achieve Rank 3</p>
+                                    <p className={`${styles.commText} ${teamActiveAccounts >= 16 ? '' : styles.locked}`}>$1 / Standard lot</p>
+                                </div>
                             </div>
+                            {teamActiveAccounts < 16 && (
+                                <div className={styles.lockOverlay}>
+                                    <AnimatedLock />
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -194,17 +223,19 @@ export default function TeamLevel() {
                             <Image src={step4icon} alt="step4icon" width={36} height={36} className={styles.stepIcon} />
                             <div className={`${styles.line} ${teamActiveAccounts >= 51 ? styles.active : styles.inactive}`}></div>
                         </div>
-                        <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 26 ? '' : styles.locked}`}>
-                            <div className={styles.stepContentInner}>
-                                <p className={styles.levelText}>Level 4</p>
-                                <p className={styles.reqText}>Achieve Rank 4</p>
-                                <p className={`${styles.commText} ${teamActiveAccounts >= 26 ? '' : styles.locked}`}>$1 / Standard lot</p>
-                                {teamActiveAccounts < 26 && (
-                                    <div className={styles.lockOverlay}>
-                                        <Image src={LockImage} alt="LockImage" width={24} height={24} />
-                                    </div>
-                                )}
+                        <div className={styles.relative}>
+                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 26 ? '' : styles.locked}`}>
+                                <div className={styles.stepContentInner}>
+                                    <p className={styles.levelText}>Level 4</p>
+                                    <p className={styles.reqText}>Achieve Rank 4</p>
+                                    <p className={`${styles.commText} ${teamActiveAccounts >= 26 ? '' : styles.locked}`}>$1 / Standard lot</p>
+                                </div>
                             </div>
+                            {teamActiveAccounts < 26 && (
+                                <div className={styles.lockOverlay}>
+                                    <AnimatedLock />
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -214,17 +245,19 @@ export default function TeamLevel() {
                             <Image src={step5icon} alt="step5icon" width={36} height={36} className={styles.stepIcon} />
                             <div className={`${styles.line} ${teamActiveAccounts >= 51 ? styles.active : styles.inactive} ${styles.short}`}></div>
                         </div>
-                        <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 51 ? '' : styles.locked}`}>
-                            <div className={styles.stepContentInner}>
-                                <p className={styles.levelText}>Level 5</p>
-                                <p className={styles.reqText}>Achieve Rank 5</p>
-                                <p className={`${styles.commText} ${teamActiveAccounts >= 51 ? '' : styles.locked}`}>$1 / Standard lot</p>
-                                {teamActiveAccounts < 51 && (
-                                    <div className={styles.lockOverlay}>
-                                        <Image src={LockImage} alt="LockImage" width={24} height={24} />
-                                    </div>
-                                )}
+                        <div className={styles.relative}>
+                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 51 ? '' : styles.locked}`}>
+                                <div className={styles.stepContentInner}>
+                                    <p className={styles.levelText}>Level 5</p>
+                                    <p className={styles.reqText}>Achieve Rank 5</p>
+                                    <p className={`${styles.commText} ${teamActiveAccounts >= 51 ? '' : styles.locked}`}>$1 / Standard lot</p>
+                                </div>
                             </div>
+                            {teamActiveAccounts < 51 && (
+                                <div className={styles.lockOverlay}>
+                                    <AnimatedLock />
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

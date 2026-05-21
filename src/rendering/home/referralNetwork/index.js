@@ -1,54 +1,102 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import styles from "./referralNetwork.module.scss";
+import { createPortal } from "react-dom";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import styles from "./referralNetwork.module.scss";
 
-export default function ReferralNetwork() {
+const ReferralNetwork = () => {
+  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0 });
+  const [activeCard, setActiveCard] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
-  const [activeIndex, setActiveIndex] = useState(-1);
 
   useEffect(() => {
-    if (window.innerWidth <= 768) {
-      setActiveIndex(0);
-    }
-
-    const interval = setInterval(() => {
-      if (window.innerWidth <= 768) {
-        setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-      } else {
-        setActiveIndex(-1);
-      }
-    }, 5000);
-
-    return () => clearInterval(interval);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (!isMobile) return;
+    const interval = setInterval(() => {
+      setActiveCard((prev) => (prev === 0 ? 1 : 0));
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [isMobile]);
+
+  const handleRedirect = (Path) => {
+    router.push(Path);
+  };
+
   return (
-    <div className={styles.referralNetwork}>
-      <div className="container">
-        <div className={styles.title}>
-          <h2>Earn More As your Referral Network Earns</h2>
-          <p>
-            At Lunar Wolf, our exclusive networking-based referral program lets you earn beyond your trading returns by building your own network.
-            Choose from two earning options: Profit Sharing & IB Network to maximize your income.
-          </p>
-        </div>
-        <div className={styles.grid}>
+    <section className={styles.container}>
+      <div className={styles.bgImage}>
+        <Image src="/assets/images/pricing-hover-effect.png" alt="bg" fill style={{ objectFit: 'cover' }} />
+      </div>
+
+      <div className={styles.contentWrapper}>
+        <h1 className={styles.heading}>
+          Earn More As your Referral Network Earns
+        </h1>
+        <p className={styles.description}>
+          At Lunar Wolf, our exclusive networking-based referral program lets
+          you earn beyond your trading returns by building your own network.
+          Choose from two earning options: Profit Sharing & IB Network to
+          maximize your income.
+        </p>
+
+        <div className={styles.cardsContainer}>
+          {tooltip.visible && typeof window !== "undefined"
+            ? createPortal(
+              <div
+                className={styles.tooltip}
+                style={{
+                  left: tooltip.x + 20,
+                  top: tooltip.y + 20,
+                  opacity: tooltip.visible ? 1 : 0,
+                }}
+              >
+                Click Here
+              </div>,
+              document.body
+            )
+            : null}
+
+          {/* Left Option */}
           <div
-            className={`${styles.items} ${activeIndex === 0 ? styles.active : ""}`}
-            onClick={() => router.push("/referral-program?model=profit")}
+            className={`${styles.card} ${styles.leftCard} ${isMobile && activeCard === 0 ? styles.active : ""}`}
+            onMouseMove={(e) => setTooltip({ visible: true, x: e.clientX, y: e.clientY })}
+            onMouseEnter={() => setTooltip((t) => ({ ...t, visible: true }))}
+            onMouseLeave={() => setTooltip((t) => ({ ...t, visible: false }))}
+            onClick={() => handleRedirect("/referral-program?model=profit")}
           >
-            <p>Join Profit Sharing</p>
+            <div className={styles.blackOverlayBottom} />
+            <div className={styles.blackOverlayTop} />
+            <span>Join Profit Sharing</span>
           </div>
-          <div className={styles.line}></div>
+
+          <div className={styles.divider} />
+
+          {/* Right Option */}
           <div
-            className={`${styles.items} ${activeIndex === 1 ? styles.active : ""}`}
-            onClick={() => router.push("/referral-program?model=brokerage")}
+            className={`${styles.card} ${styles.rightCard} ${isMobile && activeCard === 1 ? styles.active : ""}`}
+            onMouseMove={(e) => setTooltip({ visible: true, x: e.clientX, y: e.clientY })}
+            onMouseEnter={() => setTooltip((t) => ({ ...t, visible: true }))}
+            onMouseLeave={() => setTooltip((t) => ({ ...t, visible: false }))}
+            onClick={() => handleRedirect("/referral-program?model=brokerage")}
           >
-            <p>Become an IB Partner</p>
+            <div className={styles.blackOverlayBottom} />
+            <div className={styles.blackOverlayTop} />
+            <span>Become an IB Partner</span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default ReferralNetwork;

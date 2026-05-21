@@ -9,6 +9,18 @@
         padding: 60px 0 0 0;
     }
 
+    .mobileLine {
+        display: none;
+        position: absolute;
+        padding: 0 20px;
+        bottom: 11%;
+        z-index: 9;
+
+        @include respond-to("sm") {
+            display: block;
+        }
+    }
+
     &:before {
         position: absolute;
         bottom: 0%;
@@ -56,6 +68,36 @@
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
+
+            .textbox {
+                border-radius: 8px;
+                border: 0.6px solid rgba(255, 255, 255, 0.30);
+                background: rgba(0, 0, 0, 0.04);
+                backdrop-filter: blur(28px);
+                position: absolute;
+                left: 50%;
+                bottom: 7%;
+                transform: translateX(-50%);
+                padding: 12px 24px;
+
+                @include respond-to("sm") {
+                    width: calc(100% - 40px);
+                    padding: 4px 10px;
+                    display: none;
+                }
+
+                p {
+                    color: #FFF;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+
+                    @include respond-to("sm") {
+                        font-size: 10px;
+                    }
+                }
+            }
 
             .cownAlignment {
                 position: absolute;
@@ -175,7 +217,7 @@
                 width: 100%;
 
                 @include respond-to("sm") {
-                    width: 80%;
+                    width: 53%;
                 }
             }
         }

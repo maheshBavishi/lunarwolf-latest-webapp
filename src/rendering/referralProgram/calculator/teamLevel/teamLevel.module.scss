@@ -312,6 +312,23 @@
                     }
                 }
 
+                .relative {
+                    position: relative;
+
+                    .lockOverlay {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 99;
+
+
+                        img {
+                            display: block;
+                        }
+                    }
+                }
+
                 .stepContentOuter {
                     background: linear-gradient(0deg, #000 0%, rgba(102, 102, 102, 0.67) 100%);
                     padding: 1px;
@@ -384,16 +401,7 @@
                             }
                         }
 
-                        .lockOverlay {
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            transform: translate(-50%, -50%);
 
-                            img {
-                                display: block;
-                            }
-                        }
                     }
                 }
             }
