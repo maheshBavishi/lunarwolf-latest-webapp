@@ -29,7 +29,7 @@ export default function Homepage() {
             <MemberSection />
             <LivePortfolios />
             <StepSection />
-            <OurClient />
+            {/* <OurClient /> */}
             <AutomatedProfit />
             <FaqSection />
         </div>
