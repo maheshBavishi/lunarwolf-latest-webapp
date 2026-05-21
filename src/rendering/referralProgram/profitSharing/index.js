@@ -392,7 +392,6 @@ const generateLetterAConnectionsBetweenLevels = () => {
 
 const ProfitSharing = () => {
   const { width: screenWidth, height: screenHeight } = useScreenSize();
-  console.log(screenWidth, "screenWidthscreenWidthscreenWidth")
   const getResponsiveLayout = (w) => {
     if (!w) w = 1280;
 

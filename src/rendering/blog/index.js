@@ -8,6 +8,9 @@ import Link from "next/link";
 import styles from "./blog.module.scss";
 
 export default function Blog({ blogsData, paginationData, categoriesData, currentCategory, currentPage }) {
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const bannerBlogData = blogsData?.[0];
   const exploreBlogsData = blogsData?.slice(1);
   const hasBlogs = blogsData && blogsData.length > 0;
