@@ -64,11 +64,11 @@
 
     h1 {
       font-family: "Inter", sans-serif;
-      font-size: 2rem; // Reduced for mobile
+      font-size: 63px; // Reduced for mobile
       line-height: 1.2;
       text-transform: uppercase;
       color: #ffffff;
-      font-weight: 400;
+      font-weight: 300;
       margin: 0;
 
       @include respond-to("tab") {

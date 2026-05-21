@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './beComingSection.module.scss';
 import Image from 'next/image';
+import AutomateAnimation from './automateAnimation';
+import TradingAnimation from './tradingAnimation';
 
 const AutomateImage = "/assets/images/automate.png";
 const ReferralImage = "/assets/images/referral.png";
@@ -24,6 +26,7 @@ export default function BeComingSection() {
                                 fill
                                 className={styles.cardImage}
                             />
+                          
                         </div>
                         <div>
                             <h3 className={styles.cardTitle}>
@@ -38,12 +41,8 @@ export default function BeComingSection() {
                     </div>
                     <div className={styles.card}>
                         <div className={styles.imageWrap}>
-                            <Image
-                                src={ReferralImage}
-                                alt="ReferralImage"
-                                fill
-                                className={styles.cardImage}
-                            />
+                            <AutomateAnimation />
+
                         </div>
                         <div>
                             <h3 className={styles.cardTitle}>
@@ -58,12 +57,7 @@ export default function BeComingSection() {
                     </div>
                     <div className={styles.card}>
                         <div className={styles.imageWrap}>
-                            <Image
-                                src={WinImage}
-                                alt="WinImage"
-                                fill
-                                className={styles.cardImage}
-                            />
+                            <TradingAnimation />
                         </div>
                         <div>
                             <h3 className={styles.cardTitle}>

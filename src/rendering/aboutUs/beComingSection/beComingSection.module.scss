@@ -2,7 +2,7 @@
 @use '../../../scss/breakpoints/breakpoints.scss' as *;
 
 .beComingSection {
-    padding: 120px 0;
+    padding: 120px 0 0 0;
     position: relative;
 
     @include respond-to("sm") {

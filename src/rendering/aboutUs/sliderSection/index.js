@@ -142,15 +142,6 @@ const SliderSection = forwardRef(({ onProgressChange }, ref) => {
 
     return (
         <section className={styles.sliderSection} ref={sectionRef}>
-            <div className={styles.bgSmoke}>
-                <Image
-                    src={SmokeLg}
-                    alt="Background Smoke"
-                    fill
-                    className="object-cover"
-                />
-            </div>
-
             <div className={styles.contentContainer}>
                 <div className={styles.leftContent}>
                     <h2>

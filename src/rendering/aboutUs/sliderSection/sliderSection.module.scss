@@ -201,9 +201,11 @@
         position: relative;
         overflow: hidden; // To allow numbers to peak out
         width: calc(100% - 35%);
+        padding-left: 80px; // 80px safe zone so active card doesn't go all the way left and numbers don't get cut
 
         @include respond-to("sm") {
             width: 100%;
+            padding-left: 0; // Mobile already handles this via card padding
         }
     }
 

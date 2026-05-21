@@ -62,6 +62,23 @@ export default function Footer() {
             <div>
               <h3>Contact Us</h3>
               <a href="mailto:contact@lunarwolf.com">contact@lunarwolf.com</a>
+              <div className={styles.socialIconAlignment}>
+                <a href="https://www.facebook.com/lunarwolfai" target="_blank" rel="noopener noreferrer">
+                  <FacebookIcon />
+                </a>
+                <a href="https://www.instagram.com/lunarwolf.ai/" target="_blank" rel="noopener noreferrer">
+                  <InstagramIcon />
+                </a>
+                <a href="https://x.com/Lunarwolf_ai" target="_blank" rel="noopener noreferrer">
+                  <TwitterIcon />
+                </a>
+                <a href="https://www.youtube.com/@Lunarwolf_ai" target="_blank" rel="noopener noreferrer">
+                  <YoutubeIcon />
+                </a>
+                <a href="https://t.me/lunarwolfai" target="_blank" rel="noopener noreferrer">
+                  <TelegramIcon />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -69,23 +86,7 @@ export default function Footer() {
           <p>EA Software Service Provider</p>
           <span>©2026 All Rights Reserved</span>
         </div>
-        <div className={styles.socialIconAlignment}>
-          <a href="https://www.facebook.com/lunarwolfai" target="_blank" rel="noopener noreferrer">
-            <FacebookIcon />
-          </a>
-          <a href="https://www.instagram.com/lunarwolf.ai/" target="_blank" rel="noopener noreferrer">
-            <InstagramIcon />
-          </a>
-          <a href="https://x.com/Lunarwolf_ai" target="_blank" rel="noopener noreferrer">
-            <TwitterIcon />
-          </a>
-          <a href="https://www.youtube.com/@Lunarwolf_ai" target="_blank" rel="noopener noreferrer">
-            <YoutubeIcon />
-          </a>
-          <a href="https://t.me/lunarwolfai" target="_blank" rel="noopener noreferrer">
-            <TelegramIcon />
-          </a>
-        </div>
+
       </div>
       <div className={styles.footerTextAlignment}>
         <p>
