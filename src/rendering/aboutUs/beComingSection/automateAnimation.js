@@ -1,16 +1,27 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 export default function AutomateAnimation() {
+    const [isSafari, setIsSafari] = useState(false);
+
+    useEffect(() => {
+        const ua = navigator.userAgent;
+        // Detect Safari (but not Chrome/Edge/Firefox on iOS which also have Safari UA)
+        const safari = /^((?!chrome|android).)*safari/i.test(ua);
+        setIsSafari(safari);
+    }, []);
+
     return (
-        <svg width="327" height="172" viewBox="0 0 327 172" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
+        <svg width="100%" height="100%" viewBox="0 0 327 172" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ overflow: 'visible' }}>
             <motion.g animate={{ y: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0 }}>
-                <foreignObject x="209" y="10" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
+                {!isSafari && <foreignObject x="209" y="10" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
                     backdropFilter: "blur(15px)",
+                    WebkitBackdropFilter: "blur(15px)",
                     clipPath: "url(#bgblur_0_5744_460_clip_path)",
                     height: "100%",
                     width: "100%",
-                }}></div></foreignObject><g filter="url(#filter0_i_5744_460)" data-figma-bg-blur-radius="30">
+                }}></div></foreignObject>}<g filter="url(#filter0_i_5744_460)" data-figma-bg-blur-radius="30">
                     <rect x="239" y="40" width="44" height="44" rx="22" fill="url(#paint0_linear_5744_460)" fillOpacity="0.1" />
                     <rect x="239.3" y="40.3" width="43.4" height="43.4" rx="21.7" stroke="url(#paint1_linear_5744_460)" strokeWidth="0.6" />
                     <path d="M260.167 64.5001H261.833C262.275 64.5001 262.699 64.3245 263.012 64.0119C263.324 63.6994 263.5 63.2754 263.5 62.8334C263.5 62.3914 263.324 61.9675 263.012 61.6549C262.699 61.3423 262.275 61.1667 261.833 61.1667H259.333C258.833 61.1667 258.417 61.3334 258.167 61.6667L253.5 66.1667" stroke="white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -22,12 +33,13 @@ export default function AutomateAnimation() {
             </motion.g>
 
             <motion.g animate={{ y: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}>
-                <foreignObject x="253" y="97" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
+                {!isSafari && <foreignObject x="253" y="97" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
                     backdropFilter: "blur(15px)",
+                    WebkitBackdropFilter: "blur(15px)",
                     clipPath: "url(#bgblur_1_5744_460_clip_path)",
                     height: "100%",
                     width: "100%",
-                }}></div></foreignObject><g filter="url(#filter1_i_5744_460)" data-figma-bg-blur-radius="30">
+                }}></div></foreignObject>}<g filter="url(#filter1_i_5744_460)" data-figma-bg-blur-radius="30">
                     <rect x="283" y="127" width="44" height="44" rx="22" fill="url(#paint2_linear_5744_460)" fillOpacity="0.1" />
                     <rect x="283.3" y="127.3" width="43.4" height="43.4" rx="21.7" stroke="url(#paint3_linear_5744_460)" strokeWidth="0.6" />
                     <path d="M305 157.333C309.603 157.333 313.334 153.602 313.334 149C313.334 144.398 309.603 140.667 305 140.667C300.398 140.667 296.667 144.398 296.667 149C296.667 153.602 300.398 157.333 305 157.333Z" stroke="white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -37,12 +49,13 @@ export default function AutomateAnimation() {
             </motion.g>
 
             <motion.g animate={{ y: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1.0 }}>
-                <foreignObject x="112" y="-30" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
+                {!isSafari && <foreignObject x="112" y="-30" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
                     backdropFilter: "blur(15px)",
+                    WebkitBackdropFilter: "blur(15px)",
                     clipPath: "url(#bgblur_2_5744_460_clip_path)",
                     height: "100%",
                     width: "100%",
-                }}></div></foreignObject><g filter="url(#filter2_i_5744_460)" data-figma-bg-blur-radius="30">
+                }}></div></foreignObject>}<g filter="url(#filter2_i_5744_460)" data-figma-bg-blur-radius="30">
                     <rect x="142" width="44" height="44" rx="22" fill="url(#paint4_linear_5744_460)" fillOpacity="0.1" />
                     <rect x="142.3" y="0.3" width="43.4" height="43.4" rx="21.7" stroke="url(#paint5_linear_5744_460)" strokeWidth="0.6" />
                     <path d="M169 18.6667C170.381 18.6667 171.5 17.5475 171.5 16.1667C171.5 14.786 170.381 13.6667 169 13.6667C167.619 13.6667 166.5 14.786 166.5 16.1667C166.5 17.5475 167.619 18.6667 169 18.6667Z" stroke="white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -54,12 +67,13 @@ export default function AutomateAnimation() {
             </motion.g>
 
             <motion.g animate={{ y: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}>
-                <foreignObject x="-30" y="98" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
+                {!isSafari && <foreignObject x="-30" y="98" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
                     backdropFilter: "blur(15px)",
+                    WebkitBackdropFilter: "blur(15px)",
                     clipPath: "url(#bgblur_3_5744_460_clip_path)",
                     height: "100%",
                     width: "100%",
-                }}></div></foreignObject><g filter="url(#filter3_i_5744_460)" data-figma-bg-blur-radius="30">
+                }}></div></foreignObject>}<g filter="url(#filter3_i_5744_460)" data-figma-bg-blur-radius="30">
                     <rect y="128" width="44" height="44" rx="22" fill="url(#paint6_linear_5744_460)" fillOpacity="0.1" />
                     <rect x="0.3" y="128.3" width="43.4" height="43.4" rx="21.7" stroke="url(#paint7_linear_5744_460)" strokeWidth="0.6" />
                     <path d="M22 153.333V157.5" stroke="white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -72,12 +86,13 @@ export default function AutomateAnimation() {
             </motion.g>
 
             <motion.g animate={{ y: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 2.0 }}>
-                <foreignObject x="14" y="10" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
+                {!isSafari && <foreignObject x="14" y="10" width="104" height="104"><div xmlns="http://www.w3.org/1999/xhtml" style={{
                     backdropFilter: "blur(15px)",
+                    WebkitBackdropFilter: "blur(15px)",
                     clipPath: "url(#bgblur_4_5744_460_clip_path)",
                     height: "100%",
                     width: "100%",
-                }}></div></foreignObject><g filter="url(#filter4_i_5744_460)" data-figma-bg-blur-radius="30">
+                }}></div></foreignObject>}<g filter="url(#filter4_i_5744_460)" data-figma-bg-blur-radius="30">
                     <rect x="44" y="40" width="44" height="44" rx="22" fill="url(#paint8_linear_5744_460)" fillOpacity="0.1" />
                     <rect x="44.3" y="40.3" width="43.4" height="43.4" rx="21.7" stroke="url(#paint9_linear_5744_460)" strokeWidth="0.6" />
                     <path d="M73.4997 65.3333H70.1663C69.7061 65.3333 69.333 65.7063 69.333 66.1666V69.4999C69.333 69.9602 69.7061 70.3333 70.1663 70.3333H73.4997C73.9599 70.3333 74.333 69.9602 74.333 69.4999V66.1666C74.333 65.7063 73.9599 65.3333 73.4997 65.3333Z" stroke="white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />

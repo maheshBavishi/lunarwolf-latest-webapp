@@ -128,6 +128,7 @@
 
             @include respond-to("sm") {
                 margin-top: 10px;
+                justify-content: flex-start;
             }
 
             a {
