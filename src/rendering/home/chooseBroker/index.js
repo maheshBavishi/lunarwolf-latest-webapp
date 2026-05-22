@@ -14,6 +14,14 @@ const SecurefxIcon = "/assets/images/securefx.png";
 
 const brokerData = [
   {
+    id: 3,
+    icon: TmgmIcon,
+    alt: "TmgmIcon",
+    buttonText: "Open Account with TMGM",
+    link: "https://portal.tmgm.com/register?r_code=IB1750216339A",
+    // comingSoon: true,
+  },
+  {
     id: 1,
     icon: Multibankgroup,
     alt: "Multibankgroup",
@@ -29,14 +37,6 @@ const brokerData = [
     link: "https://i.ecmarkets.com/api/client/pm/2/Z6W4D",
 
     topButtonLink: "/documents/ECMarkets_SwapFree_Guide.pdf",
-  },
-  {
-    id: 3,
-    icon: TmgmIcon,
-    alt: "TmgmIcon",
-    buttonText: "Open Account with TMGM",
-    link: "https://portal.tmgm.com/register?r_code=IB1750216339A",
-    // comingSoon: true,
   },
   {
     id: 4,
