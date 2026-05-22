@@ -491,74 +491,65 @@ const ProfitSharing = () => {
     [],
   );
 
-  const calculateUnlockProgress = useCallback((entries) => {
+  const calculateUnlockProgress = useCallback(() => {
+    if (!isClient) return;
+    
     const newProgress = { 1.1: 1 };
+    const viewportHeight = window.innerHeight;
 
-    entries.forEach((entry) => {
-      const levelId = entry.target.getAttribute("data-level");
-      if (!levelId || levelId === "1.1") return;
+    commissionLevels.forEach((level) => {
+      if (level.level === "1.1") return;
+      const element = levelRefs.current[level.level];
+      if (!element) return;
 
-      const { intersectionRatio, boundingClientRect, rootBounds } = entry;
+      const rect = element.getBoundingClientRect();
+      // We want the unlock to start when the card is well inside the viewport,
+      // giving the user time to read the lock text at the bottom.
+      // We start unlocking when the bottom of the card is 40px above the bottom of the screen.
+      const startUnlockY = viewportHeight - 40;
+      // We finish unlocking when the bottom of the card is at 60% of the screen height.
+      const endUnlockY = viewportHeight * 0.6;
 
-      if (!rootBounds) return;
-
-      const cardHeight = boundingClientRect.height;
-      const visibleHeight = Math.min(
-        boundingClientRect.bottom - rootBounds.top,
-        rootBounds.bottom - boundingClientRect.top,
-        cardHeight,
-      );
-
-      const visibilityRatio = Math.max(0, visibleHeight / cardHeight);
-
-      // Use a sophisticated easing function for smooth unlock animation
       let progress = 0;
-      if (visibilityRatio > 0.3) {
-        // Start unlocking when 30% visible
-        const adjustedRatio = (visibilityRatio - 0.3) / 0.7; // Normalize to 0-1
+      if (rect.bottom < endUnlockY) {
+        progress = 1; // Fully unlocked when scrolled up
+      } else if (rect.bottom > startUnlockY) {
+        progress = 0; // Fully locked when entering from bottom
+      } else {
+        // Linearly interpolate between start and end
+        const rawProgress = (startUnlockY - rect.bottom) / (startUnlockY - endUnlockY);
         // Smooth easing with slight overshoot for premium feel
         progress = Math.min(
           1,
-          Math.pow(adjustedRatio, 0.6) *
-          (1 + 0.1 * Math.sin(adjustedRatio * Math.PI)),
+          Math.pow(rawProgress, 0.6) *
+          (1 + 0.1 * Math.sin(rawProgress * Math.PI))
         );
       }
 
-      newProgress[levelId] = progress;
+      newProgress[level.level] = progress;
     });
 
     // Update state only if there are meaningful changes
     setUnlockProgress((prev) => {
       const hasChanges = Object.keys(newProgress).some(
-        (key) => Math.abs(newProgress[key] - prev[key]) > 0.01,
+        (key) => Math.abs(newProgress[key] - prev[key]) > 0.01
       );
       return hasChanges ? { ...prev, ...newProgress } : prev;
     });
-  }, []);
+  }, [commissionLevels, isClient]);
 
-  // Setup Intersection Observer for viewport-based unlocking
+  // Setup continuous scroll listener for perfect viewport-based unlocking
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!containerRef.current || !isClient) return;
 
-    // Create observer with optimized settings
-    observerRef.current = new IntersectionObserver(calculateUnlockProgress, {
-      root: null, // Use viewport as root
-      rootMargin: "0px 0px -10% 0px", // Trigger when card is 10% from bottom of viewport
-      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], // Multiple thresholds for smooth animation
-    });
-
-    // Observe all level cards
-    commissionLevels.forEach((level) => {
-      const element = levelRefs.current[level.level];
-      if (element) {
-        observerRef.current?.observe(element);
-      }
-    });
+    window.addEventListener("scroll", calculateUnlockProgress, { passive: true });
+    // Run once on mount or resize
+    calculateUnlockProgress();
 
     return () => {
-      observerRef.current?.disconnect();
+      window.removeEventListener("scroll", calculateUnlockProgress);
     };
-  }, [calculateUnlockProgress, commissionLevels]);
+  }, [calculateUnlockProgress, isClient]);
 
   // Optimized resize handling - update on breakpoint changes or significant size changes
   useEffect(() => {

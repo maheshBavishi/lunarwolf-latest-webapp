@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 const wolf1 = "/assets/images/wolf-1.webp";
@@ -9,6 +9,9 @@ import TopRightShadow from "@/assets/svgIcons/topRight";
 import styles from "./HeroSection.module.scss";
 
 const HeroSection = () => {
+   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const coinFlipVariants = {
     initial: {
       rotateY: 0,
