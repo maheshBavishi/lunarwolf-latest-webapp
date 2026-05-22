@@ -20,7 +20,7 @@ const interSans = Inter({
 
 export const metadata = {
   title: "Lunar Wolf",
-  description: "${Change when get it}",
+  description: "Our AI hunts where no one dare venture, bringing out profit opportunities ... Follow active trades, proven strategies, and real profits as they happen.",
 };
 
 
