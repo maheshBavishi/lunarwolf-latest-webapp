@@ -115,16 +115,20 @@
 .divider {
     display: block;
     width: 1px;
+    height: 150px;
     background-color: rgba(255, 255, 255, 0.5);
     position: relative;
     z-index: 2;
     margin: 80px 0; // Prevent stretching to full height and center it
+
+    @include respond-to("sm") {
+        height: 100%;
+    }
 }
 
 .card {
     flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
     cursor: pointer;
 
@@ -193,6 +197,8 @@
         text-align: center;
         font-family: var(--font-inter-sans);
         transition: all 0.7s;
+        position: relative;
+        top: 130px;
 
         @include respond-to("lg") {
             font-size: 24px;
@@ -204,6 +210,7 @@
 
         @include respond-to("sm") {
             font-size: 14px;
+            top: 0;
         }
     }
 
