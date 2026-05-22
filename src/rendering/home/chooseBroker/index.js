@@ -14,6 +14,7 @@ const SecurefxIcon = "/assets/images/securefx.png";
 
 const brokerData = [
   {
+    id: 1,
     icon: Multibankgroup,
     alt: "Multibankgroup",
     buttonText: "Open Account with Multibank",
@@ -21,14 +22,7 @@ const brokerData = [
     link: "https://multibankfx.com/account/live-account/?type=trader&IBCode=8899349&CampaignName=8899349&BannerID=1357&OfferID=1235",
   },
   {
-    icon: GtcIcon,
-    alt: "GtcIcon",
-    buttonText: "Open Account with GTC",
-    link: "https://web.mygtc.app/login/register?ref=130025118",
-
-    topButtonLink: "/documents/GTCFX_SwapFree_Guide.pdf",
-  },
-  {
+    id: 2,
     icon: EcIcon,
     alt: "EcIcon",
     buttonText: "Open Account with EC",
@@ -37,23 +31,35 @@ const brokerData = [
     topButtonLink: "/documents/ECMarkets_SwapFree_Guide.pdf",
   },
   {
-    icon: StartraderIcon,
-    alt: "StartraderIcon",
-    buttonText: "Open Account with Star Trader",
-    link: "https://www.startrader.com/live-account/?affid=MTcwOTg5Njk=&ibpRebateCode=MTcwOTg5NjlTVDEwMDc2",
+    id: 3,
+    icon: TmgmIcon,
+    alt: "TmgmIcon",
+    buttonText: "Open Account with TMGM",
+    link: "https://portal.tmgm.com/register?r_code=IB1750216339A",
+    // comingSoon: true,
   },
   {
+    id: 4,
+    icon: GtcIcon,
+    alt: "GtcIcon",
+    buttonText: "Open Account with GTC",
+    link: "https://web.mygtc.app/login/register?ref=130025118",
+
+    topButtonLink: "/documents/GTCFX_SwapFree_Guide.pdf",
+  },
+  {
+    id: 5,
     icon: TcorpIcon,
     alt: "TcorpIcon",
     buttonText: "Open Account with VT",
     link: "https://vtm.pro/MJ3YVf",
   },
   {
-    icon: TmgmIcon,
-    alt: "TmgmIcon",
-    buttonText: "Open Account with TMGM",
-    link: "#",
-    comingSoon: true,
+    id: 6,
+    icon: StartraderIcon,
+    alt: "StartraderIcon",
+    buttonText: "Open Account with Star Trader",
+    link: "https://www.startrader.com/live-account/?affid=MTcwOTg5Njk=&ibpRebateCode=MTcwOTg5NjlTVDEwMDc2",
   },
   {
     icon: UltimaIcon,
@@ -135,4 +141,3 @@ export default function ChooseBroker() {
     </div>
   );
 }
-
