@@ -4,7 +4,7 @@ import Image from 'next/image';
 import AutomateAnimation from './automateAnimation';
 import TradingAnimation from './tradingAnimation';
 
-const AutomateImage = "/assets/images/automate.png";
+const AutomateImage = "/assets/images/automate.svg";
 const ReferralImage = "/assets/images/referral.png";
 const WinImage = "/assets/images/win.png";
 
@@ -26,7 +26,7 @@ export default function BeComingSection() {
                                 fill
                                 className={styles.cardImage}
                             />
-                          
+
                         </div>
                         <div>
                             <h3 className={styles.cardTitle}>
