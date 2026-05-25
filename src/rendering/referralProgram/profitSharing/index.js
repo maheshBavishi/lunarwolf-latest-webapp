@@ -1,20 +1,6 @@
-import {
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-  useMemo,
-  createContext,
-  useContext,
-} from "react";
+import { useState, useEffect, useRef, useCallback, useMemo, createContext, useContext } from "react";
 import styles from "./profitSharing.module.scss";
-import {
-  ReactFlow,
-  useEdgesState,
-  MarkerType,
-  Handle,
-  Position,
-} from "@xyflow/react";
+import { ReactFlow, useEdgesState, MarkerType, Handle, Position } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import Image from "next/image";
 import SmoothElbowEdge from "./SmoothElbowEdge";
@@ -29,7 +15,6 @@ const useScreenSize = () => {
   });
 
   useEffect(() => {
-
     const handleResize = () => {
       setScreenSize({
         width: window.innerWidth,
@@ -83,7 +68,7 @@ const commissionLevels = [
     title: "HUNTER WOLF",
     commission: "2",
     isLocked: true,
-    lockDescription: "",
+    lockDescription: "Add Additional Bonus 1 $ Fore Direct 5+1=6%",
     lockPrice: "50000",
     unlockRequirement: "Complete Direct Business 50000$ Then Open LVL 3",
   },
@@ -140,11 +125,7 @@ const YouNode = () => (
       />
       <span className={styles.youNodeText}>You</span>
     </div>
-    <Image
-      className={styles.youNodeLogo}
-      src={WolfLogo}
-      alt="Lunar wolf"
-    />
+    <Image className={styles.youNodeLogo} src={WolfLogo} alt="Lunar wolf" />
   </div>
 );
 
@@ -288,27 +269,24 @@ const LevelNode = ({ data, levelRefs }) => {
           </>
         )}
 
-        {(data.level === "1.2" ||
-          data.level === "1.3" ||
-          data.level === "1.4" ||
-          data.level === "1.5") && (
-            <Handle
-              type="target"
-              position={Position.Right}
-              id="right-target"
-              style={{
-                background: "transparent",
-                right: "-4px",
-                top: "50%",
-                position: "absolute",
-                transform: "translateY(-50%) translateX(50%)",
-                border: "none",
-                width: "clamp(4px, 1vw, 8px)",
-                height: "clamp(4px, 1vw, 8px)",
-                zIndex: 1,
-              }}
-            />
-          )}
+        {(data.level === "1.2" || data.level === "1.3" || data.level === "1.4" || data.level === "1.5") && (
+          <Handle
+            type="target"
+            position={Position.Right}
+            id="right-target"
+            style={{
+              background: "transparent",
+              right: "-4px",
+              top: "50%",
+              position: "absolute",
+              transform: "translateY(-50%) translateX(50%)",
+              border: "none",
+              width: "clamp(4px, 1vw, 8px)",
+              height: "clamp(4px, 1vw, 8px)",
+              zIndex: 1,
+            }}
+          />
+        )}
 
         <LeverCard
           commission={data.commission}
@@ -341,8 +319,7 @@ const generateWolfLogoConnections = (levelId) => {
       type: "default",
       style: {
         stroke: "#53B1D9",
-        strokeWidth:
-          window.innerWidth < 640 ? 1 : 2,
+        strokeWidth: window.innerWidth < 640 ? 1 : 2,
       },
       markerEnd: {
         type: MarkerType.ArrowClosed,
@@ -357,13 +334,7 @@ const generateWolfLogoConnections = (levelId) => {
 };
 
 const generateLetterAConnectionsBetweenLevels = () => {
-  const levels = [
-    "level-1.1",
-    "level-1.2",
-    "level-1.3",
-    "level-1.4",
-    "level-1.5",
-  ];
+  const levels = ["level-1.1", "level-1.2", "level-1.3", "level-1.4", "level-1.5"];
   const connections = [];
 
   for (let i = 0; i < levels.length - 1; i++) {
@@ -493,7 +464,7 @@ const ProfitSharing = () => {
 
   const calculateUnlockProgress = useCallback(() => {
     if (!isClient) return;
-    
+
     const newProgress = { 1.1: 1 };
     const viewportHeight = window.innerHeight;
 
@@ -519,11 +490,7 @@ const ProfitSharing = () => {
         // Linearly interpolate between start and end
         const rawProgress = (startUnlockY - rect.bottom) / (startUnlockY - endUnlockY);
         // Smooth easing with slight overshoot for premium feel
-        progress = Math.min(
-          1,
-          Math.pow(rawProgress, 0.6) *
-          (1 + 0.1 * Math.sin(rawProgress * Math.PI))
-        );
+        progress = Math.min(1, Math.pow(rawProgress, 0.6) * (1 + 0.1 * Math.sin(rawProgress * Math.PI)));
       }
 
       newProgress[level.level] = progress;
@@ -531,9 +498,7 @@ const ProfitSharing = () => {
 
     // Update state only if there are meaningful changes
     setUnlockProgress((prev) => {
-      const hasChanges = Object.keys(newProgress).some(
-        (key) => Math.abs(newProgress[key] - prev[key]) > 0.01
-      );
+      const hasChanges = Object.keys(newProgress).some((key) => Math.abs(newProgress[key] - prev[key]) > 0.01);
       return hasChanges ? { ...prev, ...newProgress } : prev;
     });
   }, [commissionLevels, isClient]);
@@ -560,8 +525,7 @@ const ProfitSharing = () => {
 
     const hasBreakpointChange = currentBreakpoint !== prevBreakpoint;
     const hasSignificantSizeChange =
-      Math.abs(screenWidth - prevScreenSize.current.width) > 100 ||
-      Math.abs(screenHeight - prevScreenSize.current.height) > 100;
+      Math.abs(screenWidth - prevScreenSize.current.width) > 100 || Math.abs(screenHeight - prevScreenSize.current.height) > 100;
 
     if (hasBreakpointChange || hasSignificantSizeChange) {
       // Update all layout calculations
@@ -639,17 +603,10 @@ const ProfitSharing = () => {
         style: { opacity: 0, width: 1, height: 1 },
       },
     ];
-  }, [
-    layout.centerX,
-    layout.nodeWidth,
-    layout.youNodeY,
-    layout.levelStartY,
-    layout.levelSpacing,
-  ]);
+  }, [layout.centerX, layout.nodeWidth, layout.youNodeY, layout.levelStartY, layout.levelSpacing]);
 
   // Calculate dynamic height based on content and live screen dimensions
   const getDynamicHeight = useCallback(() => {
-
     // Fixed height for mobile view
     if (screenWidth < 768) {
       return 800;
@@ -702,14 +659,7 @@ const ProfitSharing = () => {
         targetHandle: "right-target",
         type: "smoothstep",
         data: {
-          offset:
-            screenWidth < 480
-              ? 25
-              : screenWidth < 640
-                ? 30
-                : screenWidth < 1024
-                  ? 45
-                  : 100,
+          offset: screenWidth < 480 ? 25 : screenWidth < 640 ? 30 : screenWidth < 1024 ? 45 : 100,
         },
         style: {
           stroke: "#53B1D9",
@@ -751,14 +701,7 @@ const ProfitSharing = () => {
         targetHandle: "right-target",
         type: "smoothstep",
         data: {
-          offset:
-            screenWidth < 480
-              ? 35
-              : screenWidth < 640
-                ? 45
-                : screenWidth < 1024
-                  ? 75
-                  : 150,
+          offset: screenWidth < 480 ? 35 : screenWidth < 640 ? 45 : screenWidth < 1024 ? 75 : 150,
         },
         style: {
           stroke: "#53B1D9",
@@ -800,14 +743,7 @@ const ProfitSharing = () => {
         targetHandle: "right-target",
         type: "smoothstep",
         data: {
-          offset:
-            screenWidth < 480
-              ? 50
-              : screenWidth < 640
-                ? 65
-                : screenWidth < 1024
-                  ? 110
-                  : 200,
+          offset: screenWidth < 480 ? 50 : screenWidth < 640 ? 65 : screenWidth < 1024 ? 110 : 200,
         },
         style: {
           stroke: "#53B1D9",
@@ -866,7 +802,10 @@ const ProfitSharing = () => {
     <div className={styles.profitSharing}>
       <div className={styles.title}>
         <h2>Profit Sharing</h2>
-        <p>Visualize your earnings at each level with detailed commission percentages. This chart clearly shows how profits flow from direct referrals (5%) down to the fifth level (1%). Understand your earning potential and track rewards easily across all levels.</p>
+        <p>
+          Visualize your earnings at each level with detailed commission percentages. This chart clearly shows how profits flow from direct referrals
+          (5%) down to the fifth level (1%). Understand your earning potential and track rewards easily across all levels.
+        </p>
       </div>
 
       <div ref={containerRef} className={styles.flowContainer}>
@@ -878,14 +817,12 @@ const ProfitSharing = () => {
         >
           <UnlockProgressContext.Provider value={unlockProgress}>
             <ReactFlow
-              key={`reactflow-${forceRefreshKey}-${getCurrentBreakpoint(
-                screenWidth,
-              )}`}
+              key={`reactflow-${forceRefreshKey}-${getCurrentBreakpoint(screenWidth)}`}
               nodes={staticNodes}
               edges={edges}
-              onNodesChange={() => { }}
-              onEdgesChange={() => { }}
-              onConnect={() => { }}
+              onNodesChange={() => {}}
+              onEdgesChange={() => {}}
+              onConnect={() => {}}
               nodeTypes={nodeTypes}
               edgeTypes={{
                 smoothstep: SmoothElbowEdge,
@@ -924,8 +861,7 @@ const ProfitSharing = () => {
           </UnlockProgressContext.Provider>
         </div>
       </div>
-
-    </div >
+    </div>
   );
 };
 

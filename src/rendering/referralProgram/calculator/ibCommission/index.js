@@ -18,10 +18,10 @@ export default function IBCommission() {
     const RANK_THRESHOLDS = useMemo(
         () => [
             { rank: 1, minAccounts: 2, commission: 4 },
-            { rank: 2, minAccounts: 6, commission: 5 },
-            { rank: 3, minAccounts: 16, commission: 6 },
-            { rank: 4, minAccounts: 26, commission: 7 },
-            { rank: 5, minAccounts: 51, commission: 8 },
+            { rank: 2, minAccounts: 5, commission: 5 },
+            { rank: 3, minAccounts: 15, commission: 6 },
+            { rank: 4, minAccounts: 25, commission: 7 },
+            { rank: 5, minAccounts: 50, commission: 8 },
         ],
         []
     );
@@ -29,13 +29,13 @@ export default function IBCommission() {
     const getAccountFromSlider = useCallback((value) => {
         let accounts = 1;
         if (value <= 25) {
-            accounts = 1 + (value / 25) * 5;
+            accounts = 1 + (value / 25) * 4;
         } else if (value <= 50) {
-            accounts = 6 + ((value - 25) / 25) * 10;
+            accounts = 5 + ((value - 25) / 25) * 10;
         } else if (value <= 75) {
-            accounts = 16 + ((value - 50) / 25) * 10;
+            accounts = 15 + ((value - 50) / 25) * 10;
         } else {
-            accounts = 26 + ((value - 75) / 25) * 25;
+            accounts = 25 + ((value - 75) / 25) * 25;
         }
         return Math.round(accounts);
     }, []);
@@ -113,10 +113,10 @@ export default function IBCommission() {
                             <p className={styles.cardText}>
                                 Unlock Rank {(() => {
                                     const getRankData = (acc) => {
-                                        if (acc >= 51) return { r: 5, a: "51+", c: 8 };
-                                        if (acc >= 26) return { r: 4, a: "26+", c: 7 };
-                                        if (acc >= 16) return { r: 3, a: "15+", c: 6 };
-                                        if (acc >= 6) return { r: 2, a: "6+", c: 5 };
+                                        if (acc >= 50) return { r: 5, a: "50+", c: 8 };
+                                        if (acc >= 25) return { r: 4, a: "25+", c: 7 };
+                                        if (acc >= 15) return { r: 3, a: "15+", c: 6 };
+                                        if (acc >= 5) return { r: 2, a: "5+", c: 5 };
                                         return { r: 1, a: "1+", c: 4 };
                                     };
                                     const data = getRankData(activeAccounts);
@@ -355,8 +355,9 @@ export default function IBCommission() {
                                 </div>
                             </div>
                             <div className={styles.lotsSection}>
-                                <h2 className={styles.sectionLabel}>
+                                <h2 className={styles.sectionLabel} style={{ lineHeight: '1.2', transform: 'translateY(-2px)' }}>
                                     Lot’s
+                                    <span style={{ display: 'block', fontSize: '12px', color: '#00D3F2', fontWeight: 600, lineHeight: 1.2, letterSpacing: 0.5, marginTop: '2px' }}>(Per Account)</span>
                                 </h2>
                                 <div className={styles.sliderContainer}>
                                     <div

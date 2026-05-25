@@ -42,13 +42,13 @@ export default function TeamLevel() {
     const getAccountFromSlider = useCallback((value) => {
         let accounts = 1;
         if (value <= 25) {
-            accounts = 1 + (value / 25) * 5;
+            accounts = 1 + (value / 25) * 4;
         } else if (value <= 50) {
-            accounts = 6 + ((value - 25) / 25) * 10;
+            accounts = 5 + ((value - 25) / 25) * 10;
         } else if (value <= 75) {
-            accounts = 16 + ((value - 50) / 25) * 10;
+            accounts = 15 + ((value - 50) / 25) * 10;
         } else {
-            accounts = 26 + ((value - 75) / 25) * 25;
+            accounts = 25 + ((value - 75) / 25) * 25;
         }
         return Math.round(accounts);
     }, []);
@@ -70,10 +70,10 @@ export default function TeamLevel() {
     };
 
     const getIbData = (acc) => {
-        if (acc >= 51) return { rank: 5, earn: 8, ibLevel: 5, bonus: 1, total: 9 };
-        if (acc >= 26) return { rank: 4, earn: 7, ibLevel: 4, bonus: 1, total: 8 };
-        if (acc >= 16) return { rank: 3, earn: 6, ibLevel: 3, bonus: 1, total: 7 };
-        if (acc >= 6) return { rank: 2, earn: 5, ibLevel: 2, bonus: 2, total: 7 };
+        if (acc >= 50) return { rank: 5, earn: 8, ibLevel: 5, bonus: 1, total: 9 };
+        if (acc >= 25) return { rank: 4, earn: 7, ibLevel: 4, bonus: 1, total: 8 };
+        if (acc >= 15) return { rank: 3, earn: 6, ibLevel: 3, bonus: 1, total: 7 };
+        if (acc >= 5) return { rank: 2, earn: 5, ibLevel: 2, bonus: 2, total: 7 };
         return { rank: 1, earn: 4, ibLevel: 1, bonus: 0, total: 4 };
     };
 
@@ -161,7 +161,7 @@ export default function TeamLevel() {
                     <div className={styles.stepRow}>
                         <div className={styles.iconWrapper}>
                             <Image src={step1icon} alt="step1icon" width={36} height={36} className={styles.stepIcon} />
-                            <div className={`${styles.line} ${teamActiveAccounts >= 6 ? styles.active : styles.inactive}`}></div>
+                            <div className={`${styles.line} ${teamActiveAccounts >= 5 ? styles.active : styles.inactive}`}></div>
                         </div>
                         <div className={`${styles.stepContentOuter} ${styles.first}`}>
                             <div className={`${styles.stepContentInner} ${styles.first}`}>
@@ -176,18 +176,18 @@ export default function TeamLevel() {
                     <div className={styles.stepRow}>
                         <div className={styles.iconWrapper}>
                             <Image src={step2icon} alt="step2icon" width={36} height={36} className={styles.stepIcon} />
-                            <div className={`${styles.line} ${teamActiveAccounts >= 16 ? styles.active : styles.inactive}`}></div>
+                            <div className={`${styles.line} ${teamActiveAccounts >= 15 ? styles.active : styles.inactive}`}></div>
                         </div>
                         <div className={styles.relative}>
-                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 6 ? '' : styles.locked}`}>
+                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 5 ? '' : styles.locked}`}>
                                 <div className={styles.stepContentInner}>
                                     <p className={styles.levelText}>Level 2</p>
                                     <p className={styles.reqText}>Achieve Rank 2</p>
-                                    <p className={`${styles.commText} ${teamActiveAccounts >= 6 ? '' : styles.locked}`}>$2 / standard lot</p>
+                                    <p className={`${styles.commText} ${teamActiveAccounts >= 5 ? '' : styles.locked}`}>$2 / standard lot</p>
 
                                 </div>
                             </div>
-                            {teamActiveAccounts < 6 && (
+                            {teamActiveAccounts < 5 && (
                                 <div className={styles.lockOverlay}>
                                     <AnimatedLock />
                                 </div>
@@ -199,17 +199,17 @@ export default function TeamLevel() {
                     <div className={styles.stepRow}>
                         <div className={styles.iconWrapper}>
                             <Image src={step3icon} alt="step3icon" width={36} height={36} className={styles.stepIcon} />
-                            <div className={`${styles.line} ${teamActiveAccounts >= 26 ? styles.active : styles.inactive}`}></div>
+                            <div className={`${styles.line} ${teamActiveAccounts >= 25 ? styles.active : styles.inactive}`}></div>
                         </div>
                         <div className={styles.relative}>
-                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 16 ? '' : styles.locked}`}>
+                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 15 ? '' : styles.locked}`}>
                                 <div className={styles.stepContentInner}>
                                     <p className={styles.levelText}>Level 3</p>
                                     <p className={styles.reqText}>Achieve Rank 3</p>
-                                    <p className={`${styles.commText} ${teamActiveAccounts >= 16 ? '' : styles.locked}`}>$1 / Standard lot</p>
+                                    <p className={`${styles.commText} ${teamActiveAccounts >= 15 ? '' : styles.locked}`}>$1 / Standard lot</p>
                                 </div>
                             </div>
-                            {teamActiveAccounts < 16 && (
+                            {teamActiveAccounts < 15 && (
                                 <div className={styles.lockOverlay}>
                                     <AnimatedLock />
                                 </div>
@@ -221,17 +221,17 @@ export default function TeamLevel() {
                     <div className={styles.stepRow}>
                         <div className={styles.iconWrapper}>
                             <Image src={step4icon} alt="step4icon" width={36} height={36} className={styles.stepIcon} />
-                            <div className={`${styles.line} ${teamActiveAccounts >= 51 ? styles.active : styles.inactive}`}></div>
+                            <div className={`${styles.line} ${teamActiveAccounts >= 50 ? styles.active : styles.inactive}`}></div>
                         </div>
                         <div className={styles.relative}>
-                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 26 ? '' : styles.locked}`}>
+                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 25 ? '' : styles.locked}`}>
                                 <div className={styles.stepContentInner}>
                                     <p className={styles.levelText}>Level 4</p>
                                     <p className={styles.reqText}>Achieve Rank 4</p>
-                                    <p className={`${styles.commText} ${teamActiveAccounts >= 26 ? '' : styles.locked}`}>$1 / Standard lot</p>
+                                    <p className={`${styles.commText} ${teamActiveAccounts >= 25 ? '' : styles.locked}`}>$1 / Standard lot</p>
                                 </div>
                             </div>
-                            {teamActiveAccounts < 26 && (
+                            {teamActiveAccounts < 25 && (
                                 <div className={styles.lockOverlay}>
                                     <AnimatedLock />
                                 </div>
@@ -243,17 +243,17 @@ export default function TeamLevel() {
                     <div className={styles.stepRow}>
                         <div className={styles.iconWrapper}>
                             <Image src={step5icon} alt="step5icon" width={36} height={36} className={styles.stepIcon} />
-                            <div className={`${styles.line} ${teamActiveAccounts >= 51 ? styles.active : styles.inactive} ${styles.short}`}></div>
+                            <div className={`${styles.line} ${teamActiveAccounts >= 50 ? styles.active : styles.inactive} ${styles.short}`}></div>
                         </div>
                         <div className={styles.relative}>
-                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 51 ? '' : styles.locked}`}>
+                            <div className={`${styles.stepContentOuter} ${teamActiveAccounts >= 50 ? '' : styles.locked}`}>
                                 <div className={styles.stepContentInner}>
                                     <p className={styles.levelText}>Level 5</p>
                                     <p className={styles.reqText}>Achieve Rank 5</p>
-                                    <p className={`${styles.commText} ${teamActiveAccounts >= 51 ? '' : styles.locked}`}>$1 / Standard lot</p>
+                                    <p className={`${styles.commText} ${teamActiveAccounts >= 50 ? '' : styles.locked}`}>$1 / Standard lot</p>
                                 </div>
                             </div>
-                            {teamActiveAccounts < 51 && (
+                            {teamActiveAccounts < 50 && (
                                 <div className={styles.lockOverlay}>
                                     <AnimatedLock />
                                 </div>
