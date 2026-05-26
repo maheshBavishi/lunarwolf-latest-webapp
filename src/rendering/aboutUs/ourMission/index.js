@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const tabs = [
     {
         label: 'OUR MISSION',
-        text: 'To be the leading AI-powered platform in forex, empowering our users to generate wealth through automated, intelligent trading— demystifying the forex market for all and setting a new standard in trading success.',
+        text: 'To build a structured algorithmic trading ecosystem that supports disciplined execution, transparency, and long-term adaptability through responsible automation and user-controlled trading environments.',
     },
     {
         label: 'OUR VISION',

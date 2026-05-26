@@ -24,7 +24,43 @@ const leftFaqs = [
     {
         question: "WHAT PLATFORM DOES LUNAR WOLF WORK ON?",
         answer: "Lunar Wolf EA is exclusively designed to work seamlessly with the MetaTrader 5 (MT5) platform."
-    }
+    },
+    {
+        question: "DOES LUNAR WOLF HOLD MY FUNDS?",
+        answer: (
+            <>
+                No. Lunar Wolf does not hold, manage, deposit, or withdraw client funds.
+                <br /><br />
+                All trading activity operates directly through your own broker account. You maintain full control over account ownership, capital allocation, deposits, withdrawals, and broker access at all times.
+                <br /><br />
+                Lunar Wolf functions as an algorithmic trading software provider, not a broker or fund manager.
+            </>
+        )
+    },
+    {
+        question: "IS PERFORMANCE GUARANTEED?",
+        answer: (
+            <>
+                No, Financial markets involve risk, and no trading system can guarantee profits or eliminate losses.
+                <br /><br />
+                Lunar Wolf is designed to prioritize structured execution, controlled exposure, and adaptive market behavior, but actual performance may vary depending on market conditions, broker execution quality, volatility, and user settings.
+                <br /><br />
+                Past performance does not guarantee future results.
+            </>
+        )
+    },
+    {
+        question: "HOW DOES BROKER SELECTION WORK?",
+        answer: (
+            <>
+                Lunar Wolf supports multiple broker environments to provide users with flexibility and reduce dependency on a single provider.
+                <br /><br />
+                Users choose and open their own broker account from supported options, complete verification directly with the broker, fund the account independently, and connect it to the Lunar Wolf system.
+                <br /><br />
+                This structure helps maintain user control while allowing flexibility in execution environments.
+            </>
+        )
+    },
 ];
 
 const rightFaqs = [
@@ -47,6 +83,56 @@ const rightFaqs = [
     {
         question: "DOES THE EA WORK 24/7?",
         answer: "The EA monitors the market 24/5 during active forex trading hours, automatically adapting to varying market conditions."
+    },
+    {
+        question: "CAN RESULTS VARY ACROSS BROKERS?",
+        answer: (
+            <>
+                Yes, Live trading performance can vary between brokers due to factors such as:
+                <br /><br />
+                • Execution speed
+                <br />
+                • Spread conditions
+                <br />
+                • Slippage
+                <br />
+                • Liquidity availability
+                <br />
+                • Server latency
+                <br />
+                • Market execution differences
+                <br /><br />
+                Because real-world conditions differ across broker environments, live outcomes may not exactly match historical simulations or performance shown elsewhere.
+            </>
+        )
+    },
+    {
+        question: "WHAT RISKS SHOULD USERS UNDERSTAND?",
+        answer: (
+            <>
+                Trading foreign exchange involves substantial risk and may not be suitable for every user.
+                <br /><br />
+                Key risks include:
+                <br /><br />
+                • Market volatility
+                <br />
+                • Drawdowns and losing periods
+                <br />
+                • Broker execution differences
+                <br />
+                • Spread expansion and slippage
+                <br />
+                • Liquidity changes
+                <br />
+                • Technical interruptions
+                <br />
+                • Historical performance limitations
+                <br /><br />
+                Users should only trade with capital they can afford to risk and should understand that losses are possible.
+                <br /><br />
+                Lunar Wolf is designed as a structured trading framework not a guaranteed return product.
+            </>
+        )
     }
 ];
 

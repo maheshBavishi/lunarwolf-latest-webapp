@@ -51,8 +51,8 @@ export default function LivePortfolios() {
           <div>
             <h2>Watch Live Portfolios Make Real Profits</h2>
             <p>
-              Watch Lunar Wolf analyze, execute, and dominate the forex market in real time. Follow active trades, proven strategies, and real profits
-              as they happen.
+              Track historical and live performance through independently monitored accounts. Follow active trades, proven strategies, and real profits
+              as they happen. These accounts are shared for transparency and long-term monitoring purposes.
             </p>
           </div>
         </motion.div>
@@ -113,7 +113,7 @@ export default function LivePortfolios() {
                 </div>
                 <div className={styles.buttonCenterAlignment}>
                   <Link href={account.fxBookUrl} target="_blank" rel="noopener noreferrer">
-                    <button>View Verified Results on Myfxbook</button>
+                    <button>View Verified Performance on MYFXBOOK</button>
                   </Link>
                 </div>
               </motion.div>

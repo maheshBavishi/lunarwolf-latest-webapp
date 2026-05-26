@@ -203,8 +203,7 @@ export default function StepSection() {
                         Steps to Invest through Lunar Wolf
                     </h2>
                     <p>
-                        Transparent, Powerful, and Rewarding Trading Designed for YouTransparent, Powerful, and Rewarding Trading Designed for YouTransparent, Powerful,
-                        and Rewarding Trading Designed for You
+                        Transparent, Powerful, and Rewarding Trading Designed for You LUNAR WOLF does not manage deposits or withdrawals.
                     </p>
                 </div>
                 <div className={styles.allflexBox}>

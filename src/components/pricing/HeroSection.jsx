@@ -9,7 +9,7 @@ import TopRightShadow from "@/assets/svgIcons/topRight";
 import styles from "./HeroSection.module.scss";
 
 const HeroSection = () => {
-   useEffect(() => {
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   const coinFlipVariants = {
@@ -159,13 +159,8 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Dominate the
-              <br />
-              Network,
-              <br />
-              Claim Your
-              <br />
-              Rewards
+              GROW THE <br /> COMMUNITY, <br /> PARTICIPATE  IN <br /> REWARDS
+
             </motion.h1>
 
             <motion.p
@@ -173,9 +168,8 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Stop leaving money on the table. Build your pack, expand your
-              reach, and let the profits flow. The deeper your network, the
-              greater your earning power.
+              Community participation is optional and designed to support ecosystem growth.
+              Referral rewards are performance-linked and independent from trading outcomes.
             </motion.p>
           </motion.div>
 

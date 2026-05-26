@@ -7,19 +7,19 @@ export default function Whychoose() {
 
     const features = [
         {
-            title: "PASSIVE INCOME ON AUTOPILOT",
+            title: "Structured Automated Execution",
             description: "Earn continuously, even when you're not trading",
             top: "55%", left: "10%",
             mobileTop: "40%", mobileLeft: "20%"
         },
         {
-            title: "PROVEN ALGORITHMS",
+            title: "EURUSD-Focused Validation",
             description: "Built on rigorous testing and market logic",
             top: "78%", left: "48%",
             mobileTop: "55%", mobileLeft: "80%"
         },
         {
-            title: "SECURE AND TRANSPARENT",
+            title: "Your Broker. Your Funds.",
             description: "Full control over your funds at all times",
             top: "72%", left: "75%",
             mobileTop: "75%", mobileLeft: "20%"
@@ -40,11 +40,11 @@ export default function Whychoose() {
         };
         checkMobile();
         window.addEventListener('resize', checkMobile);
-        
+
         const interval = setInterval(() => {
             setActiveIndex((prev) => (prev + 1) % features.length);
         }, 3000);
-        
+
         return () => {
             window.removeEventListener('resize', checkMobile);
             clearInterval(interval);
@@ -67,7 +67,7 @@ export default function Whychoose() {
                     const isActive = index === activeIndex;
                     const top = isMobile ? item.mobileTop : item.top;
                     const left = isMobile ? item.mobileLeft : item.left;
-                    
+
                     return (
                         <div
                             key={index}
@@ -102,12 +102,12 @@ export default function Whychoose() {
                                         exit={{ opacity: 0, y: 10 }}
                                         transition={{ duration: 0.4, ease: "easeOut" }}
                                         style={
-                                            isMobile 
-                                                ? (parseInt(left) > 50 
-                                                    ? { left: 'auto', right: '-10px', transform: 'none' } 
+                                            isMobile
+                                                ? (parseInt(left) > 50
+                                                    ? { left: 'auto', right: '-10px', transform: 'none' }
                                                     : { left: '-10px', transform: 'none' })
-                                                : (parseInt(left) > 80 
-                                                    ? { left: 'auto', right: 0, transform: 'none' } 
+                                                : (parseInt(left) > 80
+                                                    ? { left: 'auto', right: 0, transform: 'none' }
                                                     : { left: '50%', transform: 'translateX(-50%)' })
                                         }
                                     >

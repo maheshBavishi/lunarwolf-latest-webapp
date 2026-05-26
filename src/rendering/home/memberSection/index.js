@@ -16,11 +16,11 @@ export default function MemberSection() {
         },
         {
             title: "Guided by Lunar Instincts",
-            description: "Our AI hunts where no one dare venture, bringing out profit opportunities with the Martingale Strategy.",
+            description: "Our AI hunts where no one dare venture, bringing out profit opportunities with the Controlled Recovery Framework.",
             image: Guided
         },
         {
-            title: "No-cost Joining",
+            title: "No Platform Subscription Fees",
             description: "No entry fees, no commissions, and no hidden charges. You keep what you earn.",
             image: Nocost
         },
@@ -33,7 +33,7 @@ export default function MemberSection() {
 
     return (
         <div className={styles.memberSection}>
-            <motion.div 
+            <motion.div
                 className='container'
                 initial="hidden"
                 whileInView="visible"
@@ -42,7 +42,7 @@ export default function MemberSection() {
                     visible: { transition: { staggerChildren: 0.2 } }
                 }}
             >
-                <motion.div 
+                <motion.div
                     className={styles.textstyle}
                     variants={{
                         hidden: { opacity: 0, y: -20 },
@@ -57,15 +57,15 @@ export default function MemberSection() {
                         Designed for You
                     </p>
                 </motion.div>
-                <motion.div 
+                <motion.div
                     className={styles.grid}
                     variants={{
                         visible: { transition: { staggerChildren: 0.15 } }
                     }}
                 >
                     {memberFeatures.map((item, index) => (
-                        <motion.div 
-                            key={index} 
+                        <motion.div
+                            key={index}
                             className={styles.items}
                             variants={{
                                 hidden: { opacity: 0, y: 30 },
@@ -82,9 +82,9 @@ export default function MemberSection() {
                                 {item.description}
                             </p>
                             <div style={{ overflow: 'hidden', borderRadius: '8px' }}>
-                                <motion.img 
-                                    src={item.image} 
-                                    alt={item.title} 
+                                <motion.img
+                                    src={item.image}
+                                    alt={item.title}
                                     variants={{
                                         hover: { scale: 1.05 }
                                     }}

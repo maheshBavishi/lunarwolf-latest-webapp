@@ -65,15 +65,17 @@ export default function StrategicSection() {
                                 Lunar IB Structure
                             </h3>
                             <ul>
-                                <li>Profit Sharing (up to 5 levels)</li>
-                                <li>IB Commission (multi-level)</li>
-                                <li>Performance-based sharing</li>
-                                <li>Network growth bonuses</li>
+                                <li>EA + Referral Ecosystem</li>
+                                <li>Profit Sharing + IB Commission</li>
+                                <li>Automated trading through EA</li>
+                                <li>Higher Client Retention (EA-based long-term users)</li>
+                                <li>Multi-level Referral System (up to 5 levels)</li>
+                                <li>Community-driven expansion</li>
+                                <li>Multiple broker options</li>
+                                <li>Multi-broker risk distribution</li>
+                                <li>Long-term recurring potential</li>
+                                <li>Myfxbook + broker freedom</li>
                             </ul>
-                            <p>
-                                You earn from trading performance
-                                + network expansion.
-                            </p>
                         </div>
                     </motion.div>
                     <motion.div
@@ -157,13 +159,17 @@ export default function StrategicSection() {
                                 Normal Broker IB Structure
                             </h3>
                             <ul>
-                                <li>Spread commission</li>
-                                <li>Lot-based rebate</li>
-                                <li>Direct referrals only (mostly 1 level)</li>
+                                <li>Traditional Broker Referral</li>
+                                <li>Spread / Lot Commission Only</li>
+                                <li>Mostly manual traders</li>
+                                <li>Lower Client Retention (manual traders often quit)</li>
+                                <li>Mostly direct referrals only</li>
+                                <li>Continuous manual client hunting</li>
+                                <li>Usually single broker dependency</li>
+                                <li>Single broker exposure</li>
+                                <li>Volume-dependent fluctuations</li>
+                                <li>Broker-dependent reporting</li>
                             </ul>
-                            <p>
-                                ou earn only when your client trades volume.
-                            </p>
                         </div>
                     </motion.div>
                 </div>

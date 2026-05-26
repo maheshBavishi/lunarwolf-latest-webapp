@@ -21,7 +21,7 @@ export default function Footer() {
               <img src={LogoIcon} alt="LogoIcon" />
               <h2>LUNAR WOLF</h2>
             </div>
-            <p>With Lunar Wolf’s EA-Powered support, you don’t just trade, you hunt for profits with strategy, speed, and a pack-driven advantage.</p>
+            <p>LUNAR WOLF provides algorithmic trading software designed to operate on supported broker environments.</p>
           </div>
           <div className={styles.rightAlignment}>
             <div>
@@ -90,24 +90,27 @@ export default function Footer() {
       </div>
       <div className={styles.footerTextAlignment}>
         <p>
-          Forex trading involves substantial risk, and it is important to recognize that even experienced traders may face significant losses. Studies
-          suggest that 85%–95% of manual traders lose their entire capital. Engaging in Forex trading—whether manually or through an automated
-          system—requires a thorough understanding of the risks involved.
+          Forex trading involves substantial risk, and it is important to recognize that even experienced traders may face significant losses. Studies suggest that 85%–95% of manual traders lose their entire capital. Engaging in Forex trading whether manually or through an automated system requires a thorough understanding of
+          the risks involved.
         </p>
         <p>
-          Our automated trading solution is designed to optimize strategies and enhance trading efficiency, but it does not eliminate the inherent
-          risks of the Forex market. Market volatility, execution delays, liquidity fluctuations, and technical failures can all lead to unexpected
-          losses. While our system employs risk management strategies, there are no guarantees of consistent profits, and it is possible to lose your
-          entire investment.
+          Our automated trading solution is designed to optimize strategies and enhance trading efficiency, but it does not eliminate the inherent risks of the Forex market. Market volatility, execution delays, liquidity fluctuations, and technical failures can all lead to unexpected losses. While our system employs risk management strategies, there are no guarantees of consistent profits, and it is possible to lose
+          your entire investment.
         </p>
         <p>
-          By using this trading system, you acknowledge and accept that trades are executed automatically based on pre-set parameters, which may
-          become less effective due to unpredictable market changes. The platform does not provide personalized financial advice, and all trading
-          decisions are made at your own discretion and risk. The platform is not liable for any resulting financial losses.
+          By using this trading system, you acknowledge and accept that trades are executed automatically based on pre-set parameters, which may become less effective due to unpredictable market changes. The platform does not provide personalized financial advice, and all trading decisions are made at your own discretion and risk. The platform is not liable for any resulting
+          financial losses.
         </p>
         <p>
-          Forex trading may not be suitable for all investors. Only trade with funds you can afford to lose, and seek independent financial advice if
-          you are uncertain about engaging in automated trading. Past performance does not guarantee future results.
+          Forex trading may not be suitable for all investors. Only trade with funds you can afford to lose, and seek independent financial advice if you are uncertain about engaging in automated trading. Past performance does not
+          guarantee future results.
+        </p>
+        <p>
+          LUNAR WOLF:
+          ***does not manage client funds, does not guarantee returns, does not provide financial advice, supports execution through user-controlled broker accounts
+        </p>
+        <p>
+          ***Past performance does not guarantee future results.
         </p>
       </div>
     </footer>

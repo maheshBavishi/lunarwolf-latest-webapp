@@ -28,8 +28,7 @@ export default function EarnSection() {
           <h2>Growth Through EA Trading</h2>
           <div className={styles.detailsalignment}>
             <p>
-              Your Most Reliable Companion for Steady Gains of approx <span> 5-10% Gain, Every Month</span>. Lunar Wolf delivers precise trading, with
-              added potential to grow your income beyond trading alone.
+              Adaptive EURUSD Trading System. At Lunarwol, our objective is not to create unrealistic “high return” trading systems based on hype, aggressive overleveraging, or blind automation.
             </p>
           </div>
           <Link href="https://app.lunarwolf.ai/signup" target="_blank">

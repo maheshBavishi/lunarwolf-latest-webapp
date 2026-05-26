@@ -95,8 +95,9 @@ export default function ChooseBroker() {
             visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
           }}
         >
-          <h2>Choose Your Broker</h2>
-          <p>Select a trusted broker to power your automated trades.</p>
+          <h2>Choose from supported broker environments.</h2>
+          <p>Users maintain full control over deposits, withdrawals, and account access.
+          </p>
         </motion.div>
         <motion.div
           className={styles.grid}
@@ -137,6 +138,11 @@ export default function ChooseBroker() {
             );
           })}
         </motion.div>
+        <div className={styles.bottomText}>
+          <p>
+            LUNAR WOLF does not hold or manage client funds.
+          </p>
+        </div>
       </motion.div>
     </div>
   );

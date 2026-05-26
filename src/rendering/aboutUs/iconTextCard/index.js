@@ -11,22 +11,23 @@ export default function IconTextCard() {
                     <div className={styles.items}>
                         <BrainIcon />
                         <p>
-                            To transform forex trading into a fair, efficient, and
-                            opportunity-rich environment through the consistent precision of Expert Advisor automation.
+                            To develop adaptive trading frameworks through
+                            continuous refinement, historical validation, and structured market execution principles.
+
                         </p>
                     </div>
                     <div className={styles.items}>
                         <LeftRightIcon />
                         <p>
-                            To transform forex trading into a fair, efficient, and
-                            opportunity-rich environment through the consistent precision of Expert Advisor automation.
+                            To provide users with a more disciplined trading experience through
+                            automation designed around consistency, operational structure, and risk awareness.
                         </p>
                     </div>
                     <div className={styles.items}>
                         <MarketIcon />
                         <p>
-                            To build the largest global trading network where shared
-                            achievement, reliability, and collaboration shape a new standard of financial empowerment.
+                            To create a long-term ecosystem built
+                            on broker flexibility, transparent performance monitoring, and community-driven participation.
                         </p>
                     </div>
                 </div>

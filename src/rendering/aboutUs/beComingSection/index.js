@@ -30,12 +30,11 @@ export default function BeComingSection() {
                         </div>
                         <div>
                             <h3 className={styles.cardTitle}>
-                                Automated trading + passive income
+                                Structured Automated Execution
                             </h3>
                             <p className={styles.cardDesc}>
-                                The EA runs 24/5 so you don't have to. No charts to watch. No
-                                emotions to manage. Just a rule-based system working on your
-                                behalf.
+                                Algorithmic execution designed to support disciplined trading
+                                decisions. Built around adaptive market behavior and structured execution.
                             </p>
                         </div>
                     </div>
@@ -46,12 +45,13 @@ export default function BeComingSection() {
                         </div>
                         <div>
                             <h3 className={styles.cardTitle}>
-                                Automated trading + passive income
+                                Optional Community Participation
+
                             </h3>
                             <p className={styles.cardDesc}>
-                                The EA runs 24/5 so you don't have to. No charts to watch. No
-                                emotions to manage. Just a rule-based system working on your
-                                behalf.
+                                Participate in referral rewards alongside your trading journey. Community
+                                participation remains separate from trading performance.
+
                             </p>
                         </div>
                     </div>
@@ -61,12 +61,12 @@ export default function BeComingSection() {
                         </div>
                         <div>
                             <h3 className={styles.cardTitle}>
-                                Automated trading + passive income
+                                Built for Long-Term Sustainability
+
                             </h3>
                             <p className={styles.cardDesc}>
-                                The EA runs 24/5 so you don't have to. No charts to watch. No
-                                emotions to manage. Just a rule-based system working on your
-                                behalf.
+                                Designed around transparency, broker flexibility, and adaptability.
+                                Focused on sustainable participation over short-term hype.
                             </p>
                         </div>
                     </div>

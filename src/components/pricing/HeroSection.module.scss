@@ -76,8 +76,8 @@
       }
 
       @media (min-width: 1280px) {
-        font-size: 72px;
-        line-height: 80px;
+        font-size: 60px;
+        line-height: 70px;
       }
 
       @include respond-to("sm") {
