@@ -13,11 +13,11 @@ export default function Experience() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const features = [
-        { Icon: InstinctsIcon, text: "AI - Powered Instincts" },
-        { Icon: AdaptiveIcon, text: "Hyper Adaptive Trading" },
-        { Icon: AgileIcon, text: "Swift and Agile" },
+        { Icon: InstinctsIcon, text: "Adaptive Market Logic" },
+        { Icon: AdaptiveIcon, text: "EURUSD Focused Framework" },
+        { Icon: AgileIcon, text: "Structured Execution" },
         { Icon: KnowledgeIcon, text: "Zero Trading Knowledge Required" },
-        { Icon: Instincts, text: "AI - Powered Instincts" },
+        { Icon: Instincts, text: "Risk-Aware Architecture" },
         { Icon: RequireIcon, text: "No Monitoring Required" },
     ];
 
