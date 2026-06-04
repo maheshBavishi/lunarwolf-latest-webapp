@@ -16,7 +16,7 @@ export default function Experience() {
         { Icon: InstinctsIcon, text: "Adaptive Market Logic" },
         { Icon: AdaptiveIcon, text: "EURUSD Focused Framework" },
         { Icon: AgileIcon, text: "Structured Execution" },
-        { Icon: KnowledgeIcon, text: "Zero Trading Knowledge Required" },
+        { Icon: KnowledgeIcon, text: "Beginner Friendly Setup" },
         { Icon: Instincts, text: "Risk-Aware Architecture" },
         { Icon: RequireIcon, text: "No Monitoring Required" },
     ];

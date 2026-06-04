@@ -200,7 +200,7 @@ export default function StepSection() {
             <div className='container'>
                 <div className={styles.headerAlignment}>
                     <h2>
-                        Steps to Invest through Lunar Wolf
+                        Getting Started With Lunar Wolf
                     </h2>
                     <p>
                         Transparent, Powerful, and Rewarding Trading Designed for You LUNAR WOLF does not manage deposits or withdrawals.

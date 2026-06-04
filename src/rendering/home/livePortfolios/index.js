@@ -49,7 +49,7 @@ export default function LivePortfolios() {
         >
           <img src={DollorSign} alt="DollorSign" />
           <div>
-            <h2>Watch Live Portfolios Make Real Profits</h2>
+            <h2>Verified Live Performance Tracking</h2>
             <p>
               Track historical and live performance through independently monitored accounts. Follow active trades, proven strategies, and real profits
               as they happen. These accounts are shared for transparency and long-term monitoring purposes.

@@ -50,11 +50,11 @@ export default function MemberSection() {
                     }}
                 >
                     <h2>
-                        What Lunar Wolf brings for it’s members
+                        What Lunar Wolf brings for ITS members
                     </h2>
                     <p>
-                        Transparent, Powerful, and Rewarding Trading Designed for YouTransparent, Powerful, and Rewarding Trading Designed for YouTransparent, Powerful, and Rewarding Trading
-                        Designed for You
+                        Every feature inside Lunar Wolf is designed to support disciplined
+                        execution, transparent operations, adaptive automation, and long-term sustainability.
                     </p>
                 </motion.div>
                 <motion.div
