@@ -98,13 +98,13 @@ export default function BlogBanner({ bannerBlogData }) {
                   Read More...
                 </MotionLink>
               </div>
-              <motion.div className={styles.bottomContent} variants={itemVariants}>
+              {/* <motion.div className={styles.bottomContent} variants={itemVariants}>
                 <img src={getAuthorImageUrl(bannerBlogData?.attributes?.Author)} alt="AuthorImage" />
                 <div>
                   <h3>By {bannerBlogData?.attributes?.Author?.name}</h3>
                   <p>{formatDate(bannerBlogData?.attributes?.publishedAt)} • 4 min read</p>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </motion.div>
