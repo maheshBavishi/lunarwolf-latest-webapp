@@ -30,7 +30,7 @@ export default function TextAnimation({ scrollProgress }) {
 
     const paragraphs = [
         "At Lunar Wolf, we built a structured algorithmic trading ecosystem designed around disciplined execution, transparency, and long-term adaptability.",
-        "LUNAR WOLF+ operates through user-controlled broker accounts and is designed specifically around a structured EURUSD framework supported by historical analysis and real-market observation. Rather than relying on emotional decision-making or aggressive short-term strategies, our approach focuses on controlled exposure, market-aware execution, and continuous refinement over time.",
+        "LUNAR WOLF EA operates through user-controlled broker accounts and is designed specifically around a structured EURUSD framework supported by historical analysis and real-market observation. Rather than relying on emotional decision-making or aggressive short-term strategies, our approach focuses on controlled exposure, market-aware execution, and continuous refinement over time.",
         "Our objective is not to simplify trading through unrealistic promises, but to provide users with access to a more structured execution environment where automation supports consistency while users remain fully in control of their capital, broker selection, and trading decisions. We believe transparency, risk awareness, and operational discipline create stronger long-term outcomes than short-term hype."
     ];
 
