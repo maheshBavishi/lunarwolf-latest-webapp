@@ -1,0 +1,139 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.aboutEaBanner {
+    background-image: url('/assets/images/about-hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: bottom;
+    padding: 150px 0;
+    overflow: hidden;
+
+    @include respond-to("sm") {
+        padding: 100px 0 60px 0;
+        background-position: center;
+    }
+
+    :global(.container-sm4) {
+        position: relative;
+        z-index: 1;
+    }
+
+    h1 {
+        color: #FFF;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 500;
+        text-align: center;
+        line-height: 130%;
+        font-family: var(--font-inter-sans);
+
+        @include respond-to("md") {
+            font-size: 40px;
+        }
+
+        @include respond-to("sm") {
+            font-size: 32px;
+        }
+
+
+        span {
+            font-style: italic;
+            font-weight: 600;
+        }
+    }
+
+    h2 {
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 130%;
+        margin: 16px 0 40px 0;
+        font-family: var(--font-inter-sans);
+        text-align: center;
+
+        @include respond-to("sm") {
+            font-size: 18px;
+            margin: 12px 0 24px 0;
+        }
+    }
+
+    .twobutton {
+        display: flex;
+        align-items: center;
+        padding: 45px 0 0 0;
+        gap: 18px;
+        justify-content: center;
+
+        @include respond-to("sm") {
+            flex-direction: column;
+            padding: 24px 0 0 0;
+            gap: 12px;
+
+            button {
+                width: 100%;
+            }
+        }
+
+        button {
+            border-radius: 70px;
+            background: #FFF;
+            box-shadow: 0 0 12px 0 rgba(107, 197, 224, 0.80) inset;
+            padding: 12px 24px;
+            color: #000;
+            font-size: 16px;
+            font-weight: 500;
+            transition: .3s ease-in-out;
+            line-height: 130%;
+            border: 1px solid #fff;
+
+            &.fill {
+                border: 1px solid #2C505B;
+                color: #fff;
+                background: #081012;
+                box-shadow: 0 0 12px 0 rgba(107, 197, 224, 0.80) inset;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: #fff;
+            }
+        }
+    }
+
+    p {
+        margin: 0 auto 16px auto;
+        color: #CACACA;
+        text-align: center;
+        font-size: 16px;
+        font-family: var(--font-inter-sans);
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    .centerButton {
+        display: flex;
+        padding: 0 0 16px 0;
+        justify-content: center;
+
+        button {
+            border: 0.6px solid #33ACE0;
+            background: rgba(0, 170, 255, 0.30);
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 10px;
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+}

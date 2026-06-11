@@ -5,6 +5,10 @@
     padding: 120px 0;
     position: relative;
 
+    &.bgblack {
+        background-color: #000;
+    }
+
     @include respond-to("sm") {
         padding: 60px 0 40px 0;
     }

@@ -61,6 +61,18 @@ p {
   padding: 0 20px;
 }
 
+.container-sm4 {
+  max-width: 647px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-sm5 {
+  max-width: 998px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 a {
   text-decoration: none;
 }

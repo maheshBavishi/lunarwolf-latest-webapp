@@ -28,6 +28,7 @@ export default function Footer() {
               <h3>About</h3>
               {[
                 { label: "About Us", href: "/about-us" },
+                { label: "About Ea", href: "/about-ea" },
                 { label: "Blog", href: "/blog" },
                 {
                   label: "Profit Sharing Model",

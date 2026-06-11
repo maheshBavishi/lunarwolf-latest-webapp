@@ -1,0 +1,169 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.validationMethodology {
+    background-color: #000;
+    overflow: hidden;
+
+    .title {
+        padding: 0 0 30px 0;
+
+        h2 {
+            color: #FFF;
+            text-align: center;
+            font-size: 48px;
+            font-family: var(--font-inter-sans);
+            font-weight: 500;
+            line-height: 130%;
+            max-width: 568px;
+            margin: 0 auto;
+
+            @include respond-to("md") {
+                font-size: 40px;
+            }
+
+            @include respond-to("sm") {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 50px 0 0 0;
+
+        @include respond-to("sm") {
+            grid-template-columns: 1fr;
+            padding: 30px 0 0 0;
+            gap: 16px;
+        }
+
+        .items {
+            background-image: url('/assets/images/light-blue.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            padding: 40px 28px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 40px;
+
+            @include respond-to("sm") {
+                padding: 24px 16px;
+                gap: 24px;
+            }
+
+            h3 {
+                color: #FFF;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 130%;
+                font-family: var(--font-inter-sans);
+                margin: 0 0 20px 0;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0 0 0 20px;
+
+                li {
+                    color: #FFF;
+                    font-size: 16px;
+                    font-family: var(--font-inter-sans);
+                    font-weight: 400;
+                    line-height: 130%;
+                    padding: 0 0 16px 0;
+
+                    &::marker {
+                        color: #38BDF8;
+                    }
+
+                    &:last-child {
+                        padding: 0;
+                    }
+                }
+            }
+
+            h2 {
+                color: #FFF;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 130%;
+                font-family: var(--font-inter-sans);
+                margin: 0 0 10px 0;
+            }
+
+            p {
+                color: #FFF;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: var(--font-inter-sans);
+                line-height: 130%;
+            }
+
+        }
+    }
+
+    .secgrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px 0 0 0;
+
+        @include respond-to("sm") {
+            grid-template-columns: 1fr;
+            padding: 16px 0 40px 0;
+            gap: 16px;
+        }
+
+        .secgridItems {
+            &:last-child {
+                p {
+                    color: #CACACA;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 130%;
+
+                    @include respond-to("sm") {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            &:first-child {
+                background-image: url('/assets/images/light-blue2.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 8px;
+                padding: 16px;
+                backdrop-filter: blur(110px);
+                width: 100%;
+
+                p {
+                    color: #CACACA;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 130%;
+                    font-family: var(--font-inter-sans);
+                }
+
+                h3 {
+                    color: #FFF;
+                    margin: 0 0 12px 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: var(--font-inter-sans);
+                    line-height: 130%;
+                }
+            }
+        }
+    }
+
+
+}

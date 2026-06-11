@@ -27,7 +27,8 @@ export default function Homepage() {
             <ChooseBroker />
             <Whychoose />
             <MemberSection />
-            <LivePortfolios />
+            <LivePortfolios title='Verified Live Performance Tracking' description='Track historical and live performance through independently monitored accounts. Follow active trades, proven strategies, and real profits
+              as they happen. These accounts are shared for transparency and long-term monitoring purposes.' />
             <StepSection />
             {/* <OurClient /> */}
             <AutomatedProfit />

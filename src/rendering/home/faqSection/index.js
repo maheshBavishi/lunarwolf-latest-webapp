@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './faqSection.module.scss';
 import DownIcon from '@/icons/downIcon';
+import classNames from 'classnames';
 
 const leftFaqs = [
     {
@@ -179,11 +180,11 @@ const FaqItem = ({ item, isOpen, onClick }) => {
     );
 }
 
-export default function FaqSection() {
+export default function FaqSection({ bgblack }) {
     const [openIndex, setOpenIndex] = useState(null); // All FAQs closed by default
 
     return (
-        <div className={styles.faqSection}>
+        <div className={classNames(styles.faqSection, bgblack ? styles.bgblack : "")}>
             <div className={styles.leftrightSpacing}>
                 <div className={styles.title}>
                     <h2>

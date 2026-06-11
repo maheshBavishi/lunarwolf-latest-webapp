@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./livePortfolios.module.scss";
 import Link from "next/link";
+import classNames from "classnames";
 const DollorSign = "/assets/images/dollor-sign.webp";
 const RobotName = "/assets/images/RobotName.svg";
 const Platform = "/assets/images/Platform.svg";
@@ -10,7 +11,7 @@ const Server = "/assets/images/Server.svg";
 const Myfxbook = "/assets/images/myfxbook.png";
 const LeftImage = "/assets/images/leftImage.png";
 const RightImage = "/assets/images/rightImage.png";
-export default function LivePortfolios() {
+export default function LivePortfolios({ title, description, bgblack }) {
   const accounts = [
     {
       accountNo: "500186",
@@ -30,7 +31,7 @@ export default function LivePortfolios() {
     },
   ];
   return (
-    <div className={styles.livePortfolios} id="live-portfolios">
+    <div className={classNames(styles.livePortfolios, bgblack ? styles.bgblack : "")} id="live-portfolios">
       <motion.div
         className="container"
         initial="hidden"
@@ -49,10 +50,11 @@ export default function LivePortfolios() {
         >
           <img src={DollorSign} alt="DollorSign" />
           <div>
-            <h2>Verified Live Performance Tracking</h2>
+            <h2>
+              {title}
+            </h2>
             <p>
-              Track historical and live performance through independently monitored accounts. Follow active trades, proven strategies, and real profits
-              as they happen. These accounts are shared for transparency and long-term monitoring purposes.
+              {description}
             </p>
           </div>
         </motion.div>

@@ -5,6 +5,10 @@
 .livePortfolios {
     scroll-margin-top: 120px;
 
+    &.bgblack {
+        background-color: #000;
+    }
+
     .headerAlignment {
         display: flex;
         align-items: center;
