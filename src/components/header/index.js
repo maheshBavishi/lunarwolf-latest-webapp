@@ -167,7 +167,7 @@ export default function Header() {
                       Login
                     </motion.a>
                     <motion.a
-                      href="http://eauser.lunarwolf.ai/signup"
+                      href="https://eauser.lunarwolf.ai/signup"
                       className={styles.btnRegister}
                       variants={itemVariants}
                       whileHover={{ scale: 1.05 }}
@@ -245,7 +245,7 @@ export default function Header() {
                 Login
               </motion.a>
               <motion.a
-                href="http://eauser.lunarwolf.ai/signup"
+                href="https://eauser.lunarwolf.ai/signup"
                 className={styles.btnRegister}
                 target="_blank"
                 onClick={() => setIsMobileMenuOpen(false)}

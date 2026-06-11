@@ -81,7 +81,7 @@ export default function ContentSection({ model }) {
         <div className={styles.floatingNav}>
           <a
             className={styles.headwolfBtn}
-            href="http://eauser.lunarwolf.ai/signup"
+            href="https://eauser.lunarwolf.ai/signup"
             target="_blank"
             rel="noopener noreferrer"
           >

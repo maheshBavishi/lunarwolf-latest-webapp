@@ -90,7 +90,7 @@ export default function AboutUsBanner() {
                         Hunt Profits
                     </motion.p>
                     <motion.div className={styles.buttonDesign} variants={itemVariants}>
-                        <Link href="http://eauser.lunarwolf.ai/signup" target="_blank" rel="noopener noreferrer">
+                        <Link href="https://eauser.lunarwolf.ai/signup" target="_blank" rel="noopener noreferrer">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
