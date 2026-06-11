@@ -157,7 +157,7 @@ export default function Header() {
                   {/* CTA Buttons */}
                   <motion.div className={styles.cta} variants={containerVariants} initial={isLoaderPage ? "hidden" : "visible"} animate="visible">
                     <motion.a
-                      href="https://app.lunarwolf.ai"
+                      href="https://eauser.lunarwolf.ai"
                       target="_blank"
                       className={styles.btnLogin}
                       variants={itemVariants}
@@ -235,7 +235,7 @@ export default function Header() {
             </div>
             <motion.div className={styles.cta} variants={mobileItemVariants}>
               <motion.a
-                href="https://app.lunarwolf.ai"
+                href="https://eauser.lunarwolf.ai"
                 target="_blank"
                 className={styles.btnLogin}
                 onClick={() => setIsMobileMenuOpen(false)}
