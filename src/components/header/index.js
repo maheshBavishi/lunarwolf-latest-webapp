@@ -11,7 +11,7 @@ const LogoIcon = "/assets/logo/loader-logo.png";
 const navLinks = [
   { label: "Affiliate program", href: "/referral-program", target: "_self" },
   { label: "About Us", href: "/about-us", target: "_self" },
-  { label: "About Ea", href: "/about-ea", target: "_self" },
+  { label: "About Ea", href: "/ourea", target: "_self" },
   { label: "Blog", href: "/blog", target: "_self" },
   { label: "Our Profile", href: "/documents/Lunar Wolf Ea Presentation.pdf", hasDownload: true, target: "_blank" },
 ];
@@ -167,7 +167,7 @@ export default function Header() {
                       Login
                     </motion.a>
                     <motion.a
-                      href="https://app.lunarwolf.ai/signup"
+                      href="http://eauser.lunarwolf.ai/signup"
                       className={styles.btnRegister}
                       variants={itemVariants}
                       whileHover={{ scale: 1.05 }}
@@ -245,7 +245,7 @@ export default function Header() {
                 Login
               </motion.a>
               <motion.a
-                href="https://app.lunarwolf.ai/signup"
+                href="http://eauser.lunarwolf.ai/signup"
                 className={styles.btnRegister}
                 target="_blank"
                 onClick={() => setIsMobileMenuOpen(false)}

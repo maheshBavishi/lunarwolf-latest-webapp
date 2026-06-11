@@ -31,7 +31,7 @@ export default function EarnSection() {
               Adaptive EURUSD Trading System. At Lunarwol, our objective is not to create unrealistic “high return” trading systems based on hype, aggressive overleveraging, or blind automation.
             </p>
           </div>
-          <Link href="https://app.lunarwolf.ai/signup" target="_blank">
+          <Link href="http://eauser.lunarwolf.ai/signup" target="_blank">
             <div className={styles.buttonDesign}>
               <button>
                 Start hunting
