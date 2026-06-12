@@ -34,7 +34,7 @@ export default function Aboutus() {
 
     // Banner slides up from 0 to 0.25 of the total 400vh scroll (Desktop only)
     const bannerY = useTransform(scrollYProgress, [0, 0.25], ["0%", "-100%"]);
-    
+
     // Text animation progress starts after banner starts moving
     const textProgress = useTransform(scrollYProgress, [0.15, 1], [0, 1]);
 
@@ -43,8 +43,8 @@ export default function Aboutus() {
             <Loader />
             <div ref={containerRef} className={styles.stickySection}>
                 <div className={styles.stickyWrapper}>
-                    <motion.div 
-                        className={styles.bannerContainer} 
+                    <motion.div
+                        className={styles.bannerContainer}
                         style={!isMobile ? { y: bannerY } : {}}
                     >
                         <AboutUsBanner />
@@ -56,7 +56,7 @@ export default function Aboutus() {
             </div>
             <OurMission />
             <IconTextCard />
-            <CompanyInfo />
+            {/* <CompanyInfo /> */}
             <MarketFlow />
             <BeComingSection />
             <SliderSection />
