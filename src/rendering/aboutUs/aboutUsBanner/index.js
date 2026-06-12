@@ -87,7 +87,7 @@ export default function AboutUsBanner() {
                     </motion.h1>
                     <motion.p variants={itemVariants}>
                         Where Smart Algorithms Chase Smarter Profits.
-                        Hunt Profits
+                        {/* Hunt Profits */}
                     </motion.p>
                     <motion.div className={styles.buttonDesign} variants={itemVariants}>
                         <Link href="https://eauser.lunarwolf.ai/signup" target="_blank" rel="noopener noreferrer">

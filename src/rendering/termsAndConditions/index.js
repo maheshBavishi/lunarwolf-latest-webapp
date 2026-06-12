@@ -10,12 +10,12 @@ const termsPoints = [
   {
     title: "Services",
     description:
-      "Lunar Wolf provides information related to automated trading strategies and account management services. All strategies remain the intellectual property of Lunar Wolf.",
+      "Lunar Wolf provides information related to automated trading strategies and EA services. All strategies remain the intellectual property of Lunar Wolf.",
   },
   {
     title: "Account Access",
     description:
-      "Users who participate in account management services may voluntarily provide trading account access for the purpose of executing trades through automated systems.",
+      "Users who participate in EA services may voluntarily provide trading account access for the purpose of executing trades through automated systems.",
   },
   {
     title: "Intellectual Property",
@@ -25,7 +25,7 @@ const termsPoints = [
   {
     title: "Minimum Investment",
     description:
-      "Participation in the trading strategy may require a minimum investment as stated on the website.",
+      "Participation in the trading strategy may require a minimum investment in your preferred broker account as stated on the website.",
   },
   {
     title: "Performance Fees",

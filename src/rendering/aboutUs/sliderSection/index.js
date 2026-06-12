@@ -18,7 +18,7 @@ const contents = [
     {
         id: 2,
         title: "Guided by Lunar Instincts",
-        desc: "Our AI hunts where no one dare venture, bringing out profit opportunities with the Martingale Strategy.",
+        desc: "Our AI hunts where no one dare venture, bringing out profit opportunities with the Adaptive Strategy.",
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const contents = [
     {
         id: 5,
         title: "No-cost Joining",
-        desc: "No entry fees, no commissions, and no hidden charges. You keep what you earn.",
+        desc: "No entry fees and no hidden charges.",
     },
     {
         id: 6,
@@ -45,8 +45,10 @@ const contents = [
 const SliderSection = forwardRef(({ onProgressChange }, ref) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
     const sectionRef = useRef(null);
     const autoplayTimer = useRef(null);
+    const hasResetRef = useRef(false);
     const controls = useAnimation();
     const isInView = useInView(sectionRef, { amount: 0.3 });
 
@@ -74,12 +76,13 @@ const SliderSection = forwardRef(({ onProgressChange }, ref) => {
 
     const scrollTo = (index, fast = true) => {
         const targetX = -(index * cardWidth);
+        const isResetting = index === 0 && currentIndexRef.current === contents.length - 1;
         setCurrentIndex(index);
         controls.start({
             x: targetX,
             transition: {
-                duration: fast ? 0.6 : 2.5,
-                ease: fast ? "easeOut" : "easeInOut"
+                duration: isResetting ? 1.6 : (fast ? 0.8 : 2.5),
+                ease: isResetting ? "easeInOut" : (fast ? [0.25, 1, 0.5, 1] : "easeInOut")
             }
         });
         if (onProgressChange) {
@@ -99,36 +102,55 @@ const SliderSection = forwardRef(({ onProgressChange }, ref) => {
 
     // Autoplay logic
     useEffect(() => {
-        if (isInView) {
-            // Initial reset when entering view
-            scrollTo(0, true);
-
-            // Start autoplay after a small delay
-            const delay = setTimeout(() => {
-                autoplayTimer.current = setInterval(() => {
-                    nextSlide(false); // Auto-scroll is slow
-                }, 3000);
-            }, 2000);
-
-            return () => {
-                clearTimeout(delay);
-                if (autoplayTimer.current) clearInterval(autoplayTimer.current);
-            };
-        } else {
+        if (!isInView) {
+            hasResetRef.current = false;
             if (autoplayTimer.current) clearInterval(autoplayTimer.current);
+            return;
         }
-    }, [isInView, isMobile]);
+
+        // Reset to 0 only on initial view entry
+        if (!hasResetRef.current) {
+            scrollTo(0, true);
+            hasResetRef.current = true;
+        }
+
+        if (autoplayTimer.current) {
+            clearInterval(autoplayTimer.current);
+        }
+
+        if (!isHovered) {
+            autoplayTimer.current = setInterval(() => {
+                nextSlide(false); // Auto-scroll is slow
+            }, 5000);
+        }
+
+        return () => {
+            if (autoplayTimer.current) clearInterval(autoplayTimer.current);
+        };
+    }, [isInView, isHovered, isMobile]);
 
     // Manual navigation resets autoplay
     const handleManualNav = (type, value) => {
         if (autoplayTimer.current) {
             clearInterval(autoplayTimer.current);
-            autoplayTimer.current = setInterval(() => nextSlide(false), 3000);
+        }
+        if (!isHovered && isInView) {
+            autoplayTimer.current = setInterval(() => nextSlide(false), 5000);
         }
 
-        if (type === 'next') nextSlide(true);
-        else if (type === 'prev') prevSlide();
-        else if (type === 'click') scrollTo(value, true);
+        if (type === 'next') {
+            if (currentIndexRef.current < contents.length - 1) {
+                nextSlide(true);
+            }
+        }
+        else if (type === 'prev') {
+            if (currentIndexRef.current > 0) {
+                prevSlide();
+            }
+        }
+        else if (type === 'click') {
+            scrollTo(value, true);
+        }
     };
 
     // Expose control to parent
@@ -153,7 +175,8 @@ const SliderSection = forwardRef(({ onProgressChange }, ref) => {
                     <div className={styles.navButtons}>
                         <button
                             onClick={() => handleManualNav('prev')}
-                            className={styles.active} // Keep it always styled as active since it loops
+                            disabled={currentIndex === 0}
+                            className={currentIndex !== 0 ? styles.active : ''}
                             aria-label="Previous Slide"
                         >
                             <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,7 +185,8 @@ const SliderSection = forwardRef(({ onProgressChange }, ref) => {
                         </button>
                         <button
                             onClick={() => handleManualNav('next')}
-                            className={styles.active} // Keep it always styled as active since it loops
+                            disabled={currentIndex === contents.length - 1}
+                            className={currentIndex !== contents.length - 1 ? styles.active : ''}
                             aria-label="Next Slide"
                         >
                             <svg style={{ transform: "rotate(180deg)" }} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-180">
@@ -172,7 +196,11 @@ const SliderSection = forwardRef(({ onProgressChange }, ref) => {
                     </div>
                 </div>
 
-                <div className={styles.sliderWrapper}>
+                <div
+                    className={styles.sliderWrapper}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
                     <motion.div
                         className={styles.sliderTrack}
                         animate={controls}

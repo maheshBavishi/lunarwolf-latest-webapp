@@ -61,7 +61,7 @@ const policyPoints = [
     type: "section",
     title: "Contact",
     description:
-      "If you have any questions regarding this Privacy Policy, please contact us through the website contact form.",
+      "If you have any questions regarding this Privacy Policy, please contact us through customer support email.",
   },
 ];
 
