@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 const RoundedLine = '/assets/icons/rounded-line.svg';
 const FillLogo = '/assets/icons/fill-logo.svg';
+const RoundImage = '/assets/images/bg-top-round.png';
 
 // ── Variants ───────────────────────────────────────────────────────────────
 
@@ -62,6 +63,14 @@ const listItems2 = [
 export default function RiskAndRecovery() {
     return (
         <div className={styles.riskAndRecovery}>
+            <motion.div 
+                className={styles.topAlignment}
+                initial={{ scale: 1, opacity: 0.8 }}
+                animate={{ scale: 1.05, opacity: 1 }}
+                transition={{ duration: 15, repeat: Infinity, repeatType: 'reverse', ease: "easeInOut" }}
+            >
+                <img src={RoundImage} alt='RoundImage' />
+            </motion.div>
             <div className='container'>
                 <div className={styles.grid}>
 

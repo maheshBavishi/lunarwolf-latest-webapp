@@ -4,10 +4,10 @@ import styles from './whylunar.module.scss';
 import Line from '@/icons/line';
 import { motion } from 'framer-motion';
 
-const Exposure   = '/assets/icons/exposure.svg';
+const Exposure = '/assets/icons/exposure.svg';
 const Protection = '/assets/icons/Protection.svg';
-const Recovery   = '/assets/icons/Recovery.svg';
-const Stability  = '/assets/icons/Stability.svg';
+const Recovery = '/assets/icons/Recovery.svg';
+const Stability = '/assets/icons/Stability.svg';
 
 // ── Variants ─────────────────────────────────────────────────────────────────
 
@@ -162,43 +162,46 @@ export default function Whylunar() {
                             whileTap={cardTap}
                         >
                             {/* Corner icon with drift-in + wiggle on hover */}
-                            <motion.div
-                                className={styles.iconAlignment}
-                                variants={iconVariants}
-                                whileHover={iconHover}
-                            >
-                                <img src={icon} alt={alt} />
-                            </motion.div>
+
 
                             <div className={styles.relative}>
-                                <motion.h2
-                                    initial={{ opacity: 0, x: -16 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-                                >
-                                    {title}
-                                </motion.h2>
+                                <div>
+                                    <motion.h2
+                                        initial={{ opacity: 0, x: -16 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+                                    >
+                                        {title}
+                                    </motion.h2>
 
-                                {/* Line animates its width from 0 → full */}
+                                    {/* Line animates its width from 0 → full */}
+                                    <motion.div
+                                        className={styles.line}
+                                        initial={{ scaleX: 0, originX: 0 }}
+                                        whileInView={{ scaleX: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
+                                    >
+                                        <Line />
+                                    </motion.div>
+
+                                    <motion.p
+                                        initial={{ opacity: 0, y: 12 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+                                    >
+                                        {body}
+                                    </motion.p>
+                                </div>
                                 <motion.div
-                                    className={styles.line}
-                                    initial={{ scaleX: 0, originX: 0 }}
-                                    whileInView={{ scaleX: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
+                                    className={styles.iconAlignment}
+                                    variants={iconVariants}
+                                    whileHover={iconHover}
                                 >
-                                    <Line />
+                                    <img src={icon} alt={alt} />
                                 </motion.div>
-
-                                <motion.p
-                                    initial={{ opacity: 0, y: 12 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-                                >
-                                    {body}
-                                </motion.p>
                             </div>
                         </motion.div>
                     ))}

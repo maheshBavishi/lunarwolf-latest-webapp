@@ -6,17 +6,19 @@ import ValidationMethodology from './validationMethodology'
 import RealMarket from './realMarket'
 import LivePortfolios from '../home/livePortfolios'
 import FaqSection from '../home/faqSection'
+import Ourvalidationindex from './ourvalidation'
 
 export default function AboutEa() {
     return (
-        <div >
+        <>
             <AboutEaBanner />
             <Whylunar />
             <RiskAndRecovery />
+            <Ourvalidationindex />
             <ValidationMethodology />
             <RealMarket />
             <LivePortfolios bgblack title='Performance Transparency' description='Watch Lunar Wolf analyze, execute, and dominate the forex market in real time. Follow active trades, proven strategies, and real profits as they happen.' />
             <FaqSection bgblack />
-        </div>
+        </>
     )
 }

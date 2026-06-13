@@ -5,9 +5,41 @@
     padding: 120px 0;
     background-color: #000;
     overflow: hidden;
+    position: relative;
+
+    &::before {
+        filter: blur(139.5px);
+        content: "";
+        background: radial-gradient(50% 50%, #19424b 0%, #0f203b 100%);
+        border-radius: 400px;
+        z-index: 9;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        bottom: 20%;
+        left: 0;
+    }
+
+    @include respond-to("md") {
+        padding: 80px 0;
+    }
 
     @include respond-to("sm") {
         padding: 60px 0;
+    }
+
+    .topAlignment {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     .grid {
@@ -15,7 +47,9 @@
         grid-template-columns: 519px 1fr;
         gap: 64px;
         align-items: center;
-        padding: 0 0 60px 0;
+        position: relative;
+        z-index: 1;
+        padding: 40px 0 60px 0;
 
         @include respond-to("md") {
             grid-template-columns: 1fr;
@@ -112,6 +146,10 @@
                                 color: #38BDF8;
                             }
 
+                            @include respond-to("sm") {
+                                font-size: 14px;
+                            }
+
                             &:last-child {
                                 padding: 0;
                             }
@@ -128,8 +166,12 @@
                     line-height: 130%;
                     font-family: var(--font-inter-sans);
 
+                    @include respond-to("md") {
+                        font-size: 22px;
+                    }
+
                     @include respond-to("sm") {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
 
                 }
@@ -142,6 +184,10 @@
                     font-weight: 400;
                     margin: 0 0 20px 0;
                     line-height: 130%;
+
+                    @include respond-to("sm") {
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -160,6 +206,7 @@
         border-radius: 0 6px 6px 0;
         background: rgba(255, 255, 255, 0.10);
         backdrop-filter: blur(110px);
+        border-left: 2px solid #38BDF8;
         padding: 16px;
         position: relative;
         overflow: hidden;
@@ -172,7 +219,7 @@
             background-color: #1E90FF;
             content: '';
             left: 0;
-            opacity: 0.3;
+            opacity: 0.5;
             filter: blur(40px);
         }
 

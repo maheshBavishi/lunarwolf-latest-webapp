@@ -59,6 +59,12 @@ const buttonTap = { scale: 0.96 };
 export default function AboutEaBanner() {
     return (
         <div className={styles.aboutEaBanner}>
+            <motion.div 
+                className={styles.bannerBg}
+                initial={{ scale: 1 }}
+                animate={{ scale: 1.1 }}
+                transition={{ duration: 20, repeat: Infinity, repeatType: 'reverse', ease: "linear" }}
+            />
             <div className='container-sm4'>
                 <motion.div
                     variants={containerVariants}
