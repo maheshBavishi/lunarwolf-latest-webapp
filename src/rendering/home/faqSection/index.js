@@ -32,7 +32,7 @@ const leftFaqs = [
         question: "IS PERFORMANCE GUARANTEED?",
         answer: (
             <>
-                No, Financial markets involve risk, and no trading system can guarantee profits or eliminate losses.
+                No, financial markets involve risk, and no trading system can guarantee profits or eliminate losses.
                 <br /><br />
                 Lunar Wolf is designed to prioritize structured execution, controlled exposure, and adaptive market behavior, but actual performance may vary depending on market conditions, broker execution quality, volatility, and user settings.
                 <br /><br />
@@ -76,7 +76,7 @@ const rightFaqs = [
         )
     },
     {
-        question: "DOES THE EA OPERATE 24/7?",
+        question: " Does the EA operate 24/5?",
         answer: (
             <>
                 LUNAR WOLF EA monitors markets during active forex trading sessions and executes only when predefined conditions are met.
@@ -141,7 +141,8 @@ const rightFaqs = [
                 <br /><br />
                 Users should only trade with capital they can afford to risk and should understand that losses are possible.
                 <br /><br />
-                Lunar Wolf is designed as a structured trading framework not a guaranteed return product.
+                Lunar Wolf is designed as a structured trading framework and not a guaranteed return product.
+
             </>
         )
     }

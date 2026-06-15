@@ -4,7 +4,6 @@ import BlogBanner from "./blogBanner";
 import Loader from "@/components/loader";
 import ExploreBlog from "./exploreBlog";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import styles from "./blog.module.scss";
 
 export default function Blog({ blogsData, paginationData, categoriesData, currentCategory, currentPage }) {
@@ -61,8 +60,6 @@ export default function Blog({ blogsData, paginationData, categoriesData, curren
                 : "Our blog is currently empty. We are working hard to bring you valuable content soon. Stay tuned!"
               }
             </motion.p>
-
-
           </div>
         </div>
       )}

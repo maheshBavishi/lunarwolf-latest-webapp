@@ -10,8 +10,8 @@ const Relentless = '/assets/images/Relentless.png';
 export default function MemberSection() {
     const memberFeatures = [
         {
-            title: "Trained to hunt since 2015",
-            description: "Lunar Wolf’s razor-sharp senses are honed by rigorous backtesting for pinpoint profit hunting tactics.",
+            title: "Trained to Hunt Since 2015",
+            description: "Lunar Wolf EA's razor-sharp senses are honed by rigorous backtesting for pinpoint profit hunting tactics.",
             image: Trained
         },
         {
@@ -26,7 +26,7 @@ export default function MemberSection() {
         },
         {
             title: "Relentless Market Tracking",
-            description: "Lunar Wolf never sleeps, it scans the forex market 24/5, ensuring you never miss a profitable opportunity.",
+            description: "Lunar Wolf EA never sleeps, it scans the forex market 24/5, ensuring you never miss a profitable opportunity.",
             image: Relentless
         }
     ];
@@ -50,10 +50,10 @@ export default function MemberSection() {
                     }}
                 >
                     <h2>
-                        What Lunar Wolf brings for ITS members
+                        What Lunar Wolf EA brings for ITS members
                     </h2>
                     <p>
-                        Every feature inside Lunar Wolf is designed to support disciplined
+                        Every feature inside Lunar Wolf EA is designed to support disciplined
                         execution, transparent operations, adaptive automation, and long-term sustainability.
                     </p>
                 </motion.div>

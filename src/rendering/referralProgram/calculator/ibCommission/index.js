@@ -120,7 +120,7 @@ export default function IBCommission() {
                                         return { r: 1, a: "1+", c: 4 };
                                     };
                                     const data = getRankData(activeAccounts);
-                                    return `${data.r} with ${data.a} active referrals and earn $${data.c} per standard lot traded. The more lots your network trades, the more you earn, your total commission is simply $${data.c} × total standard lots generated.`;
+                                    return `${data.r} with ${data.a} active referrals and earn $${data.c} per standard lot traded. The more lots your network trades, the more you earn. Your total commission is simply $${data.c} × total standard lots generated.`;
                                 })()}
                             </p>
                         </div>

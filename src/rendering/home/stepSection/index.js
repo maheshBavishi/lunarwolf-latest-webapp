@@ -203,7 +203,8 @@ export default function StepSection() {
                         Getting Started With Lunar Wolf
                     </h2>
                     <p>
-                        Transparent, Powerful, and Rewarding Trading Designed for You LUNAR WOLF does not manage deposits or withdrawals.
+                        Transparent, Powerful, and Rewarding Trading Designed for You <br />
+                        LUNAR WOLF EA does not manage your deposits or withdrawals
                     </p>
                 </div>
                 <div className={styles.allflexBox}>
@@ -257,12 +258,12 @@ export default function StepSection() {
                                         </h3>
                                     </div>
                                     <ul>
-                                        <li>Link your MT5 account to our “Profit Hunter.</li>
+                                        <li>Link your MT5 account to Lunar Wolf EA</li>
                                         <li>
                                             Make sure your account has a minimum of $1000 fund to start bot setup.
                                         </li>
                                         <li>
-                                            Confirm connection status as “Connected.
+                                            {`Confirm connection as "Connected"`}
                                         </li>
                                     </ul>
                                 </div>
@@ -288,12 +289,12 @@ export default function StepSection() {
                                         </h3>
                                     </div>
                                     <ul>
-                                        <li>Apply to Activate Bot through Lunar Wolf dashboard.</li>
+                                        <li>apply to activate bot through Lunar Wolf dashboard.</li>
                                         <li>
-                                            Fill the quick form with accurate details to setup the bot.
+                                            fill the quick form with accurate details to setup the bot.
                                         </li>
                                         <li>
-                                            Wait for confirmation and let the bot start.
+                                            wait for confirmation and let the bot start.
                                         </li>
                                     </ul>
                                 </div>

@@ -43,10 +43,10 @@ const ReferralNetwork = () => {
           Earn More As your Referral Network Earns
         </h1>
         <p className={styles.description}>
-          At Lunar Wolf, our exclusive networking-based referral program lets
-          you earn beyond your trading returns by building your own network.
-          Choose from two earning options: Profit Sharing & IB Network to
-          participate in additional reward streams.
+          Build. Share. Earn.
+          Get the best from your network with Lunar Wolf EA. Choose from the below earning
+          options to participate in our exclusive reward streams.
+
         </p>
 
         <div className={styles.cardsContainer}>

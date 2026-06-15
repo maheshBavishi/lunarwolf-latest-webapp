@@ -107,11 +107,10 @@ export default function Footer() {
           guarantee future results.
         </p>
         <p>
-          LUNAR WOLF:
-          ***does not manage client funds, does not guarantee returns, does not provide financial advice, supports execution through user-controlled broker accounts
-        </p>
-        <p>
-          ***Past performance does not guarantee future results.
+          *** NOTE: Lunar Wolf EA does not manage client funds, does not guarantee returns, does not
+          provide financial advice, supports execution through user-controlled broker accounts. Past
+          performance does not guarantee future results.
+
         </p>
       </div>
     </footer>

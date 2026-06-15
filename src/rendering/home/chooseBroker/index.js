@@ -95,7 +95,7 @@ export default function ChooseBroker() {
             visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
           }}
         >
-          <h2>Choose from supported broker environments.</h2>
+          <h2>CHOOSE FROM SUPPORTED BROKERS</h2>
           <p>Users maintain full control over deposits, withdrawals, and account access.
           </p>
         </motion.div>

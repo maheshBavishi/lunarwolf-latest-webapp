@@ -62,19 +62,40 @@ export default function StrategicSection() {
                         </div>
                         <div className={styles.details}>
                             <h3>
-                                Lunar IB Structure
+                                Lunar Wolf IB
                             </h3>
+                            <p>
+                                Built to compound
+                            </p>
+                            <p>
+                                An automated ecosystem where your referrals trade, your network grows, and your
+                                commissions multiply on autopilot.
+                            </p>
                             <ul>
-                                <li>EA + Referral Ecosystem</li>
-                                <li>Profit Sharing + IB Commission</li>
-                                <li>Automated trading through EA</li>
-                                <li>Potentially Higher Client Retention (EA-based long-term users)</li>
-                                <li>Multi-level Referral System (up to 5 levels)</li>
-                                <li>Community-driven expansion</li>
-                                <li>Multiple broker options</li>
-                                <li>Multi-broker risk distribution</li>
-                                <li>Long-term recurring potential</li>
-                                <li>Myfxbook + broker freedom</li>
+                                <li>
+                                    <strong>Profit sharing <i>and</i> IB commission</strong>
+                                    <span>Two income streams from every referral</span>
+                                </li>
+                                <li>
+                                    <strong>5-level referral network</strong>
+                                    <span>Earn from your referrals' referrals, down 5 tiers</span>
+                                </li>
+                                <li>
+                                    <strong>EA-driven client retention</strong>
+                                    <span>Automated traders stay active longer</span>
+                                </li>
+                                <li>
+                                    <strong>Multi-broker flexibility</strong>
+                                    <span>Spread risk across TMGM, Multibank, VT &amp; more</span>
+                                </li>
+                                <li>
+                                    <strong>Myfxbook-verified reporting</strong>
+                                    <span>Independent, tamper-proof performance tracking</span>
+                                </li>
+                                <li>
+                                    <strong>Community-driven growth</strong>
+                                    <span>Network effect works in your favour</span>
+                                </li>
                             </ul>
                         </div>
                     </motion.div>
@@ -156,19 +177,40 @@ export default function StrategicSection() {
                         </div>
                         <div className={styles.details}>
                             <h3>
-                                Normal Broker IB Structure
+                                Traditional IB
                             </h3>
+                            <p>
+                                Built to stall
+                            </p>
+                            <p>
+                                You earn only when your direct referrals trade manually, and when they stop, so does your
+                                income.
+                            </p>
                             <ul>
-                                <li>Traditional Broker Referral</li>
-                                <li>Spread / Lot Commission Only</li>
-                                <li>Mostly manual traders</li>
-                                <li>Often Dependent On Individual Trader Activity</li>
-                                <li>Mostly direct referrals only</li>
-                                <li>Continuous manual client hunting</li>
-                                <li>Usually single broker dependency</li>
-                                <li>Single broker exposure</li>
-                                <li>Volume-dependent fluctuations</li>
-                                <li>Broker-dependent reporting</li>
+                                <li>
+                                    <strong>Spread or lot commission only</strong>
+                                    <span>No profit sharing, no bonus tiers</span>
+                                </li>
+                                <li>
+                                    <strong>Direct referrals only</strong>
+                                    <span>No income beyond your immediate network</span>
+                                </li>
+                                <li>
+                                    <strong>Manual trader dependency</strong>
+                                    <span>Inactive traders mean zero commissions</span>
+                                </li>
+                                <li>
+                                    <strong>Single broker lock-in</strong>
+                                    <span>Full exposure if one broker underperforms</span>
+                                </li>
+                                <li>
+                                    <strong>Broker-controlled reporting</strong>
+                                    <span>No independent verification of your data</span>
+                                </li>
+                                <li>
+                                    <strong>Constant manual prospecting</strong>
+                                    <span>No self-sustaining growth mechanism</span>
+                                </li>
                             </ul>
                         </div>
                     </motion.div>

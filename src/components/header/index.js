@@ -9,7 +9,7 @@ import Link from "next/link";
 const LogoIcon = "/assets/logo/loader-logo.png";
 
 const navLinks = [
-  { label: "Affiliate program", href: "/referral-program", target: "_self" },
+  { label: "Affiliate Program", href: "/referral-program", target: "_self" },
   { label: "About Us", href: "/about-us", target: "_self" },
   // { label: "Our EA", href: "/ourea", target: "_self" },
   { label: "Blog", href: "/blog", target: "_self" },

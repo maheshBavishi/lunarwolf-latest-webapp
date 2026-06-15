@@ -61,25 +61,25 @@ const commissionLevels = [
     isLocked: true,
     lockDescription: "",
     lockPrice: "25000",
-    unlockRequirement: "Complete Direct Business 25000$ Then Open Lv1.2",
+    unlockRequirement: "Achieve direct referrals worth 25000$ to unlock LV 2",
   },
   {
     level: "1.3",
     title: "HUNTER WOLF",
     commission: "2",
     isLocked: true,
-    lockDescription: "Add Additional Bonus 1 $ Fore Direct 5+1=6%",
+    lockDescription: "Get additional bonus of 1% on Direct Referral LV 1 (5+1=6%)",
     lockPrice: "50000",
-    unlockRequirement: "Complete Direct Business 50000$ Then Open LVL 3",
+    unlockRequirement: "Achieve direct referrals worth 50000$ to unlock LV 3",
   },
   {
     level: "1.4",
     title: "SCOUT WOLF",
     commission: "1.5",
     isLocked: true,
-    lockDescription: "Add Additional Bonus 1 $ Fore Direct 6+1=7%",
+    lockDescription: "Get additional bonus of 1% on Direct Referral LV 1 (7+1=8%)",
     lockPrice: "100000",
-    unlockRequirement: "Complete Direct Business 100000$ Then Open LVL 4",
+    unlockRequirement: "Achieve direct referrals worth 100000$ to unlock LV 4",
   },
   {
     level: "1.5",
@@ -820,9 +820,9 @@ const ProfitSharing = () => {
               key={`reactflow-${forceRefreshKey}-${getCurrentBreakpoint(screenWidth)}`}
               nodes={staticNodes}
               edges={edges}
-              onNodesChange={() => {}}
-              onEdgesChange={() => {}}
-              onConnect={() => {}}
+              onNodesChange={() => { }}
+              onEdgesChange={() => { }}
+              onConnect={() => { }}
               nodeTypes={nodeTypes}
               edgeTypes={{
                 smoothstep: SmoothElbowEdge,

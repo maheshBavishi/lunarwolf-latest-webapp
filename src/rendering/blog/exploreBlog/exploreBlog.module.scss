@@ -65,6 +65,7 @@
             box-shadow: 0 0 12px 0 rgba(107, 197, 224, 0.80) inset;
             line-height: 130%;
             padding: 10px 24px;
+            text-transform: capitalize;
             cursor: pointer;
 
             @include respond-to("md") {

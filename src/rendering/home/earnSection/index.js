@@ -28,7 +28,9 @@ export default function EarnSection() {
           <h2>Growth Through EA Trading</h2>
           <div className={styles.detailsalignment}>
             <p>
-              Adaptive EURUSD Trading System. At Lunarwol, our objective is not to create unrealistic “high return” trading systems based on hype, aggressive overleveraging, or blind automation.
+              At Lunar Wolf EA, our objective is not to create unrealistic “high return” trading systems based
+              on hype, aggressive overleveraging, or blind automation. It is to create long-term steady returns.
+
             </p>
           </div>
           <Link href="https://eauser.lunarwolf.ai/signup" target="_blank">
@@ -55,8 +57,9 @@ export default function EarnSection() {
           </h2>
           <div className={styles.detailsalignment}>
             <p>
-              LunarWolf EA doesn’t just trade for you 24/5 with proven algorithms — it builds you a 5-level income empire where every referral’s
-              success becomes YOUR recurring payday.
+              Why trade alone when you can earn two ways? Lunar Wolf EA works for you 24/5 with tested
+              automated strategies while helping you build a 5-level income network that can generate
+              recurring commissions long after your referrals join.
             </p>
           </div>
         </div>
@@ -64,7 +67,7 @@ export default function EarnSection() {
           <img src={WolfImage2} alt="WolfImage2" />
           <div className={styles.textbox}>
             <p>
-              Turn Every Trade Into Wealth = Automated Profits + Lifetime Commissions
+              Automated Profits + Lifetime Commissions = Turn Every Trade Into Wealth
             </p>
           </div>
           <div className={styles.cownAlignment}>

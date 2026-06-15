@@ -11,7 +11,7 @@ export default function BlogInformation({ blogData, sidebarBlogs }) {
         <div className={styles.grid}>
           <div className={styles.items}>
             <div className={styles.stickySection}>
-              <h2>Explore Our Blog</h2>
+              <h2>Explore Our Blogs</h2>
               <div className={styles.allCardAlignment}>
                 {sidebarBlogs && sidebarBlogs.length > 0 ? (
                   sidebarBlogs.map((blog, index) => (

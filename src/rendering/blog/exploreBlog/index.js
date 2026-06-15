@@ -32,7 +32,7 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
     <div className={styles.exploreBlog}>
       <div className="container-lg">
         <div className={styles.title}>
-          <h2>Explore Our Blog</h2>
+          <h2>Explore Our Blogs</h2>
         </div>
         <div className={styles.tabCenter}>
           <button
