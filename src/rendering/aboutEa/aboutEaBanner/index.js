@@ -59,7 +59,7 @@ const buttonTap = { scale: 0.96 };
 export default function AboutEaBanner() {
     return (
         <div className={styles.aboutEaBanner}>
-            <motion.div 
+            <motion.div
                 className={styles.bannerBg}
                 initial={{ scale: 1 }}
                 animate={{ scale: 1.1 }}
@@ -106,19 +106,23 @@ export default function AboutEaBanner() {
 
                     {/* CTA Buttons */}
                     <motion.div className={styles.twobutton} variants={fadeSlideUp}>
-                        <motion.button
-                            whileHover={buttonHover}
-                            whileTap={buttonTap}
-                        >
-                            View Live Performance
-                        </motion.button>
-                        <motion.button
-                            className={styles.fill}
-                            whileHover={buttonHover}
-                            whileTap={buttonTap}
-                        >
-                            Registration
-                        </motion.button>
+                        <a href='#live-portfolios'>
+                            <motion.button
+                                whileHover={buttonHover}
+                                whileTap={buttonTap}
+                            >
+                                View Live Performance
+                            </motion.button>
+                        </a>
+                        <a href="https://eauser.lunarwolf.ai/signup" target='_blank'>
+                            <motion.button
+                                className={styles.fill}
+                                whileHover={buttonHover}
+                                whileTap={buttonTap}
+                            >
+                                Registration
+                            </motion.button>
+                        </a>
                     </motion.div>
                 </motion.div>
             </div>

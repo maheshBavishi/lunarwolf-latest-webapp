@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './riskAndRecovery.module.scss';
 import { motion } from 'framer-motion';
+import RoundLineAnimation from '@/icons/roundLineAnimation';
 
 const RoundedLine = '/assets/icons/rounded-line.svg';
 const FillLogo = '/assets/icons/fill-logo.svg';
@@ -63,13 +64,13 @@ const listItems2 = [
 export default function RiskAndRecovery() {
     return (
         <div className={styles.riskAndRecovery}>
-            <motion.div 
+            <motion.div
                 className={styles.topAlignment}
                 initial={{ scale: 1, opacity: 0.8 }}
                 animate={{ scale: 1.05, opacity: 1 }}
                 transition={{ duration: 15, repeat: Infinity, repeatType: 'reverse', ease: "easeInOut" }}
             >
-                <img src={RoundImage} alt='RoundImage' />
+                {/* <img src={RoundImage} alt='RoundImage' /> */}
             </motion.div>
             <div className='container'>
                 <div className={styles.grid}>
@@ -88,7 +89,8 @@ export default function RiskAndRecovery() {
                                 className={styles.image}
 
                             >
-                                <img src={RoundedLine} alt='RoundedLine' />
+                                <RoundLineAnimation />
+                                {/* <img src={RoundedLine} alt='RoundedLine' /> */}
                             </motion.div>
 
                             {/* Glow pulse behind center circle */}

@@ -15,6 +15,22 @@ const realWorldFactors = [
     "Server Latency"
 ];
 
+const possibleLiveTradingDifferences = [
+    "Missed Entries",
+    "Delayed Execution",
+    "Partial Fills",
+    "Different Exit Prices",
+    "Take Profit Variations"
+];
+
+const brokerDependency = [
+    "Execution Speed",
+    "Liquidity Quality",
+    "Slippage Handling",
+    "Spread Stability",
+    "Server Performance"
+];
+
 // ── Animation Variants ─────────────────────────────────────────────────────
 
 const sectionVariants = {
@@ -160,14 +176,32 @@ export default function RealMarket() {
                                 isOpen={openIndex === 1}
                                 onToggle={() => handleToggle(1)}
                             >
-                                <p className={styles.placeholderText}>Information about live trading differences goes here.</p>
+                                <ul>
+                                    {possibleLiveTradingDifferences.map((factor, index) => (
+                                        <li key={index}>
+                                            <span className={styles.dot}>
+                                                <span className={styles.innerDot}></span>
+                                            </span>
+                                            {factor}
+                                        </li>
+                                    ))}
+                                </ul>
                             </AccordionItem>
                             <AccordionItem
                                 title="Broker Dependency"
                                 isOpen={openIndex === 2}
                                 onToggle={() => handleToggle(2)}
                             >
-                                <p className={styles.placeholderText}>Information about broker dependency goes here.</p>
+                                <ul>
+                                    {brokerDependency.map((factor, index) => (
+                                        <li key={index}>
+                                            <span className={styles.dot}>
+                                                <span className={styles.innerDot}></span>
+                                            </span>
+                                            {factor}
+                                        </li>
+                                    ))}
+                                </ul>
                             </AccordionItem>
                         </div>
                     </motion.div>

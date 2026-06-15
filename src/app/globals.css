@@ -11,6 +11,10 @@ a {
   /* font-family: var(--font-inter-sans); */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
