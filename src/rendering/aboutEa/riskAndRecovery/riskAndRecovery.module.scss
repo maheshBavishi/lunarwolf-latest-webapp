@@ -49,7 +49,7 @@
         align-items: center;
         position: relative;
         z-index: 9;
-        padding: 40px 0 60px 0;
+        padding: 0 0 60px 0;
 
         @include respond-to("md") {
             grid-template-columns: 1fr;
