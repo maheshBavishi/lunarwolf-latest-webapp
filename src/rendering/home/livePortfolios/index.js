@@ -80,7 +80,7 @@ export default function LivePortfolios({ title, description, bgblack }) {
                     <div>
                       <div className={styles.icontext}>
                         <img src={RobotName} alt="RobotName" />
-                        <span>Robot Name</span>
+                        <span>EA Name</span>
                       </div>
                       <p>{account.robotName}</p>
                     </div>

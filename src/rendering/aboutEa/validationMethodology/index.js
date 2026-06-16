@@ -17,51 +17,51 @@ const containerVariants = {
 
 const titleVariants = {
     hidden: { opacity: 0, y: -20, filter: 'blur(5px)' },
-    visible: { 
-        opacity: 1, 
-        y: 0, 
-        filter: 'blur(0px)', 
-        transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+    visible: {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px)',
+        transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
     }
 };
 
 const fadeUpVariants = {
     hidden: { opacity: 0, y: 30, filter: 'blur(5px)' },
-    visible: { 
-        opacity: 1, 
-        y: 0, 
-        filter: 'blur(0px)', 
-        transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+    visible: {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px)',
+        transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
     }
 };
 
 const listItemVariants = {
     hidden: { opacity: 0, x: -15, filter: 'blur(2px)' },
-    visible: { 
-        opacity: 1, 
-        x: 0, 
-        filter: 'blur(0px)', 
-        transition: { duration: 0.5, ease: 'easeOut' } 
+    visible: {
+        opacity: 1,
+        x: 0,
+        filter: 'blur(0px)',
+        transition: { duration: 0.5, ease: 'easeOut' }
     }
 };
 
 const slideRightVariants = {
     hidden: { opacity: 0, x: -40, filter: 'blur(5px)' },
-    visible: { 
-        opacity: 1, 
-        x: 0, 
-        filter: 'blur(0px)', 
-        transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } 
+    visible: {
+        opacity: 1,
+        x: 0,
+        filter: 'blur(0px)',
+        transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] }
     }
 };
 
 const slideLeftVariants = {
     hidden: { opacity: 0, x: 40, filter: 'blur(5px)' },
-    visible: { 
-        opacity: 1, 
-        x: 0, 
-        filter: 'blur(0px)', 
-        transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } 
+    visible: {
+        opacity: 1,
+        x: 0,
+        filter: 'blur(0px)',
+        transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] }
     }
 };
 
@@ -76,9 +76,9 @@ export default function ValidationMethodology() {
     return (
         <div className={styles.validationMethodology}>
             <div className='container-sm5'>
-                
+
                 {/* Title */}
-                <motion.div 
+                <motion.div
                     className={styles.title}
                     initial="hidden"
                     whileInView="visible"
@@ -91,7 +91,7 @@ export default function ValidationMethodology() {
                 </motion.div>
 
                 {/* Main Grid */}
-                <motion.div 
+                <motion.div
                     className={styles.grid}
                     variants={containerVariants}
                     initial="hidden"
@@ -105,7 +105,7 @@ export default function ValidationMethodology() {
                                 Intro
                             </h2>
                             <p>
-                                LUNAR WOLF+ is continuously refined through a structured EURUSD-focused development and validation process designed
+                                LUNAR WOLF EA is continuously refined through a structured EURUSD-focused development and validation process designed
                                 to prioritize stability, adaptability, and long-term operational consistency.
                             </p>
                         </motion.div>
@@ -154,13 +154,13 @@ export default function ValidationMethodology() {
                 </motion.div>
 
                 {/* Secondary Grid */}
-                <motion.div 
+                <motion.div
                     className={styles.secgrid}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.4 }}
                 >
-                    <motion.div 
+                    <motion.div
                         className={styles.secgridItems}
                         variants={slideRightVariants}
                     >
@@ -172,12 +172,12 @@ export default function ValidationMethodology() {
                             under changing market conditions.
                         </p>
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                         className={styles.secgridItems}
                         variants={slideLeftVariants}
                     >
                         <p>
-                            The objective is not simply finding the highest historical profit curve, but identifying more stable and repeatable behavior across 
+                            The objective is not simply finding the highest historical profit curve, but identifying more stable and repeatable behavior across
                             different market environments.
                         </p>
                     </motion.div>

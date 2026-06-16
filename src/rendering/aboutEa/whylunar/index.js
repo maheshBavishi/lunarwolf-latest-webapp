@@ -98,8 +98,8 @@ const cards = [
     {
         icon: Exposure,
         alt: 'Exposure',
-        title: 'Controlled Exposure',
-        body: 'Position sizing and scaling are designed to support disciplined risk management.',
+        title: 'Disciplined Risk Exposure',
+        body: 'Position sizing and scaling are structured to maintain measured market exposure and support consistent risk control.',
     },
     {
         icon: Protection,
@@ -137,7 +137,7 @@ export default function Whylunar() {
                     viewport={{ once: true, amount: 0.3 }}
                 >
                     <motion.h2 variants={fadeSlideLeft}>
-                        Why <span> Lunar Wolf EA </span> is different
+                        Why <span> Lunar Wolf EA </span> is Different
                     </motion.h2>
                     <motion.p variants={fadeSlideUp}>
                         LUNAR WOLF EA is built around a stability-first philosophy that prioritizes controlled exposure and long-term consistency over aggressive short-term

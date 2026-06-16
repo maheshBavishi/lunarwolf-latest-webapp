@@ -54,7 +54,7 @@ export default function Herobanner() {
               visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
             }}
           >
-            LUNAR WOLF - A <br /> <span> FOREX </span> EA <br /> -
+            LUNAR WOLF - A <br /> <span> FOREX </span> EA <br />
             WITH POWERFUL INSTINCTS
           </motion.h2>
           <motion.button

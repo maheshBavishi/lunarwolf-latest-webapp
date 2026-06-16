@@ -143,7 +143,7 @@ export default function RiskAndRecovery() {
                             </motion.h3>
 
                             <motion.p variants={fadeSlideUp}>
-                                Financial markets are inherently unpredictable. Periods of strong trends, sudden volatility spikes, liquidity shifts, and abnormal market conditions can occur without warning. LUNAR WOLF EA + is built with a risk-first architecture
+                                Financial markets are inherently unpredictable. Periods of strong trends, sudden volatility spikes, liquidity shifts, and abnormal market conditions can occur without warning. LUNAR WOLF EA is built with a risk-first architecture
                                 designed to support disciplined execution and operational stability across changing market environments.
                             </motion.p>
 
@@ -197,7 +197,7 @@ export default function RiskAndRecovery() {
                         Risk Disclosure
                     </h3>
                     <p>
-                        Risk cannot be eliminated from financial markets. The objective of LUNAR WOLF+ is not to promise protection from losses or guarantee outcomes, but to approach market participation through a disciplined, adaptive, and risk-aware
+                        Risk cannot be eliminated from financial markets. The objective of LUNAR WOLF EA is not to promise protection from losses or guarantee outcomes, but to approach market participation through a disciplined, adaptive, and risk-aware
                         framework designed for long-term operational consistency.
                     </p>
                 </motion.div>

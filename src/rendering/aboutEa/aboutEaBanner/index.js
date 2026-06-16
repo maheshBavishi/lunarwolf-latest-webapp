@@ -86,7 +86,7 @@ export default function AboutEaBanner() {
 
                     {/* Headline */}
                     <motion.h1 variants={fadeSlideUp}>
-                        Designed Specifically <br /> for <span> EURO|USD</span>
+                        Designed Specifically <br /> for <span> EUR|USD</span>
                     </motion.h1>
 
                     {/* Sub-headline */}
