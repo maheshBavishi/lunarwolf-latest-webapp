@@ -53,7 +53,7 @@
         position: relative;
         z-index: 1;
 
-        @include respond-to("sm") {
+        @include respond-to("md") {
             padding: 0 20px;
         }
 
