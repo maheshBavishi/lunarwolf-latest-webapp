@@ -20,7 +20,7 @@ export default function Header() {
   const pathname = usePathname();
 
   // Define pages that have the Loader component and need delayed header entrance
-  const loaderPages = ["/", "/about-us", "/blog", "/referral-program", "/ourea"];
+  const loaderPages = ["/", "/about-us", "/blog", "/referral-program",];
   const isLoaderPage = loaderPages.includes(pathname);
 
   const [isVisible, setIsVisible] = useState(!isLoaderPage);
