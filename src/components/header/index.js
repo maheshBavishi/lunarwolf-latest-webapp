@@ -11,7 +11,7 @@ const LogoIcon = "/assets/logo/loader-logo.png";
 const navLinks = [
   { label: "Affiliate Program", href: "/referral-program", target: "_self" },
   { label: "About Us", href: "/about-us", target: "_self" },
-  // { label: "Our EA", href: "/ourea", target: "_self" },
+  { label: "Our EA", href: "/ourea", target: "_self" },
   { label: "Blog", href: "/blog", target: "_self" },
   { label: "Our Profile", href: "/documents/Lunar Wolf Ea Presentation.pdf", hasDownload: true, target: "_blank" },
 ];
@@ -20,7 +20,7 @@ export default function Header() {
   const pathname = usePathname();
 
   // Define pages that have the Loader component and need delayed header entrance
-  const loaderPages = ["/", "/about-us", "/blog", "/referral-program"];
+  const loaderPages = ["/", "/about-us", "/blog", "/referral-program", "/ourea"];
   const isLoaderPage = loaderPages.includes(pathname);
 
   const [isVisible, setIsVisible] = useState(!isLoaderPage);

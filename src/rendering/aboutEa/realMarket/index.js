@@ -71,7 +71,7 @@ const AccordionItem = ({ title, children, isOpen, onToggle }) => {
             <div className={styles.accordionHeader} onClick={onToggle}>
                 <h4>{title}</h4>
                 <motion.div
-                    animate={{ rotate: isOpen ? 0 : 180 }}
+                    animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                     className={styles.chevron}
                 >

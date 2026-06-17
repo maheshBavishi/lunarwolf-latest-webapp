@@ -28,7 +28,7 @@ export default function Footer() {
               <h3>About</h3>
               {[
                 { label: "About Us", href: "/about-us" },
-                // { label: "Our EA", href: "/ourea" },
+                { label: "Our EA", href: "/ourea" },
                 { label: "Blog", href: "/blog" },
                 {
                   label: "Profit Sharing Model",
@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
             <div>
               <h3>Contact Us</h3>
-              <a href="mailto:contact@lunarwolf.com">contact@lunarwolf.com</a>
+              <a href="mailto:contact@lunarwolf.ai">contact@lunarwolf.ai</a>
               <div className={styles.socialIconAlignment}>
                 <a href="https://www.facebook.com/lunarwolfai" target="_blank" rel="noopener noreferrer">
                   <FacebookIcon />
