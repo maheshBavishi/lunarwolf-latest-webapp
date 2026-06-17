@@ -38,7 +38,7 @@
         position: relative;
 
         @include respond-to("md") {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
         }
 
@@ -69,6 +69,12 @@
 
             @include respond-to("md") {
                 justify-content: center;
+                display: none;
+            }
+
+            @include respond-to("sm") {
+                justify-content: center;
+                display: block;
             }
 
             svg {
