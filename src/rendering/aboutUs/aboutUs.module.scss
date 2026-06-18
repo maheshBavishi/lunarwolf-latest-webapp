@@ -12,7 +12,7 @@
         position: relative;
         width: 100%;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1199px) {
             height: auto;
         }
     }
@@ -24,7 +24,7 @@
         width: 100%;
         overflow: hidden;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1199px) {
             position: relative;
             height: auto;
             overflow: visible;
@@ -39,7 +39,7 @@
         height: 100vh;
         z-index: 20;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1199px) {
             position: relative;
             height: auto;
             min-height: 100dvh;
@@ -54,7 +54,7 @@
         height: 100vh;
         z-index: 10;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1199px) {
             position: relative;
             height: auto;
             min-height: auto;

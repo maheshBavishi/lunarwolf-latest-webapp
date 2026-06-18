@@ -21,7 +21,7 @@ export default function TextAnimation({ scrollProgress }) {
 
     useEffect(() => {
         const checkMobile = () => {
-            setIsMobile(window.innerWidth < 1024);
+            setIsMobile(window.innerWidth < 1200);
         };
         checkMobile();
         window.addEventListener('resize', checkMobile);
