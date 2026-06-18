@@ -134,6 +134,10 @@
         justify-content: center;
         z-index: 999;
 
+        @include respond-to("md") {
+            bottom: -10vh;
+        }
+
         @include respond-to("sm") {
             bottom: -10vh;
         }
