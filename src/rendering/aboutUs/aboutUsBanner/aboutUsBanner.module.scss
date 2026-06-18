@@ -7,7 +7,7 @@
     position: relative;
     overflow: hidden;
 
-    @include respond-to("sm") {
+    @include respond-to("md") {
         height: 100dvh;
     }
 
