@@ -2,6 +2,11 @@ import { GetAllBlogs, GetBlogsCategory } from "@/graphql/graphql";
 import { graphcms } from "@/graphql/graphQLClient";
 import Blog from "@/rendering/blog";
 
+export const metadata = {
+  title: "Blog | Lunar Wolf",
+  description: "Read the latest news, updates, and articles from Lunar Wolf about AI trading, crypto, and market strategies.",
+};
+
 export default async function page({ searchParams }) {
   const params = await searchParams;
   const page = Number(params?.page) || 1;
