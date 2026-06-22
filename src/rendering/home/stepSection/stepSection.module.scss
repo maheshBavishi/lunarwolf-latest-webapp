@@ -88,9 +88,13 @@
         flex-direction: column;
 
         .flexBox {
+            &:first-child {
+                align-items: flex-end;
+            }
+
             &:nth-child(2) {
                 justify-content: flex-end;
-                margin-top: -70px;
+                margin-top: 0;
                 align-items: flex-end;
 
                 @include respond-to("md") {
@@ -112,7 +116,7 @@
 
             &:nth-child(4) {
                 justify-content: flex-end;
-                margin-top: -30px;
+                margin-top: 0;
 
                 @include respond-to("md") {
                     justify-content: flex-start;
@@ -209,6 +213,22 @@
 
                 .contentAlignment {
                     padding: 0;
+
+                    p {
+
+                        color: #FFF;
+                        font-size: 18px;
+                        font-family: var(--font-inter-sans);
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 140%;
+
+                        @include respond-to("md") {
+                            font-size: 16px;
+                        }
+
+
+                    }
 
                     ul {
                         margin: 0;

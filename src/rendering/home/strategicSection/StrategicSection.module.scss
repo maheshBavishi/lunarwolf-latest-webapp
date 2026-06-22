@@ -44,6 +44,7 @@
 
         @include respond-to("sm") {
             gap: 20px;
+            grid-template-columns: 1fr;
         }
 
         &::before {
@@ -74,7 +75,8 @@
 
             @include respond-to("sm") {
                 justify-content: center;
-                display: block;
+                display: flex;
+                margin: 0 auto;
             }
 
             svg {

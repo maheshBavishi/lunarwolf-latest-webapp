@@ -80,6 +80,7 @@
                 filter: blur(45px);
                 bottom: 0;
                 left: 0;
+                z-index: -1;
             }
 
             &:first-child {
@@ -99,6 +100,10 @@
 
                 svg {
                     width: 100%;
+
+                    @include respond-to("sm") {
+                        width: auto;
+                    }
                 }
             }
 
@@ -110,7 +115,7 @@
                 line-height: 130%;
                 margin: 20px 0 0 0;
                 font-family: var(--font-inter-sans);
-                
+
                 @include respond-to("sm") {
                     font-size: 14px;
                 }
@@ -124,7 +129,7 @@
                 line-height: 130%;
                 max-width: 205px;
                 font-family: var(--font-inter-sans);
-                
+
                 @include respond-to("md") {
                     font-size: 18px;
                 }

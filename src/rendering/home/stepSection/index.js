@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import styles from './stepSection.module.scss';
 const Signup = '/assets/images/signup.svg';
 const Connect = '/assets/images/Connect.svg';
+const UserSetting = '/assets/icons/user-setting.svg';
+const Bot = '/assets/icons/bot.svg';
+const Hunting = '/assets/icons/Hunting.svg';
 
 const AnimatedConnectorSVG = ({ id = "connector1" }) => {
     const gradientId = `gradient_${id}`;
@@ -220,15 +223,12 @@ export default function StepSection() {
                                     <div className={styles.icontext}>
                                         <img src={Signup} alt='Signup' />
                                         <h3>
-                                            Sign Up
+                                            Register Your Account
                                         </h3>
                                     </div>
-                                    <ul>
-                                        <li>Sign Up to create your Lunar Wolf Account.</li>
-                                        <li>
-                                            Create your trading account (MT5) with
-                                        </li>
-                                    </ul>
+                                    <p>
+                                        Create your Lunar Wolf account and access your dashboard.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -252,20 +252,15 @@ export default function StepSection() {
                                 </div>
                                 <div className={styles.contentAlignment}>
                                     <div className={styles.icontext}>
-                                        <img src={Connect} alt='Connect' />
+                                        <img src={UserSetting} alt='UserSetting' />
                                         <h3>
-                                            Connect
+                                            Create Your MT5 Account
                                         </h3>
                                     </div>
-                                    <ul>
-                                        <li>Link your MT5 account to Lunar Wolf EA</li>
-                                        <li>
-                                            Make sure your account has a minimum of $1000 fund to start bot setup.
-                                        </li>
-                                        <li>
-                                            {`Confirm connection as "Connected"`}
-                                        </li>
-                                    </ul>
+                                    <p>
+                                        Open an MT5 trading account with one of our compliant brokers
+                                        and fund it with a minimum of $1,000.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -283,20 +278,15 @@ export default function StepSection() {
                                 </div>
                                 <div className={styles.contentAlignment}>
                                     <div className={styles.icontext}>
-                                        <img src={Signup} alt='Signup' />
+                                        <img src={Bot} alt='Bot' />
                                         <h3>
-                                            EA Setup
+                                            Connect to Lunar Wolf EA
                                         </h3>
                                     </div>
-                                    <ul>
-                                        <li>apply to activate bot through Lunar Wolf dashboard.</li>
-                                        <li>
-                                            fill the quick form with accurate details to setup the bot.
-                                        </li>
-                                        <li>
-                                            wait for confirmation and let the bot start.
-                                        </li>
-                                    </ul>
+                                    <p>
+                                        Complete a quick form in your dashboard to connect your MT5 account to the Lunar
+                                        Wolf EA.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -317,21 +307,15 @@ export default function StepSection() {
                                 </div>
                                 <div className={styles.contentAlignment}>
                                     <div className={styles.icontext}>
-                                        <img src={Connect} alt='Connect' />
+                                        <img src={Hunting} alt='Hunting' />
                                         <h3>
-                                            Hunt Profit
+                                            Start Hunting Opportunities
                                         </h3>
                                     </div>
-                                    <ul>
-                                        <li>Watch the bot hunt for top trading setups.
-                                        </li>
-                                        <li>
-                                            Track live results on your dashboard.
-                                        </li>
-                                        <li>
-                                            Refer and grow your pack to earn more profits.
-                                        </li>
-                                    </ul>
+                                    <p>
+                                        Track live activity and watch the Lunar Wolf
+                                        EA hunt trading opportunities for you.
+                                    </p>
                                 </div>
                             </div>
                         </div>
