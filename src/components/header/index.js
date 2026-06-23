@@ -131,7 +131,7 @@ export default function Header() {
               <div className={styles.headerInner}>
                 <motion.div className={styles.logoWrap} variants={containerVariants} initial={isLoaderPage ? "hidden" : "visible"} animate="visible">
                   <motion.a href="/" className={styles.logo} variants={itemVariants}>
-                    <img src={LogoIcon} alt="Lunar Wolf" className={styles.logoIcon} />
+                    <img src={LogoIcon} alt=" Lunar Wolf EA Logo" className={styles.logoIcon} />
                     <span className={styles.logoText}>LUNAR WOLF</span>
                   </motion.a>
                 </motion.div>

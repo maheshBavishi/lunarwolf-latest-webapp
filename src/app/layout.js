@@ -19,8 +19,8 @@ const interSans = Inter({
 });
 
 export const metadata = {
-  title: "Lunar Wolf",
-  description: "Our AI hunts where no one dare venture, bringing out profit opportunities ... Follow active trades, proven strategies, and real profits as they happen.",
+  title: "LUNAR WOLF | EURUSD Forex EA Automation Software",
+  description: "Lunar Wolf provides EURUSD-focused automated Forex EA software with user-controlled broker accounts, live performance tracking, and risk-aware execution.",
 };
 
 

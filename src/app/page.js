@@ -1,8 +1,8 @@
 import Homepage from "@/rendering/home";
 
 export const metadata = {
-  title: "LUNAR WOLF | Automated Forex EA & Trading Ecosystem",
-  description: " LUNAR WOLF provides an automated Forex EA built around structured execution, risk awareness, and long-term consistency. Explore algorithmic trading, performance tracking, and partner opportunities.",
+  title: "LUNAR WOLF | EURUSD Forex EA Automation Software",
+  description: " Lunar Wolf provides EURUSD-focused automated Forex EA software with user-controlled broker accounts, live performance tracking, and risk-aware execution.",
 };
 
 export default function Home() {

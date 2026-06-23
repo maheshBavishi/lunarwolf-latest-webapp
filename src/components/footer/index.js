@@ -18,7 +18,7 @@ export default function Footer() {
         <div className={styles.footerAlignment}>
           <div className={styles.leftAlignment}>
             <div className={styles.logo}>
-              <img src={LogoIcon} alt="LogoIcon" />
+              <img src={LogoIcon} alt=" Lunar Wolf EA Logo" />
               <h2>LUNAR WOLF</h2>
             </div>
             <p>LUNAR WOLF provides algorithmic trading software designed to operate on supported broker environments.</p>
