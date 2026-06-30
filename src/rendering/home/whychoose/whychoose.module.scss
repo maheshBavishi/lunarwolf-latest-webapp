@@ -62,7 +62,7 @@
             }
 
             @include respond-to("sm") {
-                font-size: 32px;
+                font-size: 30px;
             }
         }
 
@@ -117,7 +117,7 @@
             border-radius: 50%;
             z-index: 1;
         }
-        
+
         .tooltip {
             position: absolute;
             top: 40px;
@@ -135,7 +135,7 @@
                 width: 280px;
                 padding: 15px;
             }
-            
+
             h3 {
                 color: #fff;
                 font-size: 16px;
@@ -148,7 +148,7 @@
                     font-size: 14px;
                 }
             }
-            
+
             p {
                 color: rgba(255, 255, 255, 0.7);
                 font-size: 16px;
@@ -163,4 +163,4 @@
             }
         }
     }
-}
+}

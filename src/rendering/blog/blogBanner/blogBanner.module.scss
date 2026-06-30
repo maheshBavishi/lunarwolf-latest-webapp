@@ -48,7 +48,7 @@
             line-height: normal;
 
             @include respond-to("sm") {
-                font-size: 32px;
+                font-size: 30px;
             }
 
             span {
@@ -206,7 +206,7 @@
 
             h2 {
                 color: #FFF;
-                font-size: 32px;
+                font-size: 30px;
                 max-width: 376px;
                 margin: 20px 0 32px 0;
                 font-style: normal;

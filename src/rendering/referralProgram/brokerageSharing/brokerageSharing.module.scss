@@ -23,7 +23,7 @@
             font-weight: 400;
 
             @include respond-to("sm") {
-                font-size: 32px;
+                font-size: 30px;
                 margin: 0 0 10px 0;
             }
         }

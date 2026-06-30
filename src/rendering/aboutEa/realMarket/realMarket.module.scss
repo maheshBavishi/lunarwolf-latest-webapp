@@ -11,7 +11,7 @@
     }
 
     @include respond-to("sm") {
-        padding: 60px 0 40px 0;
+        padding: 0 0 40px 0;
     }
 
     background-color: #000;
@@ -75,7 +75,7 @@
             font-family: var(--font-inter-sans);
 
             @include respond-to("sm") {
-                font-size: 32px;
+                font-size: 30px;
             }
 
             span {
@@ -93,7 +93,7 @@
             max-width: 614px;
             font-family: var(--font-inter-sans);
             margin: 0 auto;
-            
+
             @include respond-to("sm") {
                 font-size: 14px;
             }

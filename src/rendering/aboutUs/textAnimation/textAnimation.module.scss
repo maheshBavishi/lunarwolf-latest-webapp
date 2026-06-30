@@ -15,6 +15,10 @@
         min-height: auto;
     }
 
+    @include respond-to("sm") {
+        padding: 60px 0;
+    }
+
     p {
         color: rgba(255, 255, 255, 0.55);
         font-size: 24px;
@@ -28,10 +32,10 @@
         overflow-wrap: break-word;
 
         @include respond-to("sm") {
-            font-size: 18px;
+            font-size: 16px;
             margin: 0 auto 40px auto;
             line-height: 1.7;
-            padding: 0 20px;
+            padding: 0 0;
         }
 
         &:last-child {

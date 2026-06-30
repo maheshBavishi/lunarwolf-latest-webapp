@@ -65,7 +65,7 @@
             }
 
             @include respond-to("sm") {
-                font-size: 32px;
+                font-size: 30px;
             }
         }
 
@@ -201,6 +201,12 @@
                 padding: 20px;
             }
 
+            @include respond-to("sm") {
+                max-width: 100%;
+                padding: 16px;
+                border-radius: 8px;
+            }
+
             .colgrid {
                 display: grid;
                 grid-template-columns: 50px 1fr;
@@ -272,6 +278,10 @@
 
                             @include respond-to("md") {
                                 font-size: 20px;
+                            }
+
+                            @include respond-to("sm") {
+                                font-size: 18px;
                             }
                         }
                     }

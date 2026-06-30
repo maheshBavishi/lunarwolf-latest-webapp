@@ -47,7 +47,7 @@
             line-height: normal;
 
             @include respond-to("sm") {
-                font-size: 32px;
+                font-size: 30px;
             }
 
             span {
