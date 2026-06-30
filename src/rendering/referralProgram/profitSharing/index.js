@@ -10,8 +10,8 @@ import LeverCard from "./LeverCard";
 // Custom hook to get live screen dimensions
 const useScreenSize = () => {
   const [screenSize, setScreenSize] = useState({
-    width: window.innerWidth ?? 1280,
-    height: window.innerHeight ?? 800,
+    width: typeof window !== "undefined" ? window.innerWidth : 1280,
+    height: typeof window !== "undefined" ? window.innerHeight : 800,
   });
 
   useEffect(() => {
@@ -144,15 +144,17 @@ const LevelNode = ({ data, levelRefs }) => {
       style={{
         position: "relative",
         width:
-          window.innerWidth < 430
-            ? "94vw"
-            : window.innerWidth < 640
-              ? "97vw"
-              : window.innerWidth < 768
-                ? "80vw"
-                : window.innerWidth < 1024
-                  ? "70vw"
-                  : "55vw",
+          typeof window !== "undefined"
+            ? window.innerWidth < 430
+              ? "94vw"
+              : window.innerWidth < 640
+                ? "97vw"
+                : window.innerWidth < 768
+                  ? "80vw"
+                  : window.innerWidth < 1024
+                    ? "70vw"
+                    : "55vw"
+            : "55vw",
         maxWidth: "100%",
       }}
     >
@@ -319,7 +321,7 @@ const generateWolfLogoConnections = (levelId) => {
       type: "default",
       style: {
         stroke: "#53B1D9",
-        strokeWidth: window.innerWidth < 640 ? 1 : 2,
+        strokeWidth: typeof window !== "undefined" && window.innerWidth < 640 ? 1 : 2,
       },
       markerEnd: {
         type: MarkerType.ArrowClosed,
@@ -353,7 +355,7 @@ const generateLetterAConnectionsBetweenLevels = () => {
       },
       style: {
         stroke: "#53B1D9",
-        strokeWidth: window.innerWidth < 640 ? 1 : 2,
+        strokeWidth: typeof window !== "undefined" && window.innerWidth < 640 ? 1 : 2,
       },
     });
   }

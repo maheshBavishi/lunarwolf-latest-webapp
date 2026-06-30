@@ -64,8 +64,7 @@ export default function BlogBanner({ bannerBlogData }) {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.p variants={itemVariants}>
-                Dive into Holocene’s full library of case studies, whitepapers, videos, and insights — organized for clarity, built to help you solve
-                real challenges faster.
+                Explore practical guides on automated trading, EURUSD, broker execution, risk management, and Lunar Wolf EA usage.
               </motion.p>
             </div>
           </div>

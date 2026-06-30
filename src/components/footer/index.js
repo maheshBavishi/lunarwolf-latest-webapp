@@ -54,6 +54,7 @@ export default function Footer() {
                 },
                 { label: "Disclaimer", href: "/disclaimer" },
                 { label: "Refund Policy", href: "/refund-policy" },
+                { label: "Jurisdiction & Eligibility Notice", href: "/jurisdiction-eligibility-notice" },
               ].map((item, index) => (
                 <a href={item.href} rel="noopener noreferrer" key={index}>
                   {item.label}
@@ -90,27 +91,28 @@ export default function Footer() {
 
       </div>
       <div className={styles.footerTextAlignment}>
+        <h3>
+          **Forex Risk Disclaimer**
+        </h3>
         <p>
-          Forex trading involves substantial risk, and it is important to recognize that even experienced traders may face significant losses. Studies suggest that 85%–95% of manual traders lose their entire capital. Engaging in Forex trading whether manually or through an automated system requires a thorough understanding of
-          the risks involved.
+          Forex trading and automated trading involve substantial risk, including the possible loss of part or all of your invested capital. Due to market volatility, liquidity changes, price fluctuations, execution delays, and technical factors,
+          trading results may vary significantly, and losses can occur.
         </p>
         <p>
-          Our automated trading solution is designed to optimize strategies and enhance trading efficiency, but it does not eliminate the inherent risks of the Forex market. Market volatility, execution delays, liquidity fluctuations, and technical failures can all lead to unexpected losses. While our system employs risk management strategies, there are no guarantees of consistent profits, and it is possible to lose
-          your entire investment.
+          Lunar Wolf provides automated Forex EA software and technical support only. The software executes trades based on predefined strategies and user-configured settings. No automated system can eliminate market risk or guarantee profitable outcomes under
+          all market conditions.
         </p>
         <p>
-          By using this trading system, you acknowledge and accept that trades are executed automatically based on pre-set parameters, which may become less effective due to unpredictable market changes. The platform does not provide personalized financial advice, and all trading decisions are made at your own discretion and risk. The platform is not liable for any resulting
-          financial losses.
+          Lunar Wolf does not hold, manage, control, deposit, withdraw, or custody client funds. All trading activities are conducted exclusively through user-controlled broker accounts, and users remain solely responsible for their trading decisions, account configuration, capital management, deposits, withdrawals, and compliance with their broker's terms
+          and applicable regulations.
         </p>
         <p>
-          Forex trading may not be suitable for all investors. Only trade with funds you can afford to lose, and seek independent financial advice if you are uncertain about engaging in automated trading. Past performance does not
-          guarantee future results.
+          The information provided on this website is for informational purposes only and should not be considered financial, investment, legal, or tax advice. Users should carefully evaluate the risks involved and seek independent professional advice if
+          necessary before engaging in Forex or automated trading.
         </p>
         <p>
-          *** NOTE: Lunar Wolf EA does not manage client funds, does not guarantee returns, does not
-          provide financial advice, supports execution through user-controlled broker accounts. Past
-          performance does not guarantee future results.
-
+          Past performance, historical backtests, simulations, or live trading results are provided for transparency only and do not guarantee or predict future performance. By using Lunar Wolf EA, you acknowledge and accept the risks associated with
+          Forex trading and automated execution.
         </p>
       </div>
     </footer>

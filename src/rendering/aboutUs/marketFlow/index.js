@@ -32,7 +32,7 @@ const timelineData = [
         desc: [
             'The EA went through round after round of backtesting using years of historical Forex data. Strategies were built, tested, refined, and rebuilt as we searched for a more stable and repeatable approach.',
             'We didn\'t chase big wins. We chased stability. As the results became more consistent, we moved beyond simulations and began validating the framework under live market conditions.',
-            'Every challenge became a lesson. Every setback became an opportunity to improve. The goal was never perfection—it was continuous refinement.',
+            'Every challenge became a lesson. Every setback became an opportunity to improve. The goal was never perfection  was continuous refinement.',
         ],
         align: 'right',
     },
@@ -52,7 +52,7 @@ const timelineData = [
         label: 'EA GOES LIVE',
         title: 'Years of development become a live ecosystem.',
         desc: [
-            'LUNAR WOLF EA became available to users—not as a rushed product, but as a framework that had earned its place through years of testing, validation, and refinement.',
+            'LUNAR WOLF EA became available to users not as a rushed product, but as a framework that had earned its place through years of testing, validation, and refinement.',
             'Alongside the EA, we introduced a referral-based growth model designed to reward community participation and network expansion. Automated trading on one side. Community-driven growth on the other.',
             'What began as a development project had evolved into a structured trading ecosystem.',
         ],

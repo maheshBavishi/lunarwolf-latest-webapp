@@ -55,25 +55,47 @@ export default function Herobanner() {
             }}
           >
             LUNAR WOLF - A <br /> <span> FOREX </span> EA <br />
-            WITH POWERFUL INSTINCTS
+            EURUSD-FOCUSED <br />
+            AUTOMATED FOREX EA
           </motion.h2>
-          <motion.button
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-            }}
-            onClick={() => {
-              const element = document.getElementById('live-portfolios');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          >
-            View Live Performance
-            <RightIcon />
-          </motion.button>
+          <div className={styles.buttonAlignment}>
+            <motion.button
+              className={styles.first}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              }}
+              onClick={() => {
+                const element = document.getElementById('live-portfolios');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              View Live Performance
+              <RightIcon />
+            </motion.button>
+            <a href="https://eauser.lunarwolf.ai/signup" target='_blank'>
+              <motion.button
+                className={styles.sec}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                }}
+              // onClick={() => {
+              //   const element = document.getElementById('live-portfolios');
+              //   if (element) {
+              //     element.scrollIntoView({ behavior: 'smooth' });
+              //   }
+              // }}
+              >
+                Create EA Access Account
+                <RightIcon />
+              </motion.button>
+            </a>
+          </div>
         </motion.div>
-      </div>
+      </div >
       <div className={styles.wolfImage} >
         <img
           src={WolfImage}
@@ -81,6 +103,6 @@ export default function Herobanner() {
 
         />
       </div>
-    </div>
+    </div >
   )
 }

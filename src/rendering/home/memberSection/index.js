@@ -20,8 +20,8 @@ export default function MemberSection() {
             image: Guided
         },
         {
-            title: "No Platform Subscription Fees",
-            description: "No entry fees, no commissions, and no hidden charges. You keep what you earn.",
+            title: "No upfront platform subscription fee.",
+            description: "A performance-based fee applies only on eligible net profits, according to the selected plan and service agreement.",
             image: Nocost
         },
         {

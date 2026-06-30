@@ -23,14 +23,14 @@ const termsPoints = [
       "All software, strategies, algorithms, and content on this website are the exclusive property of Lunar Wolf. Users may not copy, distribute, or replicate any part of the system.",
   },
   {
-    title: "Minimum Investment",
+    title: "Minimum Trading Capital",
     description:
-      "Participation in the trading strategy may require a minimum investment in your preferred broker account as stated on the website.",
+      "EA activation may require a minimum trading capital in the user’s own broker account, as stated in the applicable plan. Lunar Wolf does not receive, hold, or manage this capital.",
   },
   {
-    title: "Performance Fees",
+    title: "Performance Fee",
     description:
-      "Performance fees may apply based on profits generated through trading services as agreed between the client and Lunar Wolf.",
+      "A performance-based fee may apply only on eligible net profits generated through the EA, according to the selected plan and service agreement.",
   },
   {
     title: "User Responsibility",
@@ -48,9 +48,9 @@ const termsPoints = [
       "Lunar Wolf will not be responsible for trading losses, technical issues, or any financial damages arising from the use of the website or services.",
   },
   {
-    title: "Governing Law",
+    title: "Jurisdiction & User Responsibility",
     description:
-      "These Terms shall be governed by applicable laws of the jurisdiction where the business operates.",
+      "Users are responsible for ensuring that use of the service is lawful in their country of residence.",
   },
 ];
 

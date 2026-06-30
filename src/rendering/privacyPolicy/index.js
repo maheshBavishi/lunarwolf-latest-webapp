@@ -61,8 +61,9 @@ const policyPoints = [
     type: "section",
     title: "Contact",
     description:
-      "If you have any questions regarding this Privacy Policy, please contact us through customer support email.",
+      "Providing EA software access, technical support, account connection assistance, service communication, referral tracking, and platform functionality.",
   },
+
 ];
 
 const PrivacyPolicy = () => {
