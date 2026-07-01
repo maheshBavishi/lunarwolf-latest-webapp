@@ -22,7 +22,7 @@ export default function EarnSection() {
           <div className={styles.buttonstyle}>
             <button>
               <img src={CownIcon} alt="CownIcon" />
-              <span>Backtested Since 2015. Live Results May Vary</span>
+              <span>Historical Monthly Growth: Approximately 4–8%</span>
             </button>
           </div>
           <h2>Growth Through EA Trading</h2>
