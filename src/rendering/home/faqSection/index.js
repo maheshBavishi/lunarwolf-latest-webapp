@@ -23,8 +23,8 @@ const leftFaqs = [
         )
     },
     {
-        question: "Can Indian residents use Lunar Wolf?",
-        answer: "Users are responsible for confirming whether forex trading, automated trading, broker selection, deposits, withdrawals, and referral rewards are permitted under the laws and regulations of their country of residence."
+        question: "Is Lunar Wolf available worldwide?",
+        answer: "Yes. Lunar Wolf is available to users in many countries. Users are solely responsible for ensuring that their use of the EA, forex trading, broker selection, deposits, withdrawals, and referral participation comply with the laws and regulations of their country of residence."
     },
     {
         question: "IS PERFORMANCE GUARANTEED?",
