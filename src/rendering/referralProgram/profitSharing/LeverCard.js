@@ -13,6 +13,7 @@ const LeverCard = memo(
     isLocked,
     lockDescription,
     lockPrice,
+    lockContent,
     unlockProgress = 0,
   }) => {
     // Calculate if the card should be unlocked based on progress
@@ -25,9 +26,8 @@ const LeverCard = memo(
 
     return (
       <div
-        className={`${styles.card} ${isUnlocking ? styles.cardUnlocking : ""} ${
-          justUnlocked ? styles.cardUnlocked : ""
-        }`}
+        className={`${styles.card} ${isUnlocking ? styles.cardUnlocking : ""} ${justUnlocked ? styles.cardUnlocked : ""
+          }`}
         style={{
           willChange: "transform, opacity, filter, box-shadow",
           backfaceVisibility: "hidden",
@@ -36,12 +36,11 @@ const LeverCard = memo(
             "linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(153,153,153,0.1) 100%)",
           borderRadius: "14px",
           boxShadow: isUnlocking
-            ? `0 0 ${20 + unlockProgress * 30}px rgba(83, 177, 217, ${
-                0.3 + unlockProgress * 0.4
-              })`
+            ? `0 0 ${20 + unlockProgress * 30}px rgba(83, 177, 217, ${0.3 + unlockProgress * 0.4
+            })`
             : justUnlocked
-            ? "0 0 25px rgba(83, 177, 217, 0.6)"
-            : "none",
+              ? "0 0 25px rgba(83, 177, 217, 0.6)"
+              : "none",
           transition:
             "box-shadow 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s ease-out",
         }}
@@ -51,12 +50,10 @@ const LeverCard = memo(
             className={styles.lockOverlay}
             style={{
               opacity: 1 - unlockProgress,
-              transform: `scale(${1 - unlockProgress * 0.08}) translateY(${
-                unlockProgress * 6
-              }px)`,
-              filter: `blur(${unlockProgress * 2}px) brightness(${
-                1 + unlockProgress * 0.3
-              })`,
+              transform: `scale(${1 - unlockProgress * 0.08}) translateY(${unlockProgress * 6
+                }px)`,
+              filter: `blur(${unlockProgress * 2}px) brightness(${1 + unlockProgress * 0.3
+                })`,
               transition: "opacity .6s ease, transform .6s ease",
               borderRadius: "inherit",
               margin: "inherit",
@@ -77,15 +74,12 @@ const LeverCard = memo(
                 alt=""
                 className={styles.lockIcon}
                 style={{
-                  transform: `rotate(${unlockProgress * 360}deg) scale(${
-                    1 + unlockProgress * 0.15
-                  })`,
-                  filter: `drop-shadow(0 0 ${
-                    unlockProgress * 20
-                  }px rgba(83, 177, 217, ${0.9 - unlockProgress * 0.9})) 
-                           drop-shadow(0 0 ${
-                             unlockProgress * 30
-                           }px rgba(255, 215, 0, ${unlockProgress * 0.6})) 
+                  transform: `rotate(${unlockProgress * 360}deg) scale(${1 + unlockProgress * 0.15
+                    })`,
+                  filter: `drop-shadow(0 0 ${unlockProgress * 20
+                    }px rgba(83, 177, 217, ${0.9 - unlockProgress * 0.9})) 
+                           drop-shadow(0 0 ${unlockProgress * 30
+                    }px rgba(255, 215, 0, ${unlockProgress * 0.6})) 
                            brightness(${1 + unlockProgress * 1.2}) 
                            saturate(${1 + unlockProgress * 0.5})`,
                   transition: "transform .8s ease",
@@ -109,19 +103,16 @@ const LeverCard = memo(
           className={styles.contentWrapper}
           style={{
             opacity: isUnlocked ? 1 : 0.4 + unlockProgress * 0.6,
-            transform: `translateY(${
-              isUnlocked ? 0 : (1 - unlockProgress) * 12
-            }px)`,
+            transform: `translateY(${isUnlocked ? 0 : (1 - unlockProgress) * 12
+              }px)`,
             filter: `blur(${isUnlocked ? 0 : (1 - unlockProgress) * 2}px) 
                      brightness(${isUnlocked ? 1 : 0.7 + unlockProgress * 0.3}) 
                      saturate(${isUnlocked ? 1 : 0.6 + unlockProgress * 0.4})
-                     ${
-                       isUnlocking
-                         ? `drop-shadow(0 0 ${
-                             unlockProgress * 10
-                           }px rgba(83, 177, 217, ${unlockProgress * 0.4}))`
-                         : ""
-                     }`,
+                     ${isUnlocking
+                ? `drop-shadow(0 0 ${unlockProgress * 10
+                }px rgba(83, 177, 217, ${unlockProgress * 0.4}))`
+                : ""
+              }`,
             transition: "opacity .6s ease, transform .6s ease",
             willChange: "transform, opacity",
             backfaceVisibility: "hidden",
@@ -158,19 +149,16 @@ const LeverCard = memo(
           className={styles.wolfLogosWrapper}
           style={{
             opacity: isUnlocked ? 1 : 0.3 + unlockProgress * 0.7,
-            transform: `translateY(${
-              isUnlocked ? 0 : (1 - unlockProgress) * 8
-            }px)`,
+            transform: `translateY(${isUnlocked ? 0 : (1 - unlockProgress) * 8
+              }px)`,
             filter: `blur(${isUnlocked ? 0 : (1 - unlockProgress) * 1}px) 
                      saturate(${isUnlocked ? 1 : 0.5 + unlockProgress * 0.5})
                      brightness(${isUnlocked ? 1 : 0.7 + unlockProgress * 0.3})
-                     ${
-                       isUnlocking
-                         ? `drop-shadow(0 0 ${
-                             unlockProgress * 8
-                           }px rgba(83, 177, 217, ${unlockProgress * 0.3}))`
-                         : ""
-                     }`,
+                     ${isUnlocking
+                ? `drop-shadow(0 0 ${unlockProgress * 8
+                }px rgba(83, 177, 217, ${unlockProgress * 0.3}))`
+                : ""
+              }`,
             transition: "opacity .6s ease, transform .6s ease",
             willChange: "transform, opacity",
             backfaceVisibility: "hidden",

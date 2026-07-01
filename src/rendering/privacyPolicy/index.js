@@ -95,6 +95,11 @@ const PrivacyPolicy = () => {
               )}
             </li>
           ))}
+          <li>
+            <p>
+              contact us at <a href="mailto:contact@lunarwolf.ai">contact@lunarwolf.ai </a>
+            </p>
+          </li>
         </ul>
       </div>
     </section>

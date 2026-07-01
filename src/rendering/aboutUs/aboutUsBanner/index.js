@@ -95,7 +95,7 @@ export default function AboutUsBanner() {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Hunt Profits
+                                Start EA Setup
                                 <RightIcon />
                             </motion.button>
                         </Link>

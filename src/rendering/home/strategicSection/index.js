@@ -65,7 +65,7 @@ export default function StrategicSection() {
                                 Lunar Wolf IB
                             </h3>
                             <p>
-                                Built to compound
+                                Built for eligible reward participation
                             </p>
                             <p>
                                 An automated ecosystem where your referrals trade, your network grows, and
@@ -180,7 +180,7 @@ export default function StrategicSection() {
                                 Traditional IB
                             </h3>
                             <p>
-                                Built to stall
+                                Direct-only traditional IB model
                             </p>
                             <p>
                                 You earn only when your direct referrals trade manually, and when they stop, so does your

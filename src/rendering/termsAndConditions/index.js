@@ -10,7 +10,7 @@ const termsPoints = [
   {
     title: "Services",
     description:
-      "Lunar Wolf provides information related to automated trading strategies and EA services. All strategies remain the intellectual property of Lunar Wolf.",
+      "Lunar Wolf provides automated Forex EA software access, technical support, and information related to EA services. Lunar Wolf does not provide fund management, investment advisory, or guaranteed-return services.",
   },
   {
     title: "Account Access",

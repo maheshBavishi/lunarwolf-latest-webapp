@@ -86,7 +86,7 @@ export default function AboutEaBanner() {
 
                     {/* Headline */}
                     <motion.h1 variants={fadeSlideUp}>
-                        Designed Specifically <br /> for <span> EUR|USD</span>
+                        Designed Specifically  <br /> for <span> EUR/USD </span>
                     </motion.h1>
 
                     {/* Sub-headline */}
@@ -96,8 +96,9 @@ export default function AboutEaBanner() {
 
                     {/* Paragraphs */}
                     <motion.p variants={fadeSlideUp}>
-                        Long-term consistency, controlled exposure, and long-term stability matter more than short-
-                        term aggressive profits.
+                        Long-term consistency, controlled exposure, and long-term stability matter more than
+                        short-term
+                        aggressive profits.
                     </motion.p>
 
                     <motion.p variants={fadeSlideUp}>
@@ -120,7 +121,7 @@ export default function AboutEaBanner() {
                                 whileHover={buttonHover}
                                 whileTap={buttonTap}
                             >
-                                Registration
+                                Start EA Setup
                             </motion.button>
                         </a>
                     </motion.div>

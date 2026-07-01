@@ -18,7 +18,7 @@ export default function Experience() {
         { Icon: AgileIcon, text: "Structured Execution" },
         { Icon: KnowledgeIcon, text: "Beginner Friendly Setup" },
         { Icon: Instincts, text: "Risk-Aware Architecture" },
-        { Icon: RequireIcon, text: "No Monitoring Required" },
+        { Icon: RequireIcon, text: "Reduced Manual Monitoring" },
     ];
 
     useEffect(() => {

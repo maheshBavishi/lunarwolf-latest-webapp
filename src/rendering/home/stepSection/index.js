@@ -309,12 +309,11 @@ export default function StepSection() {
                                     <div className={styles.icontext}>
                                         <img src={Hunting} alt='Hunting' />
                                         <h3>
-                                            Start Hunting Opportunities
+                                            Start EA Monitoring
                                         </h3>
                                     </div>
                                     <p>
-                                        Track live activity and watch the Lunar Wolf
-                                        EA hunt trading opportunities for you.
+                                        Track live EA activity through your user-controlled broker account.
                                     </p>
                                 </div>
                             </div>

@@ -22,8 +22,7 @@ const policies = [
     title: "3. PROFIT SHARING POLICY",
     items: [
       "Profit-sharing (performance fee) is charged only on generated profits.",
-      "Once charged, profit-sharing fees are strictly non-refundable.",
-      "Once a performance fee has been charged on eligible net profits for a completed settlement period, it is non-refundable regardless of future trading performance or market conditions."
+      "Once a performance fee has been charged on eligible net profits for a completed settlement period, it is non-refundable regardless of future trading performance or market conditions.",
     ]
   },
   {

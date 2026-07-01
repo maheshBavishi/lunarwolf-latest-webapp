@@ -16,7 +16,7 @@ export default function MemberSection() {
         },
         {
             title: "Guided by Lunar Instincts",
-            description: "Our AI hunts where no one dare venture, bringing out profit opportunities with the Controlled Recovery Framework.",
+            description: "The EA evaluates EURUSD conditions using  predefined strategy rules.",
             image: Guided
         },
         {
@@ -50,7 +50,7 @@ export default function MemberSection() {
                     }}
                 >
                     <h2>
-                        What Lunar Wolf EA brings for ITS members
+                        What Lunar Wolf EA Provides for Users
                     </h2>
                     <p>
                         Every feature inside Lunar Wolf EA is designed to support disciplined

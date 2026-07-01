@@ -13,7 +13,7 @@ const contents = [
     {
         id: 1,
         title: "Backtested Since 2015",
-        desc: "Lunar Wolf’s razor-sharp senses are honed by rigorous backtesting for pinpoint structured EURUSD strategy logic.",
+        desc: "Lunar Wolf EA is supported by long-term backtesting and structured EURUSD strategy logic.",
     },
     {
         id: 2,
