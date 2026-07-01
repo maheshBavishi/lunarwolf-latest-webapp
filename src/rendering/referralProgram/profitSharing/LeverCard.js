@@ -89,10 +89,11 @@ const LeverCard = memo(
                 }}
               />
               <div className={styles.lockText}>
-                Complete direct business {lockPrice}$ then open{" "}
+                {/* Complete direct business {lockPrice}$ then open{" "}
                 <span className={styles.lockLevelText}>
                   Lv {level.split(".")[1]}
-                </span>
+                </span> */}
+                {lockContent}
               </div>
               <p className={styles.lockDescription}>{lockDescription}</p>
             </div>

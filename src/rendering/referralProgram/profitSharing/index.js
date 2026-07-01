@@ -72,6 +72,7 @@ const commissionLevels = [
     lockDescription: "Get additional bonus of 1% on Direct Referral LV 1 (5+1=6%)",
     lockPrice: "50000",
     unlockRequirement: "Achieve direct referrals worth 50000$ to unlock LV 3",
+    lockContent: "Level 3 unlocks when eligible Level 1 network trading capital reaches $50,000."
   },
   {
     level: "1.4",
@@ -81,6 +82,7 @@ const commissionLevels = [
     lockDescription: "Get additional bonus of 1% on Direct Referral LV 1 (7+1=8%)",
     lockPrice: "100000",
     unlockRequirement: "Achieve direct referrals worth 100000$ to unlock LV 4",
+    lockContent: "Level 4 unlocks when eligible Level 1 network trading capital reaches $100,000.",
   },
   {
     level: "1.5",
@@ -90,6 +92,7 @@ const commissionLevels = [
     lockDescription: "Add Additional Bonus 1 $ Fore Direct 7+1=8%",
     lockPrice: "200000",
     unlockRequirement: "Complete Direct Business 200000$ Then Open LVL 5",
+    lockContent: "Level 5 unlocks when eligible Level 1 network trading capital reaches $200,000."
   },
 ];
 
