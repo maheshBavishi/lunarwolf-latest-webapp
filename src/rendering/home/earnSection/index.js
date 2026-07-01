@@ -36,7 +36,7 @@ export default function EarnSection() {
           <Link href="https://eauser.lunarwolf.ai/signup" target="_blank">
             <div className={styles.buttonDesign}>
               <button>
-                Start hunting
+                Start EA Setup
                 <RightIcon />
               </button>
             </div>
