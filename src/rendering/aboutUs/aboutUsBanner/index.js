@@ -83,10 +83,10 @@ export default function AboutUsBanner() {
                     viewport={{ once: true }}
                 >
                     <motion.h1 variants={itemVariants}>
-                        MEET THE LUNAR WOLVES
+                        About Lunar Wolf EA
                     </motion.h1>
                     <motion.p variants={itemVariants}>
-                        Where Smart Algorithms Chase Smarter Profits.
+                        Structured EURUSD Automation Built Around Risk Awareness
                         {/* Hunt Profits */}
                     </motion.p>
                     <motion.div className={styles.buttonDesign} variants={itemVariants}>

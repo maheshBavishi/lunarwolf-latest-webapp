@@ -22,7 +22,7 @@ export default function EarnSection() {
           <div className={styles.buttonstyle}>
             <button>
               <img src={CownIcon} alt="CownIcon" />
-              <span>Approx 5-10% Gain, Every Month</span>
+              <span>Backtested Since 2015. Live Results May Vary</span>
             </button>
           </div>
           <h2>Growth Through EA Trading</h2>
@@ -67,7 +67,7 @@ export default function EarnSection() {
           <img src={WolfImage2} alt="WolfImage2" />
           <div className={styles.textbox}>
             <p>
-              Automated Profits + Lifetime Commissions = Turn Every Trade Into Wealth
+              Automated EURUSD Execution + Eligible Referral Rewards
             </p>
           </div>
           <div className={styles.cownAlignment}>

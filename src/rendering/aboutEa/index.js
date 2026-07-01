@@ -17,7 +17,7 @@ export default function AboutEa() {
             <Ourvalidationindex />
             <ValidationMethodology />
             <RealMarket />
-            <LivePortfolios bgblack title='Performance Transparency' description='Watch Lunar Wolf analyze, execute, and dominate the forex market in real time. Follow active trades, proven strategies, and real profits as they happen.' />
+            <LivePortfolios bgblack title='Performance Transparency' description='Track Lunar Wolf EA activity through third-party monitored accounts. Performance records are shared for transparency only and should not be interpreted as guaranteed future results.' />
             <FaqSection bgblack />
         </>
     )

@@ -59,7 +59,7 @@ export default function BlogBanner({ bannerBlogData }) {
           <div className={styles.textgrid}>
             <div style={{ overflow: "hidden" }}>
               <motion.h2 variants={itemVariants}>
-                Everything you need, <span> in one place. </span>
+                Lunar Wolf <span> Learning Hub </span>
               </motion.h2>
             </div>
             <div style={{ overflow: "hidden" }}>

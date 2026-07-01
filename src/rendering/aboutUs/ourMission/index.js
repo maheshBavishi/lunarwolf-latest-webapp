@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const tabs = [
     {
         label: 'OUR VISION',
-        text: 'Our vision is to revolutionise the forex trading landscape through cutting-edge AI technology, empowering individuals and businesses to achieve financial success with ease, transparency, and reliability.',
+        text: 'Our vision is to revolutionise the forex trading landscape through cutting-edge AI technology, empowering individuals and businesses to achieve structured automated trading access with transparency and risk awareness, transparency, and reliability.',
     },
     {
         label: 'OUR MISSION',

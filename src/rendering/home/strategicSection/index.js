@@ -68,8 +68,8 @@ export default function StrategicSection() {
                                 Built to compound
                             </p>
                             <p>
-                                An automated ecosystem where your referrals trade, your network grows, and your
-                                commissions multiply on autopilot.
+                                An automated ecosystem where your referrals trade, your network grows, and
+                                Eligible referral rewards from active trading.
                             </p>
                             <ul>
                                 <li>

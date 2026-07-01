@@ -20,7 +20,7 @@ const policyPoints = [
     title: "How We Use Your Information",
     description: "The information we collect may be used for:",
   },
-  { type: "item", text: "Providing our trading or investment services" },
+  { type: "item", text: "Providing EA software access, technical support, account connection assistance, service communication, referral tracking, and platform functionality." },
   { type: "item", text: "Contacting users regarding their inquiries" },
   {
     type: "item",

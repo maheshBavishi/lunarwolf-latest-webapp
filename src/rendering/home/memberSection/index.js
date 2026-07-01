@@ -11,7 +11,7 @@ export default function MemberSection() {
     const memberFeatures = [
         {
             title: "Trained to Hunt Since 2015",
-            description: "Lunar Wolf EA's razor-sharp senses are honed by rigorous backtesting for pinpoint profit hunting tactics.",
+            description: "Lunar Wolf EA's razor-sharp senses are honed by rigorous backtesting for pinpoint structured EURUSD strategy logic.",
             image: Trained
         },
         {
@@ -26,7 +26,7 @@ export default function MemberSection() {
         },
         {
             title: "Relentless Market Tracking",
-            description: "Lunar Wolf EA never sleeps, it scans the forex market 24/5, ensuring you never miss a profitable opportunity.",
+            description: "Lunar Wolf EA never sleeps, it scans the forex market 24/5, continuously monitors eligible EURUSD market conditions.",
             image: Relentless
         }
     ];

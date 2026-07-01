@@ -30,7 +30,7 @@ const disclaimerSections = [
   {
     title: "User Responsibility",
     description:
-      "By using this platform, users acknowledge and accept the risks associated with trading activity and remain responsible for their own trading decisions, broker selection, and capital management.",
+      "Users are solely responsible for confirming whether use of Lunar Wolf EA, forex trading, broker selection, deposits, withdrawals, and referral rewards are permitted under the laws of their country of residence.",
   },
 ];
 

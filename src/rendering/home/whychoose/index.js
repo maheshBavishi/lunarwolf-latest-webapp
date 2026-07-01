@@ -8,7 +8,7 @@ export default function Whychoose() {
     const features = [
         {
             title: "Structured Automated Execution",
-            description: "Earn continuously, even when you're not trading",
+            description: "Automated execution designed to support disciplined participation",
             top: "55%", left: "10%",
             mobileTop: "40%", mobileLeft: "20%"
         },

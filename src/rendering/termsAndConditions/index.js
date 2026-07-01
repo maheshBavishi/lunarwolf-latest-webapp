@@ -35,7 +35,7 @@ const termsPoints = [
   {
     title: "User Responsibility",
     description:
-      "Users are responsible for ensuring that trading and investment activities are permitted under the laws of their jurisdiction.",
+      "Users are responsible for ensuring that forex trading, automated trading, broker selection, deposits, withdrawals, and referral rewards are permitted under the laws and regulations of their country of residence.",
   },
   {
     title: "Modification of Services",
@@ -47,11 +47,7 @@ const termsPoints = [
     description:
       "Lunar Wolf will not be responsible for trading losses, technical issues, or any financial damages arising from the use of the website or services.",
   },
-  {
-    title: "Jurisdiction & User Responsibility",
-    description:
-      "Users are responsible for ensuring that use of the service is lawful in their country of residence.",
-  },
+
 ];
 
 const TermsAndConditions = () => {

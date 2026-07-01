@@ -12,33 +12,33 @@ const SmokeLg = "/assets/images/SmokeLg.webp";
 const contents = [
     {
         id: 1,
-        title: "Trained to hunt since 2015",
-        desc: "Lunar Wolf’s razor-sharp senses are honed by rigorous backtesting for pinpoint profit hunting tactics.",
+        title: "Backtested Since 2015",
+        desc: "Lunar Wolf’s razor-sharp senses are honed by rigorous backtesting for pinpoint structured EURUSD strategy logic.",
     },
     {
         id: 2,
         title: "Guided by Lunar Instincts",
-        desc: "Our AI hunts where no one dare venture, bringing out profit opportunities with the Adaptive Strategy.",
+        desc: "Adaptive EURUSD Strategy Logic, bringing out profit opportunities with the Adaptive Strategy.",
     },
     {
         id: 3,
         title: "Swift Data Processing",
-        desc: "Similar to territory-scouting, our AI processes vast datasets in seconds to find the best trades.",
+        desc: "Similar to territory-scouting, our AI processes vast datasets in seconds to Identifies Trading Opportunities.",
     },
     {
         id: 4,
         title: "Lightning-Fast Strikes",
-        desc: "When the moment is right, it strikes instantly to maximize your gains.",
+        desc: "When the moment is right, Executes Based on Strategy Rules.",
     },
     {
         id: 5,
-        title: "No-cost Joining",
+        title: "No Upfront Subscription Fee",
         desc: "No entry fees and no hidden charges.",
     },
     {
         id: 6,
         title: "Relentless Market Tracking",
-        desc: "Lunar Wolf never sleeps—it scans the forex market 24/5, ensuring you never miss a profitable opportunity.",
+        desc: "Lunar Wolf never sleeps—it scans the forex market 24/5, ensuring you Continuously Monitors EURUSD Markets.",
     },
 ];
 

@@ -258,7 +258,7 @@ export default function StepSection() {
                                         </h3>
                                     </div>
                                     <p>
-                                        Open an MT5 trading account with one of our compliant brokers
+                                        Open an MT5 trading account with one of the supported brokers
                                         and fund it with a minimum of $1,000.
                                     </p>
                                 </div>
