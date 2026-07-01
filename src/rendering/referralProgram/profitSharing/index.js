@@ -375,7 +375,7 @@ const ProfitSharing = () => {
 
     if (w < 430) {
       return {
-        nodeWidth: w * 0.94,
+        nodeWidth: w - 40,
         levelSpacing: 190,
         youNodeY: 0,
         levelStartY: 150,
@@ -385,35 +385,44 @@ const ProfitSharing = () => {
 
     if (w < 640) {
       return {
-        nodeWidth: w * 0.97,
+        nodeWidth: w - 60,
         levelSpacing: 170,
         youNodeY: 5,
         levelStartY: 120,
-        centerX: w * 0.5,
+        centerX: w * 0.42,
       };
     }
 
     if (w < 768) {
       return {
-        nodeWidth: w * 0.8,
+        nodeWidth: w * 0.85,
         levelSpacing: 210,
         youNodeY: 15,
         levelStartY: 140,
-        centerX: w * 0.5,
+        centerX: w * 0.32,
       };
     }
 
     if (w < 1024) {
       return {
-        nodeWidth: w * 0.7,
+        nodeWidth: w * 0.75,
         levelSpacing: 260,
         youNodeY: 20,
         levelStartY: 160,
-        centerX: w * 0.45,
+        centerX: w * 0.4,
       };
     }
 
-    // Desktop
+    if (w < 1380) {
+      return {
+        nodeWidth: w * 0.55,
+        levelSpacing: 260,
+        youNodeY: 20,
+        levelStartY: 160,
+        centerX: w * 0.4,
+      };
+    }
+
     return {
       nodeWidth: w * 0.55,
       levelSpacing: 320,
@@ -622,37 +631,24 @@ const ProfitSharing = () => {
   const [dynamicHeight, setDynamicHeight] = useState(() => getDynamicHeight());
 
   const calculateInitialViewport = () => {
-    let maxOffset;
-    if (screenWidth < 480) {
-      maxOffset = 50 + 50; // max edge offset + label padding
-    } else if (screenWidth < 640) {
-      maxOffset = 65 + 60;
-    } else if (screenWidth < 1024) {
-      maxOffset = 110 + 80;
-    } else {
-      maxOffset = 200 + 120;
+    let zoom = 1.1;
+    if (screenWidth < 430) zoom = 0.72;
+    else if (screenWidth < 640) zoom = 0.82;
+    else if (screenWidth < 768) zoom = 0.92;
+    else if (screenWidth < 1024) zoom = 1.0;
+
+    // Check right side bounds to prevent line cutting off
+    let maxOffset = screenWidth < 480 ? 50 : screenWidth < 640 ? 65 : screenWidth < 1024 ? 110 : 200;
+    const layoutParams = getResponsiveLayout(screenWidth);
+    const rightMostX = layoutParams.centerX + (layoutParams.nodeWidth / 2) + maxOffset + 50; // extra padding for text
+    const maxZoom = (screenWidth * 0.98) / rightMostX;
+    
+    // Only shrink if needed to prevent clipping, never expand beyond default zoom
+    if (zoom > maxZoom) {
+        zoom = maxZoom;
     }
 
-    const layoutParams = getResponsiveLayout(screenWidth);
-    const diagramLeft = layoutParams.centerX - layoutParams.nodeWidth / 2;
-    const diagramRight = layoutParams.centerX + layoutParams.nodeWidth / 2 + maxOffset;
-    const diagramWidth = diagramRight - diagramLeft;
-
-    let targetZoom;
-    if (screenWidth < 430) targetZoom = 0.72;
-    else if (screenWidth < 640) targetZoom = 0.82;
-    else if (screenWidth < 768) targetZoom = 0.92;
-    else if (screenWidth < 1024) targetZoom = 0.95;
-    else targetZoom = 1.0;
-
-    // Ensure it doesn't overflow horizontally
-    const maxZoom = (screenWidth * 0.95) / diagramWidth;
-    const zoom = Math.min(targetZoom, maxZoom);
-
-    const diagramCenter = (diagramLeft + diagramRight) / 2;
-    const viewportX = (screenWidth / 2) - (diagramCenter * zoom);
-
-    return { x: viewportX, y: 20, zoom };
+    return { x: 0, y: 0, zoom: zoom };
   };
 
   const [viewport, setViewport] = useState(calculateInitialViewport);
