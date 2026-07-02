@@ -7,7 +7,7 @@ import BrokerageSharing from "../brokerageSharing";
 // import { useSearchParams } from "next/navigation";
 
 export default function ContentSection({ model }) {
-  const [activeTab, setActiveTab] = useState("profit");
+  const [activeTab, setActiveTab] = useState(model || "profit");
   // const searchParams = useSearchParams();
   // const model = searchParams.get("model");
 

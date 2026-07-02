@@ -415,7 +415,7 @@ const ProfitSharing = () => {
 
     if (w < 1380) {
       return {
-        nodeWidth: w * 0.55,
+        nodeWidth: w * 0.75,
         levelSpacing: 260,
         youNodeY: 20,
         levelStartY: 160,
@@ -439,7 +439,7 @@ const ProfitSharing = () => {
     setIsClient(true);
   }, []);
 
-  const prevScreenSize = useRef({ width: screenWidth, height: screenHeight });
+  const prevScreenSize = useRef({ width: 0, height: 0 });
   const [forceRefreshKey, setForceRefreshKey] = useState(0);
 
   const getCurrentBreakpoint = (width) => {
@@ -535,13 +535,21 @@ const ProfitSharing = () => {
     const hasSignificantSizeChange =
       Math.abs(screenWidth - prevScreenSize.current.width) > 100 || Math.abs(screenHeight - prevScreenSize.current.height) > 100;
 
-    if (hasBreakpointChange || hasSignificantSizeChange) {
+    const isFirstClientRender = prevScreenSize.current.width === 0;
+
+    if (isFirstClientRender || hasBreakpointChange || hasSignificantSizeChange) {
       // Update all layout calculations
       const newLayout = getResponsiveLayout(screenWidth);
 
       // Update layout immediately
       setLayout(newLayout);
-      setDynamicHeight(getDynamicHeight());
+
+      // Fix dynamic height using the new layout directly to prevent stale state values
+      const newHeight = screenWidth < 768
+        ? 800
+        : Math.max(newLayout.levelStartY + commissionLevels.length * newLayout.levelSpacing + 100, screenHeight - 100);
+      setDynamicHeight(newHeight);
+
       setViewport(calculateInitialViewport());
 
       // Force ReactFlow refresh with a more aggressive approach
@@ -818,6 +826,23 @@ const ProfitSharing = () => {
   useEffect(() => {
     setEdges(initialEdges);
   }, [initialEdges, setEdges]);
+
+  if (!isClient) {
+    return (
+      <div className={styles.profitSharing}>
+        <div className={styles.title}>
+          <h2>Profit Sharing</h2>
+          <p>
+            Visualize your earnings at each level with detailed commission percentages. This chart clearly shows how profits flow from direct referrals
+            (5%) down to the fifth level (1%). Understand your earning potential and track rewards easily across all levels.
+          </p>
+        </div>
+        <div className={styles.flowContainer}>
+          <div style={{ height: "1600px" }} />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.profitSharing}>
