@@ -47,7 +47,7 @@ export default function Experience() {
                             Experience the EA Designed Specifically for EURUSD
                         </motion.span>
                         <motion.h2 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}>
-                            Power of algorithmic Trading
+                            Power of Algorithmic Trading
                         </motion.h2>
                         <motion.div
                             className={styles.round}

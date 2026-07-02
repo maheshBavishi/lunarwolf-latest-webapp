@@ -22,7 +22,7 @@ export default function EarnSection() {
           <div className={styles.buttonstyle}>
             <button>
               <img src={CownIcon} alt="CownIcon" />
-              <span>Historical Monthly Growth: Approximately 4–8%</span>
+              <span>EURUSD-focused automated Forex EA</span>
             </button>
           </div>
           <h2>Growth Through EA Trading</h2>
