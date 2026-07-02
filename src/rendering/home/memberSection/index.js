@@ -11,7 +11,7 @@ export default function MemberSection() {
     const memberFeatures = [
         {
             title: "Backtested Since 2015",
-            description: "Lunar Wolf EA's razor-sharp senses are honed by rigorous backtesting for pinpoint structured EURUSD strategy logic.",
+            description: "Lunar Wolf EA is supported by long-term backtesting and structured EURUSD strategy logic.",
             image: Trained
         },
         {
@@ -26,7 +26,7 @@ export default function MemberSection() {
         },
         {
             title: "Relentless Market Tracking",
-            description: "Lunar Wolf EA monitors EURUSD market conditions during market hours, continuously monitors eligible EURUSD market conditions.",
+            description: "Lunar Wolf EA monitors eligible EURUSD market conditions during market hours.",
             image: Relentless
         }
     ];

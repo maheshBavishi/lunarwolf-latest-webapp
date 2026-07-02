@@ -20,7 +20,7 @@ const policyPoints = [
     title: "How We Use Your Information",
     description: "Providing EA software access, technical support, account connection assistance, service communication, referral tracking, and platform functionality.",
   },
-  { type: "item", text: "Providing EA software access, technical support, account connection assistance, service communication, referral tracking, and platform functionality." },
+
   { type: "item", text: "Contacting users regarding their inquiries" },
   {
     type: "item",
