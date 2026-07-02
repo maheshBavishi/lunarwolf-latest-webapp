@@ -18,27 +18,27 @@ const contents = [
     {
         id: 2,
         title: "Guided by Lunar Instincts",
-        desc: "Adaptive EURUSD Strategy Logic, bringing out profit opportunities with the Adaptive Strategy.",
+        desc: "Adaptive EURUSD strategy logic evaluates eligible market conditions using predefined rules.",
     },
     {
         id: 3,
         title: "Swift Data Processing",
-        desc: "Similar to territory-scouting, our AI processes vast datasets in seconds to Identifies Trading Opportunities.",
+        desc: "Similar to territory-scouting, The EA processes market data to identify eligible trading conditions based on predefined rules.",
     },
     {
         id: 4,
         title: "Lightning-Fast Strikes",
-        desc: "When the moment is right, Executes Based on Strategy Rules.",
+        desc: "When conditions match the strategy rules, the EA executes automatically.",
     },
     {
         id: 5,
         title: "No Upfront Subscription Fee",
-        desc: "No entry fees and no hidden charges.",
+        desc: "No upfront platform subscription fee. A performance-based fee may apply according to Lunar Wolf service terms.",
     },
     {
         id: 6,
         title: "Relentless Market Tracking",
-        desc: "Lunar Wolf never sleeps—it scans the forex market 24/5, ensuring you Continuously Monitors EURUSD Markets.",
+        desc: "Lunar Wolf EA monitors EURUSD market conditions during market hours.",
     },
 ];
 

@@ -79,7 +79,7 @@ const commissionLevels = [
     title: "SCOUT WOLF",
     commission: "1.5",
     isLocked: true,
-    lockDescription: "Get additional bonus of 1% on Direct Referral LV 1 (7+1=8%)",
+    lockDescription: "Get additional bonus of 1% on Direct Referral LV 1 (6+1=7%)",
     lockPrice: "100000",
     unlockRequirement: "Achieve direct referrals worth 100000$ to unlock LV 4",
     lockContent: "Level 4 unlocks when eligible Level 1 network trading capital reaches $100,000.",
@@ -89,7 +89,7 @@ const commissionLevels = [
     title: "DIRE WOLF",
     commission: "1",
     isLocked: true,
-    lockDescription: "Add Additional Bonus 1 $ Fore Direct 7+1=8%",
+    lockDescription: "Get additional bonus of 1% on Direct Referral LV 1 (7+1=8%)",
     lockPrice: "200000",
     unlockRequirement: "Complete Direct Business 200000$ Then Open LVL 5",
     lockContent: "Level 5 unlocks when eligible Level 1 network trading capital reaches $200,000."
@@ -642,10 +642,10 @@ const ProfitSharing = () => {
     const layoutParams = getResponsiveLayout(screenWidth);
     const rightMostX = layoutParams.centerX + (layoutParams.nodeWidth / 2) + maxOffset + 50; // extra padding for text
     const maxZoom = (screenWidth * 0.98) / rightMostX;
-    
+
     // Only shrink if needed to prevent clipping, never expand beyond default zoom
     if (zoom > maxZoom) {
-        zoom = maxZoom;
+      zoom = maxZoom;
     }
 
     return { x: 0, y: 0, zoom: zoom };
@@ -824,8 +824,8 @@ const ProfitSharing = () => {
       <div className={styles.title}>
         <h2>Profit Sharing</h2>
         <p>
-          Visualize your earnings at each level with detailed commission percentages. This chart clearly shows how profits flow from direct referrals
-          (5%) down to the fifth level (1%). Understand your earning potential and track rewards easily across all levels.
+          This chart explains eligible Profit Sharing reward levels. Rewards are linked to eligible profitable Lunar Wolf EA / copy-trading activity from active referred EA accounts,
+          according to achieved level, qualification rules, and Lunar Wolf service terms.
         </p>
       </div>
 

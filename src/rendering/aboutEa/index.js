@@ -17,7 +17,7 @@ export default function AboutEa() {
             <Ourvalidationindex />
             <ValidationMethodology />
             <RealMarket />
-            <LivePortfolios bgblack title='Proven Strategies' description='Track Lunar Wolf EA activity through third-party monitored accounts. Performance records are shared for transparency only and should not be interpreted as guaranteed future results. Actual results may vary due to broker execution, spreads, slippage, leverage, market volatility, latency, liquidity, and account settings.' />
+            <LivePortfolios bgblack title='Performance Transparency' description='Track Lunar Wolf EA activity through third-party monitored accounts. Performance records are shared for transparency only and should not be interpreted as guaranteed future results. Actual results may vary due to broker execution, spreads, slippage, leverage, market volatility, latency, liquidity, and account settings.' />
             <FaqSection bgblack />
         </>
     )

@@ -18,7 +18,7 @@ const policyPoints = [
   {
     type: "section",
     title: "How We Use Your Information",
-    description: "The information we collect may be used for:",
+    description: "Providing EA software access, technical support, account connection assistance, service communication, referral tracking, and platform functionality.",
   },
   { type: "item", text: "Providing EA software access, technical support, account connection assistance, service communication, referral tracking, and platform functionality." },
   { type: "item", text: "Contacting users regarding their inquiries" },
@@ -61,7 +61,7 @@ const policyPoints = [
     type: "section",
     title: "Contact",
     description:
-      "Providing EA software access, technical support, account connection assistance, service communication, referral tracking, and platform functionality.",
+      "For privacy-related questions, contact us at contact@lunarwolf.ai",
   },
 
 ];
@@ -95,11 +95,6 @@ const PrivacyPolicy = () => {
               )}
             </li>
           ))}
-          <li>
-            <p>
-              contact us at <a href="mailto:contact@lunarwolf.ai">contact@lunarwolf.ai </a>
-            </p>
-          </li>
         </ul>
       </div>
     </section>

@@ -117,7 +117,7 @@ const cards = [
         icon: Stability,
         alt: 'Stability',
         title: 'Long-Term Stability Focus',
-        body: 'The framework is optimized for consistency, adaptability, and operational discipline over time.',
+        body: 'The framework is designed for consistency, adaptability, and operational discipline over time.',
     },
 ];
 

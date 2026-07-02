@@ -68,7 +68,7 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
             ))
           ) : (
             <div className={styles.noData}>
-              <p>No blog posts found.</p>
+              <p>Hide this line until more blogs are added.</p>
             </div>
           )}
         </div>

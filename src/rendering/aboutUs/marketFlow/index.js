@@ -32,7 +32,7 @@ const timelineData = [
         desc: [
             'The EA went through round after round of backtesting using years of historical Forex data. Strategies were built, tested, refined, and rebuilt as we searched for a more stable and repeatable approach.',
             'We didn\'t chase big wins. We chased stability. As the results became more consistent, we moved beyond simulations and began validating the framework under live market conditions.',
-            'Every challenge became a lesson. Every setback became an opportunity to improve. The goal was never perfection  was continuous refinement.',
+            'Every challenge became a lesson. Every setback became an opportunity to improve. The goal was never perfection it was continuous refinement.',
         ],
         align: 'right',
     },
