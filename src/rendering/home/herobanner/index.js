@@ -61,6 +61,7 @@ export default function Herobanner() {
           <div className={styles.buttonAlignment}>
             <motion.button
               className={styles.first}
+              aria-label="View Live Performance"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
@@ -75,9 +76,10 @@ export default function Herobanner() {
               View Live Performance
               <RightIcon />
             </motion.button>
-            <a href="https://eauser.lunarwolf.ai/signup" target='_blank'>
+            <a href="https://eauser.lunarwolf.ai/signup" target='_blank' aria-label="Start EA Setup">
               <motion.button
                 className={styles.sec}
+                aria-label="Create EA Access Account"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }

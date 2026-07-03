@@ -68,6 +68,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         className={`${styles.paginationButton} ${styles.prevButton} ${currentPage === 1 ? styles.disabled : ""}`}
         onClick={goToPrevPage}
         disabled={currentPage === 1}
+        aria-label="Previous Page"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
           <path
@@ -88,6 +89,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
           } ${page === '...' ? styles.dots : ""}`}
           onClick={() => page !== '...' && handlePageChange(page)}
           disabled={page === '...'}
+          aria-label={page === '...' ? "Ellipsis" : `Page ${page}`}
         >
           {page}
         </button>
@@ -97,6 +99,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         className={`${styles.paginationButton} ${styles.nextButton} ${currentPage === totalPages ? styles.disabled : ""}`}
         onClick={goToNextPage}
         disabled={currentPage === totalPages}
+        aria-label="Next Page"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M7.5 5L12.5 10L7.5 15" stroke="white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />

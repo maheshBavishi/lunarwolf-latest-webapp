@@ -38,6 +38,7 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
           <button
             className={`${!currentCategory ? styles.active : ""}`}
             onClick={() => handleCategoryClick('all')}
+            aria-label="All Categories"
           >
             All
           </button>
@@ -47,6 +48,7 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
                 key={category.id}
                 className={`${currentCategory === category.attributes.slug ? styles.active : ""}`}
                 onClick={() => handleCategoryClick(category.attributes.slug)}
+                aria-label={category.attributes.name || "Category"}
               >
                 {category.attributes.name}
               </button>
@@ -56,7 +58,7 @@ export default function ExploreBlog({ blogsData, paginationData, categoriesData,
         <div className={styles.grid}>
           {blogsData && blogsData.length > 0 ? (
             blogsData.map((blog, index) => (
-              <Link href={`/blog/${blog.attributes.slug}`} className={styles.items} key={index}>
+              <Link href={`/blog/${blog.attributes.slug}`} className={styles.items} key={index} aria-label={blog.attributes.title || "Read blog post"}>
                 <div className={styles.image}>
                   <img src={getImageUrl(blog)} alt={blog.attributes.title} />
                 </div>

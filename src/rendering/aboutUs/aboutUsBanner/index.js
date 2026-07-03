@@ -87,13 +87,14 @@ export default function AboutUsBanner() {
                     </motion.h1>
                     <motion.p variants={itemVariants}>
                         Structured EURUSD Automation Built Around Risk Awareness
-                        {/* Hunt Profits */}
+
                     </motion.p>
                     <motion.div className={styles.buttonDesign} variants={itemVariants}>
-                        <Link href="https://eauser.lunarwolf.ai/signup" target="_blank" rel="noopener noreferrer">
+                        <Link href="https://eauser.lunarwolf.ai/signup" target="_blank" rel="noopener noreferrer" aria-label="Start EA Setup">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                aria-label="Start EA Setup"
                             >
                                 Start EA Setup
                                 <RightIcon />

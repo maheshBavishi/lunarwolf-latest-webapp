@@ -39,7 +39,7 @@ export default function Footer() {
                   href: "/referral-program?model=brokerage",
                 },
               ].map((item, index) => (
-                <a href={item.href} rel="noopener noreferrer" key={index}>
+                <a href={item.href} rel="noopener noreferrer" key={index} aria-label={item.label}>
                   {item.label}
                 </a>
               ))}
@@ -56,28 +56,28 @@ export default function Footer() {
                 { label: "Refund Policy", href: "/refund-policy" },
                 { label: "Jurisdiction & Eligibility Notice", href: "/jurisdiction-eligibility-notice" },
               ].map((item, index) => (
-                <a href={item.href} rel="noopener noreferrer" key={index}>
+                <a href={item.href} rel="noopener noreferrer" key={index} aria-label={item.label}>
                   {item.label}
                 </a>
               ))}
             </div>
             <div>
               <h3>Contact Us</h3>
-              <a href="mailto:contact@lunarwolf.ai">contact@lunarwolf.ai</a>
+              <a href="mailto:contact@lunarwolf.ai" aria-label="Contact Lunar Wolf via email">contact@lunarwolf.ai</a>
               <div className={styles.socialIconAlignment}>
-                <a href="https://www.facebook.com/lunarwolfai" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/lunarwolfai" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <FacebookIcon />
                 </a>
-                <a href="https://www.instagram.com/lunarwolf.ai/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/lunarwolf.ai/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <InstagramIcon />
                 </a>
-                <a href="https://x.com/Lunarwolf_ai" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/Lunarwolf_ai" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <TwitterIcon />
                 </a>
-                <a href="https://www.youtube.com/@Lunarwolf_ai" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/@Lunarwolf_ai" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                   <YoutubeIcon />
                 </a>
-                <a href="https://t.me/lunarwolfai" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/lunarwolfai" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
                   <TelegramIcon />
                 </a>
               </div>

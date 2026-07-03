@@ -107,19 +107,21 @@ export default function AboutEaBanner() {
 
                     {/* CTA Buttons */}
                     <motion.div className={styles.twobutton} variants={fadeSlideUp}>
-                        <a href='#live-portfolios'>
+                        <a href='#live-portfolios' aria-label="View Live Performance">
                             <motion.button
                                 whileHover={buttonHover}
                                 whileTap={buttonTap}
+                                aria-label="View Live Performance"
                             >
                                 View Live Performance
                             </motion.button>
                         </a>
-                        <a href="https://eauser.lunarwolf.ai/signup" target='_blank'>
+                        <a href="https://eauser.lunarwolf.ai/signup" target='_blank' aria-label="Start EA Setup">
                             <motion.button
                                 className={styles.fill}
                                 whileHover={buttonHover}
                                 whileTap={buttonTap}
+                                aria-label="Start EA Setup"
                             >
                                 Start EA Setup
                             </motion.button>

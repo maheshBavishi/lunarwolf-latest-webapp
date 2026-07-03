@@ -42,6 +42,7 @@ export default function ContentSection({ model }) {
                 key={tab.id}
                 className={`${styles.tabButton} ${activeTab === tab.id ? styles.active : ""}`}
                 onClick={() => setActiveTab(tab.id)}
+                aria-label={tab.label || tab.title || "Tab"}
               >
                 <span className={styles.tabLabel}>{tab.label}</span>
                 {activeTab === tab.id && (

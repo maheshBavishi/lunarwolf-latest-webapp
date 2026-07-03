@@ -77,7 +77,7 @@ export default function BlogBanner({ bannerBlogData }) {
               transition: { duration: 0.4, ease: "easeOut" },
             }}
           >
-            <Link href={`/blog/${bannerBlogData?.attributes?.slug}`} className={styles.image}>
+            <Link href={`/blog/${bannerBlogData?.attributes?.slug}`} className={styles.image} aria-label={bannerBlogData?.attributes?.title || "Featured Blog"}>
               <motion.img src={getImageUrl(bannerBlogData)} alt="BlogImage" whileHover={{ scale: 1.08 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} />
             </Link>
             <div className={styles.Content}>

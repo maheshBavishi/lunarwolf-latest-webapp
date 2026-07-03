@@ -20,7 +20,7 @@ export default function EarnSection() {
       <div className={styles.flexboxAlignment}>
         <div className={styles.textContainer}>
           <div className={styles.buttonstyle}>
-            <button>
+            <button aria-label="Historical Monthly Growth">
               <img src={CownIcon} alt="CownIcon" />
               <span>Historical Monthly Growth: Approximately 4–8%</span>
             </button>
@@ -33,9 +33,9 @@ export default function EarnSection() {
 
             </p>
           </div>
-          <Link href="https://eauser.lunarwolf.ai/signup" target="_blank">
+          <Link href="https://eauser.lunarwolf.ai/signup" target="_blank" aria-label="Start EA Setup">
             <div className={styles.buttonDesign}>
-              <button>
+              <button aria-label="Start EA Setup">
                 Start EA Setup
                 <RightIcon />
               </button>

@@ -130,7 +130,7 @@ export default function Header() {
             <div className={styles.headerDesign}>
               <div className={styles.headerInner}>
                 <motion.div className={styles.logoWrap} variants={containerVariants} initial={isLoaderPage ? "hidden" : "visible"} animate="visible">
-                  <motion.a href="/" className={styles.logo} variants={itemVariants}>
+                  <motion.a href="/" className={styles.logo} variants={itemVariants} aria-label="Home">
                     <img src={LogoIcon} alt=" Lunar Wolf EA Logo" className={styles.logoIcon} />
                     <span className={styles.logoText}>LUNAR WOLF</span>
                   </motion.a>
@@ -145,6 +145,7 @@ export default function Header() {
                         target={link.target || "_self"}
                         className={styles.navLink}
                         variants={itemVariants}
+                        aria-label={link.label}
                         whileHover={{ opacity: 0.7 }}
                         transition={{ duration: 0.2 }}
                       >
@@ -161,6 +162,7 @@ export default function Header() {
                       target="_blank"
                       className={styles.btnLogin}
                       variants={itemVariants}
+                      aria-label="Login"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -169,10 +171,11 @@ export default function Header() {
                     <motion.a
                       href="https://eauser.lunarwolf.ai/signup"
                       className={styles.btnRegister}
+                      target="_blank"
                       variants={itemVariants}
+                      aria-label="Register"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      target="_blank"
                     >
                       Registration
                     </motion.a>
@@ -208,7 +211,7 @@ export default function Header() {
           >
             <div className={styles.logoCloseIcon}>
               <div className={styles.logoWrap}>
-                <Link href="/" className={styles.logo} onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/" className={styles.logo} onClick={() => setIsMobileMenuOpen(false)} aria-label="Home">
                   <img src={LogoIcon} alt="Lunar Wolf" className={styles.logoIcon} />
                   <span className={styles.logoText}>LUNAR WOLF</span>
                 </Link>
@@ -227,7 +230,7 @@ export default function Header() {
                   whileHover={{ x: 10, opacity: 1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Link href={link.href} onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link href={link.href} onClick={() => setIsMobileMenuOpen(false)} aria-label={link.label}>
                     {link.label}
                   </Link>
                 </motion.div>
@@ -239,6 +242,7 @@ export default function Header() {
                 target="_blank"
                 className={styles.btnLogin}
                 onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Login"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -249,6 +253,7 @@ export default function Header() {
                 className={styles.btnRegister}
                 target="_blank"
                 onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Register"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

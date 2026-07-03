@@ -15,7 +15,7 @@ export default function BlogInformation({ blogData, sidebarBlogs }) {
               <div className={styles.allCardAlignment}>
                 {sidebarBlogs && sidebarBlogs.length > 0 ? (
                   sidebarBlogs.map((blog, index) => (
-                    <Link href={`/blog/${blog.attributes.slug}`} key={index} className={styles.card}>
+                    <Link href={`/blog/${blog.attributes.slug}`} key={index} className={styles.card} aria-label={blog.attributes.title || "Read blog post"}>
                       <img src={getImageUrl(blog)} alt={blog.attributes.title} />
                       <h3>{blog.attributes.title}</h3>
                     </Link>

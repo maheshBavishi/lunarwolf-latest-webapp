@@ -123,9 +123,9 @@ export default function ChooseBroker() {
                 <div className={styles.image}>
                   <img src={broker.icon} alt={broker.alt} />
                 </div>
-                <Link href={broker.link} target={broker.comingSoon ? "_self" : "_blank"} className={broker.comingSoon ? styles.disabledLink : ""}>
+                <Link href={broker.link} target={broker.comingSoon ? "_self" : "_blank"} className={broker.comingSoon ? styles.disabledLink : ""} aria-label={broker.buttonText || "Choose Broker"}>
                   <div className={styles.details}>
-                    <button disabled={broker.comingSoon}>
+                    <button disabled={broker.comingSoon} aria-label={broker.buttonText || "Choose broker"}>
                       {broker.buttonText}
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M4.66666 4.6665H11.3333V11.3332" stroke="white" strokeLinecap="round" strokeLinejoin="round" />

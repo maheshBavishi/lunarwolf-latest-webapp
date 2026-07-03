@@ -9,8 +9,8 @@ export default function AutomatedProfit() {
       <div className={styles.box}>
         <h2>Ready to Start with Lunar Wolf EA?</h2>
         <div className={styles.buttonCenter}>
-          <Link href="https://eauser.lunarwolf.ai/signup" target="_blank">
-            <button>Get Started Today</button>
+          <Link href="https://eauser.lunarwolf.ai/signup" target="_blank" aria-label="Get Started Today">
+            <button aria-label="Get Started Today">Get Started Today</button>
           </Link>
         </div>
         <div className={styles.iconTopAlignment}>

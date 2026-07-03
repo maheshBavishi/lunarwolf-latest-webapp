@@ -114,8 +114,8 @@ export default function LivePortfolios({ title, description, bgblack }) {
                   <img src={account.image} alt="AccountImage" />
                 </div>
                 <div className={styles.buttonCenterAlignment}>
-                  <Link href={account.fxBookUrl} target="_blank" rel="noopener noreferrer">
-                    <button>View Verified Performance on MYFXBOOK</button>
+                  <Link href={account.fxBookUrl} target="_blank" rel="noopener noreferrer" aria-label={`View Verified Performance on MYFXBOOK for ${account.name || 'account'}`}>
+                    <button aria-label="View Verified Performance on MYFXBOOK">View Verified Performance on MYFXBOOK</button>
                   </Link>
                 </div>
               </motion.div>

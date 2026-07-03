@@ -85,7 +85,7 @@ export default function IBCommission() {
                     Direct Referral IB Commission
                 </h2>
                 <div className={styles.youSection}>
-                    <button className={styles.youButton}>
+                    <button className={styles.youButton} aria-label="You">
                         You
                     </button>
                     <img src={LunarLogo} alt="LunarLogo" className={styles.lunarLogo} />
