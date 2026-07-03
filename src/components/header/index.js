@@ -13,7 +13,7 @@ const navLinks = [
   { label: "About Us", href: "/about-us", target: "_self" },
   { label: "Our EA", href: "/ourea", target: "_self" },
   { label: "Blog", href: "/blog", target: "_self" },
-  { label: "Our Profile", href: "/documents/Lunar Wolf Ea Presentation.pdf", hasDownload: true, target: "_blank" },
+  { label: "LW EA Guide", href: "/documents/Lunar-Wolf-EA-Referral-Program-Guide.pdf", hasDownload: true, target: "_blank" },
 ];
 
 export default function Header() {
