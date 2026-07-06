@@ -67,7 +67,7 @@ export default function StrategicSection() {
                             <p>
                                 Built for eligible reward participation
                             </p>
-                            <p>
+                            <p className={styles.heightSection}>
                                 An automated EA ecosystem where active referred users trade through Lunar Wolf EA, networks may grow through referrals,
                                 and eligible rewards are linked to active trading-related revenue.
                             </p>
@@ -183,7 +183,7 @@ export default function StrategicSection() {
                             <p>
                                 Direct-only traditional IB model
                             </p>
-                            <p>
+                            <p className={styles.heightSection}>
                                 You earn mainly when your direct referrals
                                 trade. If they stop trading, your IB income may also reduce.
                             </p>

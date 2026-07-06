@@ -56,7 +56,7 @@ const leftFaqs = [
         )
     },
     {
-        question: ": Are referral rewards paid just for adding new users?",
+        question: " Are referral rewards paid just for adding new users?",
         answer: (
             <>
                 No. Lunar Wolf does not pay rewards for registration or recruitment alone. Referral rewards may apply only when referred users maintain eligible active EA accounts and generate eligible trading-related revenue according

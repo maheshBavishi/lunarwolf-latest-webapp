@@ -166,6 +166,19 @@
                     margin: 0 0 16px 0;
                 }
 
+                .heightSection {
+                    min-height: 84px;
+
+                    @media (max-width:1024px) {
+                        min-height: 104px;
+                    }
+
+                    @media (max-width:576px) {
+                        min-height: auto;
+                    }
+
+                }
+
                 ul {
                     margin: 0;
                     padding: 0 0 0 20px;
