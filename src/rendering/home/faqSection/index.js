@@ -46,6 +46,60 @@ const leftFaqs = [
             </>
         )
     },
+    {
+        question: "Is Lunar Wolf an MLM or investment scheme?",
+        answer: (
+            <>
+                No. Lunar Wolf is not an investment scheme, fund-collection model, or guaranteed-income program. Lunar Wolf provides Forex EA software access, setup support, and related technical services. The referral structure is optional, and rewards are linked to eligible active EA usage, trading-related revenue, achieved qualification, and Lunar
+                Wolf service terms. Rewards are not paid for registration or recruitment alone.
+            </>
+        )
+    },
+    {
+        question: ": Are referral rewards paid just for adding new users?",
+        answer: (
+            <>
+                No. Lunar Wolf does not pay rewards for registration or recruitment alone. Referral rewards may apply only when referred users maintain eligible active EA accounts and generate eligible trading-related revenue according
+                to Lunar Wolf qualification rules and service terms.
+            </>
+        )
+    },
+    {
+        question: " How does the 5-level referral reward structure work?",
+        answer: (
+            <>
+                Eligible referral rewards may extend up to 5 levels, subject to achieved qualification, active EA account status, eligible trading-related revenue, and Lunar Wolf service terms. Each level has its own qualification requirement and reward percentage. Not
+                every referred user or level automatically qualifies for rewards.
+            </>
+        )
+    },
+    {
+        question: "What are the two eligible reward streams in Lunar Wolf?",
+        answer: (
+            <>
+                Lunar Wolf may offer two eligible reward streams: Profit Sharing rewards and IB-Sharing rewards. Profit Sharing rewards are linked to eligible profitable Lunar Wolf EA / copy-trading activity, while IB-Sharing rewards are linked to eligible broker-side IB income received and confirmed by Lunar Wolf.
+                Both are subject to qualification rules and service terms.
+            </>
+        )
+    },
+    {
+        question: "Is Lunar Wolf suitable for beginners?",
+        answer: (
+            <>
+                Lunar Wolf is designed to reduce manual monitoring and support structured EURUSD automation. However, Forex trading still involves risk. Beginners should understand basic trading risk, broker account setup,
+                leverage, drawdown, and capital exposure before using any automated trading system.
+            </>
+        )
+    },
+    {
+        question: "Can Lunar Wolf EA lose money?",
+        answer: (
+            <>
+                Yes. Forex trading and automated EA trading involve risk. Market volatility, spreads, slippage, broker execution, liquidity, technical issues, and changing market conditions can affect results. No
+                automated system can guarantee profits or prevent losses.
+            </>
+        )
+    },
 ];
 
 const rightFaqs = [
@@ -137,7 +191,62 @@ const rightFaqs = [
 
             </>
         )
-    }
+    },
+    {
+        question: "Does Lunar Wolf collect deposits or manage client funds?",
+        answer: (
+            <>
+                No. Lunar Wolf does not collect, hold, manage, deposit, withdraw, custody, or control client funds. Users trade through their own broker accounts and remain responsible for their deposits,
+                withdrawals, account access, risk settings, and trading capital.
+            </>
+        )
+    },
+    {
+        question: "Why are supported brokers required?",
+        answer: (
+            <>
+                Supported brokers are required because Lunar Wolf EA setup, account tracking, and IB-sharing eligibility depend on broker compatibility, EA access, and tracking availability. Users remain free to control their own broker accounts, deposits,
+                withdrawals, and trading capital. Future supported brokers may be added by Lunar Wolf.
+            </>
+        )
+    },
+    {
+        question: "What does Myfxbook tracking mean?",
+        answer: (
+            <>
+                Myfxbook tracking is used to provide third-party performance visibility for selected live trading accounts. It helps users review trading history, drawdown, trading activity, and performance behavior. Myfxbook tracking is provided
+                for transparency only and does not guarantee future results.
+            </>
+        )
+    },
+    {
+        question: "Does 3 months free access mean no charges at all?",
+        answer: (
+            <>
+                During the 3-month pre-launch period, Lunar Wolf EA usage may be provided free for selected users. No Profit Share Fee will be charged during this period, and Profit Sharing referral rewards will not be distributed. Eligible IB-Sharing benefits may still apply according to
+                active EA usage, achieved qualification, and Lunar Wolf service terms.
+            </>
+        )
+    },
+    {
+        question: "Can users withdraw their funds anytime?",
+        answer: (
+            <>
+                Users control their own broker accounts and withdrawals are handled directly through their broker, subject to broker rules, account status, open trades, margin requirements, and applicable terms. Lunar
+                Wolf does not process or control withdrawals.
+            </>
+        )
+    },
+    {
+        question: "What happens if a referred user stops trading or disconnects the EA?",
+        answer: (
+            <>
+                If a referred user stops trading, disconnects the EA, becomes inactive, or no longer meets eligibility requirements, related rewards may reduce, pause, or stop according
+                to Lunar Wolf qualification rules and service terms.
+            </>
+        )
+    },
+
 ];
 
 const FaqItem = ({ item, isOpen, onClick }) => {

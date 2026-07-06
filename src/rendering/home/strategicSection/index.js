@@ -68,33 +68,34 @@ export default function StrategicSection() {
                                 Built for eligible reward participation
                             </p>
                             <p>
-                                An automated ecosystem where your referrals trade, your network grows, and
-                                Eligible referral rewards from active trading.
+                                An automated EA ecosystem where active referred users trade through Lunar Wolf EA, networks may grow through referrals,
+                                and eligible rewards are linked to active trading-related revenue.
                             </p>
                             <ul>
                                 <li>
-                                    <strong>Profit sharing <i>and</i> IB commission</strong>
-                                    <span>Two income streams from every referral</span>
+                                    <span>
+                                        Profit Sharing + IB Commission — Two eligible income streams from active referred users
+                                    </span>
                                 </li>
                                 <li>
-                                    <strong>5-level referral network</strong>
-                                    <span>Earn from your referrals' referrals, down 5 tiers</span>
+                                    <strong>5-Level Referral Network </strong>
+                                    <span>Eligible rewards may extend up to 5 referral levels</span>
                                 </li>
                                 <li>
-                                    <strong>EA-driven client retention</strong>
-                                    <span>Automated traders stay active longer</span>
+                                    <strong>EA-Driven Client Retention  </strong>
+                                    <span>EA-based users may support stronger long-term activity</span>
                                 </li>
                                 <li>
-                                    <strong>Multi-broker flexibility</strong>
-                                    <span>Spread risk across TMGM, Multibank, VT &amp; more</span>
+                                    <strong>Multi-Broker Flexibility</strong>
+                                    <span>Supported broker options such as TMGM, MultiBank, VT Markets & more</span>
                                 </li>
                                 <li>
-                                    <strong>Myfxbook-verified reporting</strong>
-                                    <span>Independent, tamper-proof performance tracking</span>
+                                    <strong>Myfxbook-Tracked Reporting </strong>
+                                    <span>Independent third-party performance tracking</span>
                                 </li>
                                 <li>
-                                    <strong>Community-driven growth</strong>
-                                    <span>Network effect works in your favour</span>
+                                    <strong>Independent third-party performance tracking</strong>
+                                    <span>Referral activity supports long-term ecosystem expansion</span>
                                 </li>
                             </ul>
                         </div>
@@ -183,33 +184,33 @@ export default function StrategicSection() {
                                 Direct-only traditional IB model
                             </p>
                             <p>
-                                You earn only when your direct referrals trade manually, and when they stop, so does your
-                                income.
+                                You earn mainly when your direct referrals
+                                trade. If they stop trading, your IB income may also reduce.
                             </p>
                             <ul>
                                 <li>
-                                    <strong>Spread or lot commission only</strong>
-                                    <span>No profit sharing, no bonus tiers</span>
+                                    <strong>Spread or Lot Commission Only </strong>
+                                    <span>No Profit Sharing and no multi-level reward structure</span>
                                 </li>
                                 <li>
-                                    <strong>Direct referrals only</strong>
-                                    <span>No income beyond your immediate network</span>
+                                    <strong>Direct Referrals Only</strong>
+                                    <span>Limited to your immediate referred users</span>
                                 </li>
                                 <li>
-                                    <strong>Manual trader dependency</strong>
-                                    <span>Inactive traders mean zero commissions</span>
+                                    <strong>Manual Trader Dependency </strong>
+                                    <span>Income depends mainly on trader activity</span>
                                 </li>
                                 <li>
-                                    <strong>Single broker lock-in</strong>
-                                    <span>Full exposure if one broker underperforms</span>
+                                    <strong>Single Broker Dependency </strong>
+                                    <span>Higher exposure to one broker relationship</span>
                                 </li>
                                 <li>
-                                    <strong>Broker-controlled reporting</strong>
-                                    <span>No independent verification of your data</span>
+                                    <strong>Broker-Dependent Reporting </strong>
+                                    <span>Reporting depends mainly on broker-provided data</span>
                                 </li>
                                 <li>
-                                    <strong>Constant manual prospecting</strong>
-                                    <span>No self-sustaining growth mechanism</span>
+                                    <strong>Continuous Manual Prospecting </strong>
+                                    <span>Growth depends on finding new direct traders continuously</span>
                                 </li>
                             </ul>
                         </div>
